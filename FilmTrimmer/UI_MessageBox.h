@@ -10,7 +10,6 @@ enum DOMODELTYPE //domodel类型枚举
 	TWOBUTTON,
 	THREEBUTTON,
 	NOBUTTON
-	kkk;
 };
 
 enum EN_Resoult //返回值枚举

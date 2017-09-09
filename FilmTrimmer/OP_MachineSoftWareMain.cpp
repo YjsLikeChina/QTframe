@@ -27,6 +27,14 @@ OP_MachineSoftWareMain::~OP_MachineSoftWareMain()
 void OP_MachineSoftWareMain::initVal()
 {
 	m_bOnloadConfigFinish = false;
+	m_User = new CUserManager;
+	m_User->AddUser(L"中国人", L"123455", USER_ADMIN);
+	CStringList name;
+	name.InsertBefore(0, L"管理员");
+	m_User->DeleteUsers(name);
+	m_User->Login(0);
+	
+
 }
 
 void OP_MachineSoftWareMain::initConnect()

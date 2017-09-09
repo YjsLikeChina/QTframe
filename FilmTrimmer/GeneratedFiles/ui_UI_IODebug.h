@@ -74,7 +74,7 @@ public:
         LB_OutputName->setFont(font);
         LW_InputList = new QListWidget(IODebugWidget);
         LW_InputList->setObjectName(QStringLiteral("LW_InputList"));
-        LW_InputList->setGeometry(QRect(320, 34, 291, 601));
+        LW_InputList->setGeometry(QRect(320, 35, 291, 601));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::Text, brush);
         palette3.setBrush(QPalette::Inactive, QPalette::Text, brush);
@@ -86,7 +86,7 @@ public:
         LW_InputList->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         LW_OutputList = new QListWidget(IODebugWidget);
         LW_OutputList->setObjectName(QStringLiteral("LW_OutputList"));
-        LW_OutputList->setGeometry(QRect(640, 34, 291, 601));
+        LW_OutputList->setGeometry(QRect(640, 35, 291, 601));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::Text, brush);
         palette4.setBrush(QPalette::Inactive, QPalette::Text, brush);
@@ -97,10 +97,10 @@ public:
         LB_Background1 = new QLabel(IODebugWidget);
         LB_Background1->setObjectName(QStringLiteral("LB_Background1"));
         LB_Background1->setGeometry(QRect(0, 35, 291, 601));
-        LB_Background1->setFrameShape(QFrame::Box);
+        LB_Background1->setFrameShape(QFrame::NoFrame);
         LW_ModuleList = new QListWidget(IODebugWidget);
         LW_ModuleList->setObjectName(QStringLiteral("LW_ModuleList"));
-        LW_ModuleList->setGeometry(QRect(0, 34, 291, 601));
+        LW_ModuleList->setGeometry(QRect(0, 35, 291, 601));
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::Text, brush);
         palette5.setBrush(QPalette::Inactive, QPalette::Text, brush);

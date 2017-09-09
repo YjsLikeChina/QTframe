@@ -81,6 +81,9 @@
     <Filter Include="LOG">
       <UniqueIdentifier>{2204c768-8ce7-4b93-b53c-55dd758ab880}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UserManager">
+      <UniqueIdentifier>{833c83f3-d4fc-4e74-b961-630760c265b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -284,11 +287,26 @@
     <ClCompile Include="GeneratedFiles\Release\moc_OP_MachineStatusCtrl.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_UI_WorkSpeedInputDialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
     <ClCompile Include="UI_WorkSpeedInputDialog.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCUserManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCUserManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCUserManager.cpp">
+      <Filter>UserManager</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_UserManagerCtrol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_UserManagerCtrol.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_UserManagerCtrol.cpp">
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -385,7 +403,13 @@
     <CustomBuild Include="OP_MachineStatusCtrl.h">
       <Filter>Header Files\OP_Head</Filter>
     </CustomBuild>
-    <CustomBuild Include="UI_WorkSpeedInputDialog.h">
+    <CustomBuild Include="QCUserManager.h">
+      <Filter>UserManager</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_UserManagerCtrol.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_UserManagerCtrol.h">
       <Filter>Header Files\UI_Head</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -457,6 +481,9 @@
       <Filter>LOG</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_UI_WorkSpeedInputDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_UserManagerCtrol.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

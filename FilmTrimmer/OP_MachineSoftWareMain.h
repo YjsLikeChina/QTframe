@@ -6,6 +6,7 @@
 #include <vector>
 #include "DP_MotorCtrlInteraction.h"
 #include "LogManager.h"
+
 class OP_MachineSoftWareMain
 	: public QObject
 {
@@ -33,7 +34,7 @@ private:
 	bool GetAutoUpdateData(const QVector<ST_MODULE>& QVecSource,QList<ST_UPDATEDATA>& AutoUpdateData,int nPage = 1);
 	bool m_bOnloadConfigFinish;									//配置文件加载完毕(UI_FilmTrimmer、OP_MachineCtrlOrAlarmStatus中使用)
 	
-
+	CUserManager * m_User;
 	
 public:
 	//自动生产页面
@@ -61,8 +62,7 @@ public:
 	QVector<ST_MODULE> m_QveDefaultParam;						//部分默认参数(FilmTrimmer),第一项为默认参数，顺序按照EM_FILM_DEFAULT_ORDER
 
 	static OP_MachineSoftWareMain* m_pInstanceObj;
-	QString ReturnPageCfgPath(EM_CHILDPAGEITEM emPageItem);		//返回配置文件名称
-	CLog *m_Clog;												//日志编写类
+	QString ReturnPageCfgPath(EM_CHILDPAGEITEM emPageItem);		//返回配置文件名称												//日志编写类
 
 public:
 	void initTask();											//初始化工作任务
