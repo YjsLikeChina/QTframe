@@ -1,0 +1,3 @@
+: 0.000 08.31 17:17:41 HcModbusTcpClient::Connect() start...
+: 0.016 08.31 17:17:41 HcModbusTcpClient::Connect() finished.
+: 68.313 08.31 17:18:49 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!

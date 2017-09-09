@@ -1,0 +1,3 @@
+: 0.000 08.31 17:29:24 HcModbusTcpClient::Connect() start...
+: 0.062 08.31 17:29:24 HcModbusTcpClient::Connect() finished.
+: 19.875 08.31 17:29:43 GetWordData m_fnMbt03 error,nAddress0,len0.

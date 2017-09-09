@@ -1,0 +1,64 @@
+﻿生成启动时间为 2017/9/8 15:09:08。
+     1>项目“E:\Wo_Shi_Ji\Qt框架\FilmTrimmer\FilmTrimmer.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\Visual_Studio_2015\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IE:\QT5.6\5.6\msvc2015\include /I.\GeneratedFiles\Debug /IE:\QT5.6\5.6\msvc2015\include\QtCore /IE:\QT5.6\5.6\msvc2015\include\QtGui /IE:\QT5.6\5.6\msvc2015\include\QtWidgets /ID:\ControlLibrary\Include /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /D _AFXDLL /D _WIN32_WINNT=0x0601 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt DP_LaserInteraction.cpp
+         DP_LaserInteraction.cpp
+       Link:
+         E:\Visual_Studio_2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Wo_Shi_Ji\Qt框架\Win32\Debug\\FilmTrimmer.exe" /NOLOGO /LIBPATH:E:\QT5.6\5.6\msvc2015\lib /LIBPATH:D:\ControlLibrary\Lib /LIBPATH:"E:\Wo_Shi_Ji\Qt框架\lib" qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib Iphlpapi.lib LibraryBase.lib CommonSupport.lib EasyAutoControl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Wo_Shi_Ji\Qt框架\Win32\Debug\FilmTrimmer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Wo_Shi_Ji\Qt框架\Win32\Debug\FilmTrimmer.lib" /MACHINE:X86 /SAFESEH Debug\CTRL_autoproduction.obj
+         Debug\CTRL_Base.obj
+         Debug\CTRL_filmtrimmer.obj
+         Debug\CTRL_iodebug.obj
+         Debug\CTRL_motordebug.obj
+         Debug\CTRL_parameterset.obj
+         Debug\CTRL_producteditor.obj
+         Debug\DP_CfgInterface.obj
+         Debug\DP_HCPLCInteraction.obj
+         Debug\DP_LaserInteraction.obj
+         Debug\DP_MotorCtrlInteraction.obj
+         Debug\moc_CTRL_autoproduction.obj
+         Debug\moc_CTRL_Base.obj
+         Debug\moc_CTRL_filmtrimmer.obj
+         Debug\moc_DP_CfgInterface.obj
+         Debug\moc_DP_MotorCtrlInteraction.obj
+         Debug\moc_OP_AutoUpdateData.obj
+         Debug\moc_OP_MachineSoftWareMain.obj
+         Debug\moc_OP_MachineStatusCtrl.obj
+         Debug\moc_UI_AutoProduction.obj
+         Debug\moc_UI_filmtrimmer.obj
+         Debug\moc_UI_FloatingWindow.obj
+         Debug\moc_UI_HistoricalInformation.obj
+         Debug\moc_UI_IODebug.obj
+         Debug\moc_UI_MessageBox.obj
+         Debug\moc_UI_MotorDebug.obj
+         Debug\moc_UI_ParameterSetting.obj
+         Debug\moc_UI_ProductEditor.obj
+         Debug\moc_UI_Simpledialog.obj
+         Debug\moc_UI_WorkSpeedInputDialog.obj
+         Debug\Log.obj
+         Debug\LogManager.obj
+         Debug\OP_AutoUpdateData.obj
+         Debug\OP_MachineSoftWareMain.obj
+         Debug\OP_MachineStatusCtrl.obj
+         Debug\UI_AutoProduction.obj
+         Debug\UI_InterfaceBase.obj
+         Debug\UI_filmtrimmer.obj
+         Debug\UI_HistoricalInformation.obj
+         Debug\UI_IODebug.obj
+         Debug\UI_MessageBox.obj
+         Debug\moc_DP_LaserInteraction.obj
+         Debug\qrc_filmtrimmer.obj
+         Debug\main.obj
+         Debug\Ping.obj
+         Debug\DP_FileOperator.obj
+         Debug\UI_FloatingWindow.obj
+         Debug\UI_MotorDebug.obj
+         Debug\UI_ParameterSetting.obj
+         Debug\UI_ProductEditor.obj
+         Debug\UI_Simpledialog.obj
+         Debug\UI_WorkSpeedInputDialog.obj
+         FilmTrimmer.vcxproj -> E:\Wo_Shi_Ji\Qt框架\Win32\Debug\FilmTrimmer.exe
+     1>已完成生成项目“E:\Wo_Shi_Ji\Qt框架\FilmTrimmer\FilmTrimmer.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:03.26

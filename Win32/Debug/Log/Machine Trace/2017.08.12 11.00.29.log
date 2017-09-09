@@ -1,0 +1,713 @@
+2.1.2.0: 0.000 08.12 11:00:29 Software Begin to Start ...
+2.1.2.0: 0.000 08.12 11:00:29 motor ConfigModule for normal plus control.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_OpenDevice()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 11:00:29 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 11:00:29 Event EndOfLotEvt Reset
+2.1.2.0: 0.156 08.12 11:00:29  run created successfully
+2.1.2.0: 0.156 08.12 11:00:29 Event EndOfLotEvt Reset
+2.1.2.0: 0.156 08.12 11:00:29  run created successfully
+2.1.2.0: 0.156 08.12 11:00:29 Event EndOfLotEvt Reset
+2.1.2.0: 0.156 08.12 11:00:29  run created successfully
+2.1.2.0: 0.156 08.12 11:00:29  thread begin
+2.1.2.0: 0.172 08.12 11:00:29 RunCtrl thread begin
+2.1.2.0: 0.172 08.12 11:00:29 RunCtrl object construction finished
+2.1.2.0: 0.187 08.12 11:00:29 Delete old log thread Quit Complete!
+2.1.2.0: 0.219 08.12 11:00:29 Motor0 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor1 Location0Postion = 4.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor2 Location0Postion = 65.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor3 Location0Postion = 50.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor4 Location0Postion = 30.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor5 Location0Postion = 90.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor6 Location0Postion = 7.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor7 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor8 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor9 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor10 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor11 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor12 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor13 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor14 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor15 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor16 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor17 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor18 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor19 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor20 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor21 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor22 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Motor23 Location0Postion = 0.000000
+2.1.2.0: 0.219 08.12 11:00:29 Param is loaded.
+2.1.2.0: 3.900 08.12 11:00:33 HcModbusTcpClient::Connect() start...
+2.1.2.0: 4.899 08.12 11:00:34 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 5.913 08.12 11:00:35 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 6.911 08.12 11:00:36 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 6.911 08.12 11:00:36 连接控制器失败:192.168.1.88
+2.1.2.0: 7.301 08.12 11:00:36 
+2.1.2.0: 7.317 08.12 11:00:36 User: , Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 7.566 08.12 11:00:37 User: , Perform the action: Axis Selected, Current Axis: 2
+2.1.2.0: 8.143 08.12 11:00:37 主控制器未连接,启动重新连接.
+2.1.2.0: 8.143 08.12 11:00:37 HcModbusTcpClient::Connect() start...
+2.1.2.0: 9.142 08.12 11:00:38 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 10.140 08.12 11:00:39 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 10.484 08.12 11:00:40 管理员 Login
+2.1.2.0: 11.154 08.12 11:00:40 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 11.154 08.12 11:00:40 连接控制器失败:192.168.1.88
+2.1.2.0: 11.154 08.12 11:00:40 主控制器未连接,启动重新连接.
+2.1.2.0: 11.170 08.12 11:00:40 HcModbusTcpClient::Connect() start...
+2.1.2.0: 12.168 08.12 11:00:41 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 13.167 08.12 11:00:42 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 14.181 08.12 11:00:43 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 14.181 08.12 11:00:43 连接控制器失败:192.168.1.88
+2.1.2.0: 14.384 08.12 11:00:43 主控制器未连接,启动重新连接.
+2.1.2.0: 14.384 08.12 11:00:43 HcModbusTcpClient::Connect() start...
+2.1.2.0: 15.382 08.12 11:00:44 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 16.380 08.12 11:00:45 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 17.379 08.12 11:00:46 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 17.379 08.12 11:00:46 连接控制器失败:192.168.1.88
+2.1.2.0: 17.535 08.12 11:00:47 主控制器未连接,启动重新连接.
+2.1.2.0: 17.535 08.12 11:00:47 HcModbusTcpClient::Connect() start...
+2.1.2.0: 18.533 08.12 11:00:48 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 19.532 08.12 11:00:49 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 20.530 08.12 11:00:50 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 20.530 08.12 11:00:50 连接控制器失败:192.168.1.88
+2.1.2.0: 20.546 08.12 11:00:50 主控制器未连接,启动重新连接.
+2.1.2.0: 20.561 08.12 11:00:50 HcModbusTcpClient::Connect() start...
+2.1.2.0: 21.560 08.12 11:00:51 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 22.558 08.12 11:00:52 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 23.556 08.12 11:00:53 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 23.556 08.12 11:00:53 连接控制器失败:192.168.1.88
+2.1.2.0: 23.728 08.12 11:00:53 主控制器未连接,启动重新连接.
+2.1.2.0: 23.728 08.12 11:00:53 HcModbusTcpClient::Connect() start...
+2.1.2.0: 24.726 08.12 11:00:54 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 25.725 08.12 11:00:55 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 26.723 08.12 11:00:56 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 26.723 08.12 11:00:56 连接控制器失败:192.168.1.88
+2.1.2.0: 26.879 08.12 11:00:56 主控制器未连接,启动重新连接.
+2.1.2.0: 26.879 08.12 11:00:56 HcModbusTcpClient::Connect() start...
+2.1.2.0: 27.878 08.12 11:00:57 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 28.876 08.12 11:00:58 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 29.890 08.12 11:00:59 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 29.890 08.12 11:00:59 连接控制器失败:192.168.1.88
+2.1.2.0: 30.030 08.12 11:00:59 主控制器未连接,启动重新连接.
+2.1.2.0: 30.030 08.12 11:00:59 HcModbusTcpClient::Connect() start...
+2.1.2.0: 31.029 08.12 11:01:00 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 32.027 08.12 11:01:01 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 33.041 08.12 11:01:02 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 33.041 08.12 11:01:02 连接控制器失败:192.168.1.88
+2.1.2.0: 33.182 08.12 11:01:02 主控制器未连接,启动重新连接.
+2.1.2.0: 33.182 08.12 11:01:02 HcModbusTcpClient::Connect() start...
+2.1.2.0: 34.180 08.12 11:01:03 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 35.178 08.12 11:01:04 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 36.192 08.12 11:01:05 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 36.192 08.12 11:01:05 连接控制器失败:192.168.1.88
+2.1.2.0: 36.333 08.12 11:01:05 主控制器未连接,启动重新连接.
+2.1.2.0: 36.333 08.12 11:01:05 HcModbusTcpClient::Connect() start...
+2.1.2.0: 37.331 08.12 11:01:06 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 38.330 08.12 11:01:07 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 39.344 08.12 11:01:08 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 39.344 08.12 11:01:08 连接控制器失败:192.168.1.88
+2.1.2.0: 39.484 08.12 11:01:09 主控制器未连接,启动重新连接.
+2.1.2.0: 39.484 08.12 11:01:09 HcModbusTcpClient::Connect() start...
+2.1.2.0: 40.483 08.12 11:01:10 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 41.481 08.12 11:01:11 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 42.495 08.12 11:01:12 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 42.495 08.12 11:01:12 连接控制器失败:192.168.1.88
+2.1.2.0: 42.635 08.12 11:01:12 主控制器未连接,启动重新连接.
+2.1.2.0: 42.651 08.12 11:01:12 HcModbusTcpClient::Connect() start...
+2.1.2.0: 43.665 08.12 11:01:13 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 44.663 08.12 11:01:14 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 45.662 08.12 11:01:15 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 45.662 08.12 11:01:15 连接控制器失败:192.168.1.88
+2.1.2.0: 45.787 08.12 11:01:15 主控制器未连接,启动重新连接.
+2.1.2.0: 45.787 08.12 11:01:15 HcModbusTcpClient::Connect() start...
+2.1.2.0: 46.785 08.12 11:01:16 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 47.799 08.12 11:01:17 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 48.797 08.12 11:01:18 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 48.797 08.12 11:01:18 连接控制器失败:192.168.1.88
+2.1.2.0: 48.938 08.12 11:01:18 主控制器未连接,启动重新连接.
+2.1.2.0: 48.938 08.12 11:01:18 HcModbusTcpClient::Connect() start...
+2.1.2.0: 49.936 08.12 11:01:19 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 50.935 08.12 11:01:20 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 51.933 08.12 11:01:21 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 51.933 08.12 11:01:21 连接控制器失败:192.168.1.88
+2.1.2.0: 52.089 08.12 11:01:21 主控制器未连接,启动重新连接.
+2.1.2.0: 52.089 08.12 11:01:21 HcModbusTcpClient::Connect() start...
+2.1.2.0: 53.087 08.12 11:01:22 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 54.086 08.12 11:01:23 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 55.084 08.12 11:01:24 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 55.084 08.12 11:01:24 连接控制器失败:192.168.1.88
+2.1.2.0: 55.256 08.12 11:01:24 主控制器未连接,启动重新连接.
+2.1.2.0: 55.256 08.12 11:01:24 HcModbusTcpClient::Connect() start...
+2.1.2.0: 56.254 08.12 11:01:25 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 57.268 08.12 11:01:26 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 58.267 08.12 11:01:27 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 58.267 08.12 11:01:27 连接控制器失败:192.168.1.88
+2.1.2.0: 58.454 08.12 11:01:27 主控制器未连接,启动重新连接.
+2.1.2.0: 58.454 08.12 11:01:27 HcModbusTcpClient::Connect() start...
+2.1.2.0: 59.468 08.12 11:01:28 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 60.466 08.12 11:01:29 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 61.465 08.12 11:01:30 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 61.465 08.12 11:01:30 连接控制器失败:192.168.1.88
+2.1.2.0: 61.621 08.12 11:01:31 主控制器未连接,启动重新连接.
+2.1.2.0: 61.621 08.12 11:01:31 HcModbusTcpClient::Connect() start...
+2.1.2.0: 62.619 08.12 11:01:32 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 63.617 08.12 11:01:33 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 64.616 08.12 11:01:34 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 64.616 08.12 11:01:34 连接控制器失败:192.168.1.88
+2.1.2.0: 64.803 08.12 11:01:34 主控制器未连接,启动重新连接.
+2.1.2.0: 64.803 08.12 11:01:34 HcModbusTcpClient::Connect() start...
+2.1.2.0: 65.801 08.12 11:01:35 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 66.815 08.12 11:01:36 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 67.814 08.12 11:01:37 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 67.814 08.12 11:01:37 连接控制器失败:192.168.1.88
+2.1.2.0: 68.017 08.12 11:01:37 主控制器未连接,启动重新连接.
+2.1.2.0: 68.017 08.12 11:01:37 HcModbusTcpClient::Connect() start...
+2.1.2.0: 69.015 08.12 11:01:38 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 70.013 08.12 11:01:39 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 71.012 08.12 11:01:40 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 71.012 08.12 11:01:40 连接控制器失败:192.168.1.88
+2.1.2.0: 71.027 08.12 11:01:40 主控制器未连接,启动重新连接.
+2.1.2.0: 71.027 08.12 11:01:40 HcModbusTcpClient::Connect() start...
+2.1.2.0: 72.026 08.12 11:01:41 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 73.024 08.12 11:01:42 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 74.023 08.12 11:01:43 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 74.023 08.12 11:01:43 连接控制器失败:192.168.1.88
+2.1.2.0: 74.194 08.12 11:01:43 主控制器未连接,启动重新连接.
+2.1.2.0: 74.194 08.12 11:01:43 HcModbusTcpClient::Connect() start...
+2.1.2.0: 75.193 08.12 11:01:44 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 76.207 08.12 11:01:45 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 77.205 08.12 11:01:46 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 77.205 08.12 11:01:46 连接控制器失败:192.168.1.88
+2.1.2.0: 77.361 08.12 11:01:46 主控制器未连接,启动重新连接.
+2.1.2.0: 77.361 08.12 11:01:46 HcModbusTcpClient::Connect() start...
+2.1.2.0: 78.360 08.12 11:01:47 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 79.374 08.12 11:01:48 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 80.372 08.12 11:01:49 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 80.372 08.12 11:01:49 连接控制器失败:192.168.1.88
+2.1.2.0: 80.559 08.12 11:01:50 主控制器未连接,启动重新连接.
+2.1.2.0: 80.559 08.12 11:01:50 HcModbusTcpClient::Connect() start...
+2.1.2.0: 81.558 08.12 11:01:51 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 82.556 08.12 11:01:52 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 83.554 08.12 11:01:53 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 83.554 08.12 11:01:53 连接控制器失败:192.168.1.88
+2.1.2.0: 83.742 08.12 11:01:53 主控制器未连接,启动重新连接.
+2.1.2.0: 83.742 08.12 11:01:53 HcModbusTcpClient::Connect() start...
+2.1.2.0: 84.740 08.12 11:01:54 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 85.754 08.12 11:01:55 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 86.596 08.12 11:01:56 Delete old log thread Quit Complete!
+2.1.2.0: 86.752 08.12 11:01:56 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 86.752 08.12 11:01:56 连接控制器失败:192.168.1.88
+2.1.2.0: 86.940 08.12 11:01:56 主控制器未连接,启动重新连接.
+2.1.2.0: 86.940 08.12 11:01:56 HcModbusTcpClient::Connect() start...
+2.1.2.0: 87.938 08.12 11:01:57 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 88.936 08.12 11:01:58 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 89.935 08.12 11:01:59 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 89.935 08.12 11:01:59 连接控制器失败:192.168.1.88
+2.1.2.0: 90.091 08.12 11:01:59 主控制器未连接,启动重新连接.
+2.1.2.0: 90.106 08.12 11:01:59 HcModbusTcpClient::Connect() start...
+2.1.2.0: 91.105 08.12 11:02:00 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 92.103 08.12 11:02:01 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 93.117 08.12 11:02:02 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 93.117 08.12 11:02:02 连接控制器失败:192.168.1.88
+2.1.2.0: 93.304 08.12 11:02:02 主控制器未连接,启动重新连接.
+2.1.2.0: 93.304 08.12 11:02:02 HcModbusTcpClient::Connect() start...
+2.1.2.0: 94.303 08.12 11:02:03 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 95.301 08.12 11:02:04 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 96.300 08.12 11:02:05 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 96.300 08.12 11:02:05 连接控制器失败:192.168.1.88
+2.1.2.0: 96.471 08.12 11:02:05 主控制器未连接,启动重新连接.
+2.1.2.0: 96.471 08.12 11:02:05 HcModbusTcpClient::Connect() start...
+2.1.2.0: 97.470 08.12 11:02:06 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 98.468 08.12 11:02:07 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 99.482 08.12 11:02:09 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 99.482 08.12 11:02:09 连接控制器失败:192.168.1.88
+2.1.2.0: 99.700 08.12 11:02:09 主控制器未连接,启动重新连接.
+2.1.2.0: 99.700 08.12 11:02:09 HcModbusTcpClient::Connect() start...
+2.1.2.0: 100.699 08.12 11:02:10 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 101.697 08.12 11:02:11 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 102.696 08.12 11:02:12 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 102.696 08.12 11:02:12 连接控制器失败:192.168.1.88
+2.1.2.0: 102.852 08.12 11:02:12 主控制器未连接,启动重新连接.
+2.1.2.0: 102.852 08.12 11:02:12 HcModbusTcpClient::Connect() start...
+2.1.2.0: 103.850 08.12 11:02:13 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 104.849 08.12 11:02:14 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 105.847 08.12 11:02:15 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 105.863 08.12 11:02:15 连接控制器失败:192.168.1.88
+2.1.2.0: 106.019 08.12 11:02:15 主控制器未连接,启动重新连接.
+2.1.2.0: 106.019 08.12 11:02:15 HcModbusTcpClient::Connect() start...
+2.1.2.0: 107.017 08.12 11:02:16 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 108.031 08.12 11:02:17 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 109.029 08.12 11:02:18 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 109.029 08.12 11:02:18 连接控制器失败:192.168.1.88
+2.1.2.0: 109.170 08.12 11:02:18 主控制器未连接,启动重新连接.
+2.1.2.0: 109.170 08.12 11:02:18 HcModbusTcpClient::Connect() start...
+2.1.2.0: 110.168 08.12 11:02:19 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 111.167 08.12 11:02:20 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 112.181 08.12 11:02:21 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 112.181 08.12 11:02:21 连接控制器失败:192.168.1.88
+2.1.2.0: 112.352 08.12 11:02:21 主控制器未连接,启动重新连接.
+2.1.2.0: 112.352 08.12 11:02:21 HcModbusTcpClient::Connect() start...
+2.1.2.0: 113.351 08.12 11:02:22 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 114.349 08.12 11:02:23 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 115.347 08.12 11:02:24 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 115.347 08.12 11:02:24 连接控制器失败:192.168.1.88
+2.1.2.0: 115.519 08.12 11:02:25 主控制器未连接,启动重新连接.
+2.1.2.0: 115.519 08.12 11:02:25 HcModbusTcpClient::Connect() start...
+2.1.2.0: 116.517 08.12 11:02:26 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 117.531 08.12 11:02:27 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 118.545 08.12 11:02:28 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 118.545 08.12 11:02:28 连接控制器失败:192.168.1.88
+2.1.2.0: 118.733 08.12 11:02:28 主控制器未连接,启动重新连接.
+2.1.2.0: 118.733 08.12 11:02:28 HcModbusTcpClient::Connect() start...
+2.1.2.0: 119.731 08.12 11:02:29 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 120.729 08.12 11:02:30 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 121.728 08.12 11:02:31 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 121.743 08.12 11:02:31 连接控制器失败:192.168.1.88
+2.1.2.0: 121.946 08.12 11:02:31 主控制器未连接,启动重新连接.
+2.1.2.0: 121.946 08.12 11:02:31 HcModbusTcpClient::Connect() start...
+2.1.2.0: 122.945 08.12 11:02:32 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 123.943 08.12 11:02:33 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 124.957 08.12 11:02:34 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 124.957 08.12 11:02:34 连接控制器失败:192.168.1.88
+2.1.2.0: 125.160 08.12 11:02:34 主控制器未连接,启动重新连接.
+2.1.2.0: 125.160 08.12 11:02:34 HcModbusTcpClient::Connect() start...
+2.1.2.0: 126.158 08.12 11:02:35 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 127.172 08.12 11:02:36 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 128.171 08.12 11:02:37 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 128.171 08.12 11:02:37 连接控制器失败:192.168.1.88
+2.1.2.0: 128.373 08.12 11:02:37 主控制器未连接,启动重新连接.
+2.1.2.0: 128.373 08.12 11:02:37 HcModbusTcpClient::Connect() start...
+2.1.2.0: 129.372 08.12 11:02:38 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 130.386 08.12 11:02:39 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 131.384 08.12 11:02:40 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 131.384 08.12 11:02:40 连接控制器失败:192.168.1.88
+2.1.2.0: 131.525 08.12 11:02:41 主控制器未连接,启动重新连接.
+2.1.2.0: 131.525 08.12 11:02:41 HcModbusTcpClient::Connect() start...
+2.1.2.0: 132.523 08.12 11:02:42 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 133.521 08.12 11:02:43 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 134.536 08.12 11:02:44 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 134.536 08.12 11:02:44 连接控制器失败:192.168.1.88
+2.1.2.0: 134.676 08.12 11:02:44 主控制器未连接,启动重新连接.
+2.1.2.0: 134.692 08.12 11:02:44 HcModbusTcpClient::Connect() start...
+2.1.2.0: 135.690 08.12 11:02:45 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 136.688 08.12 11:02:46 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 137.687 08.12 11:02:47 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 137.687 08.12 11:02:47 连接控制器失败:192.168.1.88
+2.1.2.0: 137.827 08.12 11:02:47 主控制器未连接,启动重新连接.
+2.1.2.0: 137.827 08.12 11:02:47 HcModbusTcpClient::Connect() start...
+2.1.2.0: 138.826 08.12 11:02:48 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 139.824 08.12 11:02:49 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 140.822 08.12 11:02:50 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 140.838 08.12 11:02:50 连接控制器失败:192.168.1.88
+2.1.2.0: 140.978 08.12 11:02:50 主控制器未连接,启动重新连接.
+2.1.2.0: 140.978 08.12 11:02:50 HcModbusTcpClient::Connect() start...
+2.1.2.0: 141.977 08.12 11:02:51 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 142.975 08.12 11:02:52 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 143.974 08.12 11:02:53 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 143.989 08.12 11:02:53 连接控制器失败:192.168.1.88
+2.1.2.0: 144.130 08.12 11:02:53 主控制器未连接,启动重新连接.
+2.1.2.0: 144.130 08.12 11:02:53 HcModbusTcpClient::Connect() start...
+2.1.2.0: 145.128 08.12 11:02:54 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 146.126 08.12 11:02:55 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 147.125 08.12 11:02:56 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 147.125 08.12 11:02:56 连接控制器失败:192.168.1.88
+2.1.2.0: 147.281 08.12 11:02:56 主控制器未连接,启动重新连接.
+2.1.2.0: 147.281 08.12 11:02:56 HcModbusTcpClient::Connect() start...
+2.1.2.0: 148.279 08.12 11:02:57 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 149.278 08.12 11:02:58 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 150.276 08.12 11:02:59 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 150.292 08.12 11:02:59 连接控制器失败:192.168.1.88
+2.1.2.0: 150.338 08.12 11:02:59 主控制器未连接,启动重新连接.
+2.1.2.0: 150.338 08.12 11:02:59 HcModbusTcpClient::Connect() start...
+2.1.2.0: 151.337 08.12 11:03:00 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 152.335 08.12 11:03:01 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 153.349 08.12 11:03:02 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 153.349 08.12 11:03:02 连接控制器失败:192.168.1.88
+2.1.2.0: 153.490 08.12 11:03:03 主控制器未连接,启动重新连接.
+2.1.2.0: 153.490 08.12 11:03:03 HcModbusTcpClient::Connect() start...
+2.1.2.0: 154.488 08.12 11:03:04 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 155.486 08.12 11:03:05 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 156.485 08.12 11:03:06 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 156.500 08.12 11:03:06 连接控制器失败:192.168.1.88
+2.1.2.0: 156.641 08.12 11:03:06 主控制器未连接,启动重新连接.
+2.1.2.0: 156.641 08.12 11:03:06 HcModbusTcpClient::Connect() start...
+2.1.2.0: 157.639 08.12 11:03:07 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 158.638 08.12 11:03:08 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 159.636 08.12 11:03:09 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 159.652 08.12 11:03:09 连接控制器失败:192.168.1.88
+2.1.2.0: 159.792 08.12 11:03:09 主控制器未连接,启动重新连接.
+2.1.2.0: 159.792 08.12 11:03:09 HcModbusTcpClient::Connect() start...
+2.1.2.0: 160.790 08.12 11:03:10 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 161.789 08.12 11:03:11 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 162.787 08.12 11:03:12 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 162.803 08.12 11:03:12 连接控制器失败:192.168.1.88
+2.1.2.0: 162.943 08.12 11:03:12 主控制器未连接,启动重新连接.
+2.1.2.0: 162.943 08.12 11:03:12 HcModbusTcpClient::Connect() start...
+2.1.2.0: 163.942 08.12 11:03:13 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 164.940 08.12 11:03:14 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 165.954 08.12 11:03:15 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 165.954 08.12 11:03:15 连接控制器失败:192.168.1.88
+2.1.2.0: 166.095 08.12 11:03:15 主控制器未连接,启动重新连接.
+2.1.2.0: 166.095 08.12 11:03:15 HcModbusTcpClient::Connect() start...
+2.1.2.0: 167.093 08.12 11:03:16 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 168.091 08.12 11:03:17 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 169.090 08.12 11:03:18 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 169.090 08.12 11:03:18 连接控制器失败:192.168.1.88
+2.1.2.0: 169.729 08.12 11:03:19 主控制器未连接,启动重新连接.
+2.1.2.0: 169.729 08.12 11:03:19 HcModbusTcpClient::Connect() start...
+2.1.2.0: 170.728 08.12 11:03:20 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 171.726 08.12 11:03:21 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 172.725 08.12 11:03:22 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 172.725 08.12 11:03:22 连接控制器失败:192.168.1.88
+2.1.2.0: 172.865 08.12 11:03:22 主控制器未连接,启动重新连接.
+2.1.2.0: 172.865 08.12 11:03:22 HcModbusTcpClient::Connect() start...
+2.1.2.0: 173.005 08.12 11:03:22 Delete old log thread Quit Complete!
+2.1.2.0: 173.863 08.12 11:03:23 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 174.862 08.12 11:03:24 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 175.860 08.12 11:03:25 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 175.860 08.12 11:03:25 连接控制器失败:192.168.1.88
+2.1.2.0: 176.047 08.12 11:03:25 主控制器未连接,启动重新连接.
+2.1.2.0: 176.047 08.12 11:03:25 HcModbusTcpClient::Connect() start...
+2.1.2.0: 177.061 08.12 11:03:26 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 178.060 08.12 11:03:27 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 179.058 08.12 11:03:28 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 179.058 08.12 11:03:28 连接控制器失败:192.168.1.88
+2.1.2.0: 179.199 08.12 11:03:28 主控制器未连接,启动重新连接.
+2.1.2.0: 179.214 08.12 11:03:28 HcModbusTcpClient::Connect() start...
+2.1.2.0: 180.213 08.12 11:03:29 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 181.211 08.12 11:03:30 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 182.209 08.12 11:03:31 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 182.209 08.12 11:03:31 连接控制器失败:192.168.1.88
+2.1.2.0: 182.350 08.12 11:03:31 主控制器未连接,启动重新连接.
+2.1.2.0: 182.365 08.12 11:03:31 HcModbusTcpClient::Connect() start...
+2.1.2.0: 183.364 08.12 11:03:32 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 184.362 08.12 11:03:33 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 185.361 08.12 11:03:34 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 185.376 08.12 11:03:34 连接控制器失败:192.168.1.88
+2.1.2.0: 185.532 08.12 11:03:35 主控制器未连接,启动重新连接.
+2.1.2.0: 185.548 08.12 11:03:35 HcModbusTcpClient::Connect() start...
+2.1.2.0: 186.546 08.12 11:03:36 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 187.545 08.12 11:03:37 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 188.543 08.12 11:03:38 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 188.543 08.12 11:03:38 连接控制器失败:192.168.1.88
+2.1.2.0: 188.683 08.12 11:03:38 主控制器未连接,启动重新连接.
+2.1.2.0: 188.683 08.12 11:03:38 HcModbusTcpClient::Connect() start...
+2.1.2.0: 189.682 08.12 11:03:39 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 190.680 08.12 11:03:40 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 191.679 08.12 11:03:41 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 191.679 08.12 11:03:41 连接控制器失败:192.168.1.88
+2.1.2.0: 191.835 08.12 11:03:41 主控制器未连接,启动重新连接.
+2.1.2.0: 191.850 08.12 11:03:41 HcModbusTcpClient::Connect() start...
+2.1.2.0: 192.864 08.12 11:03:42 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 193.878 08.12 11:03:43 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 194.877 08.12 11:03:44 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 194.877 08.12 11:03:44 连接控制器失败:192.168.1.88
+2.1.2.0: 195.001 08.12 11:03:44 主控制器未连接,启动重新连接.
+2.1.2.0: 195.001 08.12 11:03:44 HcModbusTcpClient::Connect() start...
+2.1.2.0: 196.000 08.12 11:03:45 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 196.998 08.12 11:03:46 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 198.012 08.12 11:03:47 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 198.012 08.12 11:03:47 连接控制器失败:192.168.1.88
+2.1.2.0: 198.153 08.12 11:03:47 主控制器未连接,启动重新连接.
+2.1.2.0: 198.153 08.12 11:03:47 HcModbusTcpClient::Connect() start...
+2.1.2.0: 199.151 08.12 11:03:48 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 200.150 08.12 11:03:49 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 201.148 08.12 11:03:50 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 201.148 08.12 11:03:50 连接控制器失败:192.168.1.88
+2.1.2.0: 201.320 08.12 11:03:50 主控制器未连接,启动重新连接.
+2.1.2.0: 201.320 08.12 11:03:50 HcModbusTcpClient::Connect() start...
+2.1.2.0: 202.318 08.12 11:03:51 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 203.316 08.12 11:03:52 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 204.315 08.12 11:03:53 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 204.330 08.12 11:03:53 连接控制器失败:192.168.1.88
+2.1.2.0: 204.408 08.12 11:03:53 User: Operator, Perform the action: Software Exit Start
+2.1.2.0: 204.798 08.12 11:03:54 User: Operator, Perform the action: Software Exit, Exit State: Successful
+2.1.2.0: 204.814 08.12 11:03:54 System Thread Triggered Quit Command...
+2.1.2.0: 204.814 08.12 11:03:54 System Thread Quit Complete!
+2.1.2.0: 204.814 08.12 11:03:54 System Thread Deleted Successfully!
+2.1.2.0: 204.814 08.12 11:03:54  Thread Triggered Quit Command...
+2.1.2.0: 204.830 08.12 11:03:54  Thread Quit Complete!
+2.1.2.0: 204.830 08.12 11:03:54  Thread Deleted Successfully!
+2.1.2.0: 204.830 08.12 11:03:54  Thread Triggered Quit Command...
+2.1.2.0: 204.830 08.12 11:03:54  Thread Deleted Successfully!
+2.1.2.0: 204.830 08.12 11:03:54  Thread Triggered Quit Command...
+2.1.2.0: 204.830 08.12 11:03:54  Thread Quit Complete!
+2.1.2.0: 204.830 08.12 11:03:54  Thread Deleted Successfully!
+2.1.2.0: 204.830 08.12 11:03:54  Thread Triggered Quit Command...
+2.1.2.0: 204.830 08.12 11:03:54  Thread Deleted Successfully!
+2.1.2.0: 204.830 08.12 11:03:54 Run0 Thread Triggered Quit Command...
+2.1.2.0: 204.876 08.12 11:03:54 Run0 Thread Quit Complete!
+2.1.2.0: 204.876 08.12 11:03:54 Run0 Thread Deleted Successfully!
+2.1.2.0: 204.876 08.12 11:03:54 Run0 Thread Triggered Quit Command...
+2.1.2.0: 204.876 08.12 11:03:54 Run0 Thread Deleted Successfully!
+2.1.2.0: 204.876 08.12 11:03:54 CheckSwitch Thread Triggered Quit Command...
+2.1.2.0: 204.876 08.12 11:03:54 CheckSwitch Thread Quit Complete!
+2.1.2.0: 204.876 08.12 11:03:54 CheckSwitch Thread Deleted Successfully!
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 HFC9014.SetServoOn().
+2.1.2.0: 204.876 08.12 11:03:54 deleting MachineTimeManager...
+2.1.2.0: 204.876 08.12 11:03:54 deleting ModuleManager...
+2.1.2.0: 204.876 08.12 11:03:54 deleting CDeviceManager object...
+2.1.2.0: 204.876 08.12 11:03:54 deleting EventManager object...
+2.1.2.0: 204.876 08.12 11:03:54 Machine Shut Down Sequence Done, Software Will Now Exit

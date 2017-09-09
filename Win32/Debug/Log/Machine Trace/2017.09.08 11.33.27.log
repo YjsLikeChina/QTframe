@@ -1,0 +1,13 @@
+: 0.249 09.08 11:33:27 HcModbusTcpClient::Connect() start...
+: 1.263 09.08 11:33:28 Client Cannot Connect the server 192.168.1.88:502.
+: 2.262 09.08 11:33:29 Client Cannot Connect the server 192.168.1.88:502.
+: 3.260 09.08 11:33:30 Client Cannot Connect the server 192.168.1.88:502.
+: 3.276 09.08 11:33:30 连接控制器失败:192.168.1.88
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!
+: 12.324 09.08 11:33:39 参数类型设定错误,调用 SetBOOLToPLC() 写入PLC失败!

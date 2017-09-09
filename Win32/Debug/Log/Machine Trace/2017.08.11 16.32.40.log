@@ -1,0 +1,494 @@
+2.1.2.0: 0.016 08.11 16:32:40 Software Begin to Start ...
+2.1.2.0: 0.016 08.11 16:32:40 motor ConfigModule for normal plus control.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.I_OpenDevice()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.110 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.125 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.11 16:32:40 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.11 16:32:40 Event EndOfLotEvt Reset
+2.1.2.0: 0.141 08.11 16:32:40  run created successfully
+2.1.2.0: 0.141 08.11 16:32:40 Event EndOfLotEvt Reset
+2.1.2.0: 0.141 08.11 16:32:40  run created successfully
+2.1.2.0: 0.141 08.11 16:32:40 Event EndOfLotEvt Reset
+2.1.2.0: 0.141 08.11 16:32:40  run created successfully
+2.1.2.0: 0.141 08.11 16:32:40  thread begin
+2.1.2.0: 0.141 08.11 16:32:40 RunCtrl thread begin
+2.1.2.0: 0.141 08.11 16:32:40 RunCtrl object construction finished
+2.1.2.0: 0.156 08.11 16:32:40 Delete old log thread Quit Complete!
+2.1.2.0: 0.156 08.11 16:32:40 Motor0 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor1 Location0Postion = 4.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor2 Location0Postion = 65.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor3 Location0Postion = 50.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor4 Location0Postion = 30.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor5 Location0Postion = 90.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor6 Location0Postion = 7.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor7 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor8 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor9 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor10 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor11 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor12 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor13 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor14 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor15 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor16 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor17 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor18 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor19 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor20 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor21 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor22 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Motor23 Location0Postion = 0.000000
+2.1.2.0: 0.156 08.11 16:32:40 Param is loaded.
+2.1.2.0: 2.652 08.11 16:32:42 HcModbusTcpClient::Connect() start...
+2.1.2.0: 2.652 08.11 16:32:42 HcModbusTcpClient::Connect() finished.
+2.1.2.0: 2.668 08.11 16:32:42 Motor0 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor1 Location0Postion = 4.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor2 Location0Postion = 65.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor3 Location0Postion = 50.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor4 Location0Postion = 30.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor5 Location0Postion = 90.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor6 Location0Postion = 7.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor7 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor8 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor9 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor10 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor11 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor12 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor13 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor14 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor15 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor16 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor17 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor18 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor19 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor20 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor21 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor22 Location0Postion = 0.000000
+2.1.2.0: 2.668 08.11 16:32:42 Motor23 Location0Postion = 0.000000
+2.1.2.0: 3.074 08.11 16:32:43 Param is loaded.
+2.1.2.0: 3.183 08.11 16:32:43 
+2.1.2.0: 3.183 08.11 16:32:43 User: , Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 3.261 08.11 16:32:43 User: , Perform the action: Axis Selected, Current Axis: 2
+2.1.2.0: 9.860 08.11 16:32:50 工程师 Login
+2.1.2.0: 10.624 08.11 16:32:50 ReadPLCData Thread is Running!
+2.1.2.0: 10.671 08.11 16:32:50 AndonMachineStatus: 上传三色灯状态: Y
+2.1.2.0: 10.671 08.11 16:32:50 AndonMachineStatus: 上传报警信息
+2.1.2.0: 11.669 08.11 16:32:51 ReadPLCData Thread is Running!
+2.1.2.0: 12.668 08.11 16:32:52 ReadPLCData Thread is Running!
+2.1.2.0: 12.730 08.11 16:32:52 User: 工程师, Perform the action: Change Software Page, Current Page: Parameter Setting Page
+2.1.2.0: 13.682 08.11 16:32:53 ReadPLCData Thread is Running!
+2.1.2.0: 14.540 08.11 16:32:54 User: 工程师, Perform the action: Laser2 Enable Selected, Current Laser2 State: 0
+2.1.2.0: 14.540 08.11 16:32:54 User: 工程师, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 14.540 08.11 16:32:54 User: 工程师, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 14.540 08.11 16:32:54 User: 工程师, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 14.540 08.11 16:32:54 User: 工程师, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 14.555 08.11 16:32:54 
+2.1.2.0: 14.555 08.11 16:32:54 User: 工程师, Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 14.555 08.11 16:32:54 
+2.1.2.0: 14.571 08.11 16:32:54 User: 工程师, Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 14.571 08.11 16:32:54 User: 工程师, Perform the action: Change Software Page, Current Page: Product Editor Page
+2.1.2.0: 14.696 08.11 16:32:54 ReadPLCData Thread is Running!
+2.1.2.0: 15.694 08.11 16:32:55 ReadPLCData Thread is Running!
+2.1.2.0: 16.396 08.11 16:32:56 Motor0 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor1 Location0Postion = 4.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor2 Location0Postion = 65.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor3 Location0Postion = 50.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor4 Location0Postion = 30.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor5 Location0Postion = 90.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor6 Location0Postion = 7.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor7 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor8 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor9 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor10 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor11 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor12 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor13 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor14 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor15 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor16 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor17 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor18 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor19 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor20 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor21 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor22 Location0Postion = 0.000000
+2.1.2.0: 16.396 08.11 16:32:56 Motor23 Location0Postion = 0.000000
+2.1.2.0: 16.708 08.11 16:32:56 ReadPLCData Thread is Running!
+2.1.2.0: 16.802 08.11 16:32:56 Param is loaded.
+2.1.2.0: 16.817 08.11 16:32:56 All axis home start...
+2.1.2.0: 73.180 08.11 16:33:53 激光1轴轴归零开始
+2.1.2.0: 73.180 08.11 16:33:53 User: 工程师, Perform the action: Set Current Package, Current Package Name: ShuangCopy1
+2.1.2.0: 73.180 08.11 16:33:53 ReadPLCData Thread is Running!
+2.1.2.0: 73.430 08.11 16:33:53 激光2轴轴归零开始
+2.1.2.0: 73.680 08.11 16:33:53 放卷纠偏轴轴归零开始
+2.1.2.0: 73.929 08.11 16:33:54 二级纠偏轴轴归零开始
+2.1.2.0: 74.179 08.11 16:33:54 二级纠偏整体移动轴轴归零开始
+2.1.2.0: 74.210 08.11 16:33:54 ReadPLCData Thread is Running!
+2.1.2.0: 75.208 08.11 16:33:55 ReadPLCData Thread is Running!
+2.1.2.0: 76.222 08.11 16:33:56 ReadPLCData Thread is Running!
+2.1.2.0: 77.237 08.11 16:33:57 ReadPLCData Thread is Running!
+2.1.2.0: 78.235 08.11 16:33:58 ReadPLCData Thread is Running!
+2.1.2.0: 79.249 08.11 16:33:59 ReadPLCData Thread is Running!
+2.1.2.0: 80.247 08.11 16:34:00 ReadPLCData Thread is Running!
+2.1.2.0: 81.261 08.11 16:34:01 ReadPLCData Thread is Running!
+2.1.2.0: 82.260 08.11 16:34:02 ReadPLCData Thread is Running!
+2.1.2.0: 83.258 08.11 16:34:03 ReadPLCData Thread is Running!
+2.1.2.0: 84.272 08.11 16:34:04 ReadPLCData Thread is Running!
+2.1.2.0: 85.271 08.11 16:34:05 ReadPLCData Thread is Running!
+2.1.2.0: 86.285 08.11 16:34:06 ReadPLCData Thread is Running!
+2.1.2.0: 86.565 08.11 16:34:06 Delete old log thread Quit Complete!
+2.1.2.0: 87.299 08.11 16:34:07 ReadPLCData Thread is Running!
+2.1.2.0: 88.297 08.11 16:34:08 ReadPLCData Thread is Running!
+2.1.2.0: 89.295 08.11 16:34:09 ReadPLCData Thread is Running!
+2.1.2.0: 90.309 08.11 16:34:10 ReadPLCData Thread is Running!
+2.1.2.0: 91.323 08.11 16:34:11 ReadPLCData Thread is Running!
+2.1.2.0: 92.322 08.11 16:34:12 ReadPLCData Thread is Running!
+2.1.2.0: 93.336 08.11 16:34:13 ReadPLCData Thread is Running!
+2.1.2.0: 94.350 08.11 16:34:14 ReadPLCData Thread is Running!
+2.1.2.0: 95.364 08.11 16:34:15 ReadPLCData Thread is Running!
+2.1.2.0: 96.362 08.11 16:34:16 ReadPLCData Thread is Running!
+2.1.2.0: 97.376 08.11 16:34:17 ReadPLCData Thread is Running!
+2.1.2.0: 98.375 08.11 16:34:18 ReadPLCData Thread is Running!
+2.1.2.0: 99.373 08.11 16:34:19 ReadPLCData Thread is Running!
+2.1.2.0: 100.387 08.11 16:34:20 ReadPLCData Thread is Running!
+2.1.2.0: 101.401 08.11 16:34:21 ReadPLCData Thread is Running!
+2.1.2.0: 102.399 08.11 16:34:22 ReadPLCData Thread is Running!
+2.1.2.0: 103.413 08.11 16:34:23 ReadPLCData Thread is Running!
+2.1.2.0: 104.427 08.11 16:34:24 ReadPLCData Thread is Running!
+2.1.2.0: 105.426 08.11 16:34:25 ReadPLCData Thread is Running!
+2.1.2.0: 106.424 08.11 16:34:26 ReadPLCData Thread is Running!
+2.1.2.0: 107.438 08.11 16:34:27 ReadPLCData Thread is Running!
+2.1.2.0: 108.437 08.11 16:34:28 ReadPLCData Thread is Running!
+2.1.2.0: 109.451 08.11 16:34:29 ReadPLCData Thread is Running!
+2.1.2.0: 110.449 08.11 16:34:30 ReadPLCData Thread is Running!
+2.1.2.0: 111.448 08.11 16:34:31 ReadPLCData Thread is Running!
+2.1.2.0: 112.462 08.11 16:34:32 ReadPLCData Thread is Running!
+2.1.2.0: 113.460 08.11 16:34:33 ReadPLCData Thread is Running!
+2.1.2.0: 114.474 08.11 16:34:34 ReadPLCData Thread is Running!
+2.1.2.0: 115.472 08.11 16:34:35 ReadPLCData Thread is Running!
+2.1.2.0: 116.471 08.11 16:34:36 ReadPLCData Thread is Running!
+2.1.2.0: 117.485 08.11 16:34:37 ReadPLCData Thread is Running!
+2.1.2.0: 118.483 08.11 16:34:38 ReadPLCData Thread is Running!
+2.1.2.0: 119.497 08.11 16:34:39 ReadPLCData Thread is Running!
+2.1.2.0: 120.496 08.11 16:34:40 ReadPLCData Thread is Running!
+2.1.2.0: 121.494 08.11 16:34:41 ReadPLCData Thread is Running!
+2.1.2.0: 122.508 08.11 16:34:42 ReadPLCData Thread is Running!
+2.1.2.0: 123.522 08.11 16:34:43 ReadPLCData Thread is Running!
+2.1.2.0: 124.520 08.11 16:34:44 ReadPLCData Thread is Running!
+2.1.2.0: 125.519 08.11 16:34:45 ReadPLCData Thread is Running!
+2.1.2.0: 126.533 08.11 16:34:46 ReadPLCData Thread is Running!
+2.1.2.0: 127.531 08.11 16:34:47 ReadPLCData Thread is Running!
+2.1.2.0: 128.545 08.11 16:34:48 ReadPLCData Thread is Running!
+2.1.2.0: 129.544 08.11 16:34:49 ReadPLCData Thread is Running!
+2.1.2.0: 130.542 08.11 16:34:50 ReadPLCData Thread is Running!
+2.1.2.0: 131.556 08.11 16:34:51 ReadPLCData Thread is Running!
+2.1.2.0: 132.554 08.11 16:34:52 ReadPLCData Thread is Running!
+2.1.2.0: 133.568 08.11 16:34:53 ReadPLCData Thread is Running!
+2.1.2.0: 134.567 08.11 16:34:54 ReadPLCData Thread is Running!
+2.1.2.0: 135.581 08.11 16:34:55 ReadPLCData Thread is Running!
+2.1.2.0: 136.579 08.11 16:34:56 ReadPLCData Thread is Running!
+2.1.2.0: 137.578 08.11 16:34:57 ReadPLCData Thread is Running!
+2.1.2.0: 138.592 08.11 16:34:58 ReadPLCData Thread is Running!
+2.1.2.0: 139.590 08.11 16:34:59 ReadPLCData Thread is Running!
+2.1.2.0: 140.604 08.11 16:35:00 ReadPLCData Thread is Running!
+2.1.2.0: 141.603 08.11 16:35:01 ReadPLCData Thread is Running!
+2.1.2.0: 142.617 08.11 16:35:02 ReadPLCData Thread is Running!
+2.1.2.0: 143.615 08.11 16:35:03 ReadPLCData Thread is Running!
+2.1.2.0: 144.613 08.11 16:35:04 ReadPLCData Thread is Running!
+2.1.2.0: 145.627 08.11 16:35:05 ReadPLCData Thread is Running!
+2.1.2.0: 146.626 08.11 16:35:06 ReadPLCData Thread is Running!
+2.1.2.0: 147.640 08.11 16:35:07 ReadPLCData Thread is Running!
+2.1.2.0: 148.638 08.11 16:35:08 ReadPLCData Thread is Running!
+2.1.2.0: 149.637 08.11 16:35:09 ReadPLCData Thread is Running!
+2.1.2.0: 150.651 08.11 16:35:10 ReadPLCData Thread is Running!
+2.1.2.0: 151.649 08.11 16:35:11 ReadPLCData Thread is Running!
+2.1.2.0: 152.663 08.11 16:35:12 ReadPLCData Thread is Running!
+2.1.2.0: 153.661 08.11 16:35:13 ReadPLCData Thread is Running!
+2.1.2.0: 154.660 08.11 16:35:14 ReadPLCData Thread is Running!
+2.1.2.0: 155.674 08.11 16:35:15 ReadPLCData Thread is Running!
+2.1.2.0: 156.672 08.11 16:35:16 ReadPLCData Thread is Running!
+2.1.2.0: 157.686 08.11 16:35:17 ReadPLCData Thread is Running!
+2.1.2.0: 158.685 08.11 16:35:18 ReadPLCData Thread is Running!
+2.1.2.0: 159.683 08.11 16:35:19 ReadPLCData Thread is Running!
+2.1.2.0: 160.697 08.11 16:35:20 ReadPLCData Thread is Running!
+2.1.2.0: 161.695 08.11 16:35:21 ReadPLCData Thread is Running!
+2.1.2.0: 162.709 08.11 16:35:22 ReadPLCData Thread is Running!
+2.1.2.0: 163.708 08.11 16:35:23 ReadPLCData Thread is Running!
+2.1.2.0: 164.722 08.11 16:35:24 ReadPLCData Thread is Running!
+2.1.2.0: 165.720 08.11 16:35:25 ReadPLCData Thread is Running!
+2.1.2.0: 166.719 08.11 16:35:26 ReadPLCData Thread is Running!
+2.1.2.0: 167.733 08.11 16:35:27 ReadPLCData Thread is Running!
+2.1.2.0: 168.731 08.11 16:35:28 ReadPLCData Thread is Running!
+2.1.2.0: 169.745 08.11 16:35:29 ReadPLCData Thread is Running!
+2.1.2.0: 170.744 08.11 16:35:30 ReadPLCData Thread is Running!
+2.1.2.0: 171.742 08.11 16:35:31 ReadPLCData Thread is Running!
+2.1.2.0: 172.756 08.11 16:35:32 ReadPLCData Thread is Running!
+2.1.2.0: 172.974 08.11 16:35:33 Delete old log thread Quit Complete!
+2.1.2.0: 173.754 08.11 16:35:33 ReadPLCData Thread is Running!
+2.1.2.0: 174.768 08.11 16:35:34 ReadPLCData Thread is Running!
+2.1.2.0: 175.767 08.11 16:35:35 ReadPLCData Thread is Running!
+2.1.2.0: 176.781 08.11 16:35:36 ReadPLCData Thread is Running!
+2.1.2.0: 177.779 08.11 16:35:37 ReadPLCData Thread is Running!
+2.1.2.0: 178.793 08.11 16:35:38 ReadPLCData Thread is Running!
+2.1.2.0: 179.792 08.11 16:35:39 ReadPLCData Thread is Running!
+2.1.2.0: 180.790 08.11 16:35:40 ReadPLCData Thread is Running!
+2.1.2.0: 181.804 08.11 16:35:41 ReadPLCData Thread is Running!
+2.1.2.0: 182.802 08.11 16:35:42 ReadPLCData Thread is Running!
+2.1.2.0: 183.816 08.11 16:35:43 ReadPLCData Thread is Running!
+2.1.2.0: 184.815 08.11 16:35:44 ReadPLCData Thread is Running!
+2.1.2.0: 185.829 08.11 16:35:45 ReadPLCData Thread is Running!
+2.1.2.0: 186.827 08.11 16:35:47 ReadPLCData Thread is Running!
+2.1.2.0: 187.826 08.11 16:35:48 ReadPLCData Thread is Running!
+2.1.2.0: 188.840 08.11 16:35:49 ReadPLCData Thread is Running!
+2.1.2.0: 189.838 08.11 16:35:50 ReadPLCData Thread is Running!
+2.1.2.0: 190.836 08.11 16:35:51 ReadPLCData Thread is Running!
+2.1.2.0: 191.850 08.11 16:35:52 ReadPLCData Thread is Running!
+2.1.2.0: 192.864 08.11 16:35:53 ReadPLCData Thread is Running!
+2.1.2.0: 193.863 08.11 16:35:54 ReadPLCData Thread is Running!
+2.1.2.0: 194.877 08.11 16:35:55 ReadPLCData Thread is Running!
+2.1.2.0: 195.875 08.11 16:35:56 ReadPLCData Thread is Running!
+2.1.2.0: 196.874 08.11 16:35:57 ReadPLCData Thread is Running!
+2.1.2.0: 197.888 08.11 16:35:58 ReadPLCData Thread is Running!
+2.1.2.0: 198.886 08.11 16:35:59 ReadPLCData Thread is Running!
+2.1.2.0: 199.900 08.11 16:36:00 ReadPLCData Thread is Running!
+2.1.2.0: 200.898 08.11 16:36:01 ReadPLCData Thread is Running!
+2.1.2.0: 201.913 08.11 16:36:02 ReadPLCData Thread is Running!
+2.1.2.0: 202.240 08.11 16:36:02 User: 管理员, Perform the action: Software Exit Start
+2.1.2.0: 202.583 08.11 16:36:02 User: 管理员, Perform the action: Software Exit, Exit State: Successful

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/FilmTrimmer">
+        <file>Resources/Background.png</file>
+        <file>Image/Background.png</file>
+        <file>Image/1.png</file>
+        <file>Image/2.png</file>
+    </qresource>
+</RCC>

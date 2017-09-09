@@ -1,0 +1,444 @@
+2.1.2.0: 0.000 08.12 10:58:26 Software Begin to Start ...
+2.1.2.0: 0.000 08.12 10:58:26 motor ConfigModule for normal plus control.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_OpenDevice()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.141 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.156 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseOutputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEncorderSource().
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetPulseInputMode()
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetAlmLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetInpLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetOrgLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetEndLimitLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetRdyLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.I_SetSvonLogic(),9014 not has this function.
+2.1.2.0: 0.172 08.12 10:58:26 HFC9014.SetServoOn().
+2.1.2.0: 0.172 08.12 10:58:26 Event EndOfLotEvt Reset
+2.1.2.0: 0.172 08.12 10:58:26  run created successfully
+2.1.2.0: 0.172 08.12 10:58:26 Event EndOfLotEvt Reset
+2.1.2.0: 0.172 08.12 10:58:26  run created successfully
+2.1.2.0: 0.172 08.12 10:58:26 Event EndOfLotEvt Reset
+2.1.2.0: 0.172 08.12 10:58:26  run created successfully
+2.1.2.0: 0.172 08.12 10:58:26  thread begin
+2.1.2.0: 0.188 08.12 10:58:26 RunCtrl thread begin
+2.1.2.0: 0.188 08.12 10:58:26 RunCtrl object construction finished
+2.1.2.0: 0.250 08.12 10:58:26 Delete old log thread Quit Complete!
+2.1.2.0: 0.266 08.12 10:58:26 Motor0 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor1 Location0Postion = 4.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor2 Location0Postion = 65.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor3 Location0Postion = 50.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor4 Location0Postion = 30.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor5 Location0Postion = 90.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor6 Location0Postion = 7.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor7 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor8 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor9 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor10 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor11 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor12 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor13 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor14 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor15 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor16 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor17 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor18 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor19 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor20 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor21 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor22 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Motor23 Location0Postion = 0.000000
+2.1.2.0: 0.266 08.12 10:58:26 Param is loaded.
+2.1.2.0: 3.916 08.12 10:58:30 HcModbusTcpClient::Connect() start...
+2.1.2.0: 4.914 08.12 10:58:31 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 5.913 08.12 10:58:32 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 6.911 08.12 10:58:33 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 6.927 08.12 10:58:33 连接控制器失败:192.168.1.88
+2.1.2.0: 7.691 08.12 10:58:34 
+2.1.2.0: 7.707 08.12 10:58:34 User: , Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 7.925 08.12 10:58:34 User: , Perform the action: Axis Selected, Current Axis: 2
+2.1.2.0: 8.627 08.12 10:58:35 主控制器未连接,启动重新连接.
+2.1.2.0: 8.627 08.12 10:58:35 HcModbusTcpClient::Connect() start...
+2.1.2.0: 9.626 08.12 10:58:36 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 10.624 08.12 10:58:37 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 11.638 08.12 10:58:38 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 11.638 08.12 10:58:38 连接控制器失败:192.168.1.88
+2.1.2.0: 13.105 08.12 10:58:39 管理员 Login
+2.1.2.0: 13.791 08.12 10:58:40 主控制器未连接,启动重新连接.
+2.1.2.0: 13.807 08.12 10:58:40 HcModbusTcpClient::Connect() start...
+2.1.2.0: 14.805 08.12 10:58:41 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 15.803 08.12 10:58:42 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 16.443 08.12 10:58:42 
+2.1.2.0: 16.459 08.12 10:58:42 User: 管理员, Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 16.459 08.12 10:58:42 
+2.1.2.0: 16.459 08.12 10:58:42 User: 管理员, Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 16.474 08.12 10:58:42 User: 管理员, Perform the action: Change Software Page, Current Page: Product Editor Page
+2.1.2.0: 16.802 08.12 10:58:43 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 16.802 08.12 10:58:43 连接控制器失败:192.168.1.88
+2.1.2.0: 17.005 08.12 10:58:43 主控制器未连接,启动重新连接.
+2.1.2.0: 17.005 08.12 10:58:43 HcModbusTcpClient::Connect() start...
+2.1.2.0: 18.003 08.12 10:58:44 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 18.081 08.12 10:58:44 User: 管理员, Perform the action: Change Software Page, Current Page: History Information Page
+2.1.2.0: 19.001 08.12 10:58:45 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 19.157 08.12 10:58:45 User: 管理员, Perform the action: Change Software Page, Current Page: Parameter Setting Page
+2.1.2.0: 20.000 08.12 10:58:46 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 20.000 08.12 10:58:46 连接控制器失败:192.168.1.88
+2.1.2.0: 20.156 08.12 10:58:46 主控制器未连接,启动重新连接.
+2.1.2.0: 20.156 08.12 10:58:46 HcModbusTcpClient::Connect() start...
+2.1.2.0: 21.154 08.12 10:58:47 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 21.435 08.12 10:58:47 User: 管理员, Perform the action: Laser2 Enable Selected, Current Laser2 State: 0
+2.1.2.0: 21.435 08.12 10:58:47 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 21.435 08.12 10:58:47 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 21.435 08.12 10:58:47 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 21.435 08.12 10:58:47 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 21.451 08.12 10:58:47 User: 管理员, Perform the action: Change Software Page, Current Page: Axis Control Page
+2.1.2.0: 22.153 08.12 10:58:48 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 23.151 08.12 10:58:49 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 23.151 08.12 10:58:49 连接控制器失败:192.168.1.88
+2.1.2.0: 23.307 08.12 10:58:49 主控制器未连接,启动重新连接.
+2.1.2.0: 23.307 08.12 10:58:49 HcModbusTcpClient::Connect() start...
+2.1.2.0: 24.181 08.12 10:58:50 User: 管理员, Perform the action: Change Software Page, Current Page: Parameter Setting Page
+2.1.2.0: 24.305 08.12 10:58:50 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 24.773 08.12 10:58:51 User: 管理员, Perform the action: Laser2 Enable Selected, Current Laser2 State: 0
+2.1.2.0: 24.773 08.12 10:58:51 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 24.773 08.12 10:58:51 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 24.773 08.12 10:58:51 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 24.773 08.12 10:58:51 User: 管理员, Perform the action: AutoStopMachine Stop Machine Enable, Current Laser2 State: 0
+2.1.2.0: 24.773 08.12 10:58:51 
+2.1.2.0: 24.789 08.12 10:58:51 User: 管理员, Perform the action: Package Change/view information, Current Package: ShuangCopy1
+2.1.2.0: 24.789 08.12 10:58:51 User: 管理员, Perform the action: Change Software Page, Current Page: Product Editor Page
+2.1.2.0: 25.304 08.12 10:58:51 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 25.335 08.12 10:58:51 User: 管理员, Perform the action: Change Software Page, Current Page: History Information Page
+2.1.2.0: 26.318 08.12 10:58:52 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 26.318 08.12 10:58:52 连接控制器失败:192.168.1.88
+2.1.2.0: 26.458 08.12 10:58:52 主控制器未连接,启动重新连接.
+2.1.2.0: 26.458 08.12 10:58:52 HcModbusTcpClient::Connect() start...
+2.1.2.0: 26.692 08.12 10:58:53 User: 管理员, Perform the action: Change Software Page, Current Page: Axis Control Page
+2.1.2.0: 27.457 08.12 10:58:53 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 27.550 08.12 10:58:54 User: 管理员, Perform the action: Change Software Page, Current Page:CCD Page
+2.1.2.0: 28.455 08.12 10:58:54 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 28.751 08.12 10:58:55 User: 管理员, Perform the action: Change Software Page, Current Page: Axis Control Page
+2.1.2.0: 29.453 08.12 10:58:55 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 29.453 08.12 10:58:55 连接控制器失败:192.168.1.88
+2.1.2.0: 29.609 08.12 10:58:56 主控制器未连接,启动重新连接.
+2.1.2.0: 29.609 08.12 10:58:56 HcModbusTcpClient::Connect() start...
+2.1.2.0: 30.608 08.12 10:58:57 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 31.606 08.12 10:58:58 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 32.605 08.12 10:58:59 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 32.605 08.12 10:58:59 连接控制器失败:192.168.1.88
+2.1.2.0: 32.901 08.12 10:58:59 主控制器未连接,启动重新连接.
+2.1.2.0: 32.901 08.12 10:58:59 HcModbusTcpClient::Connect() start...
+2.1.2.0: 33.899 08.12 10:59:00 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 33.915 08.12 10:59:00 User: 管理员, Perform the action: Axis Control Move, Current Move Axis: 2, Feedback Info: Don't have mobile conditions
+2.1.2.0: 34.898 08.12 10:59:01 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 35.896 08.12 10:59:02 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 35.896 08.12 10:59:02 连接控制器失败:192.168.1.88
+2.1.2.0: 35.896 08.12 10:59:02 主控制器未连接,启动重新连接.
+2.1.2.0: 35.912 08.12 10:59:02 HcModbusTcpClient::Connect() start...
+2.1.2.0: 36.910 08.12 10:59:03 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 37.909 08.12 10:59:04 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 38.907 08.12 10:59:05 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 38.907 08.12 10:59:05 连接控制器失败:192.168.1.88
+2.1.2.0: 39.048 08.12 10:59:05 主控制器未连接,启动重新连接.
+2.1.2.0: 39.048 08.12 10:59:05 HcModbusTcpClient::Connect() start...
+2.1.2.0: 40.062 08.12 10:59:06 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 41.060 08.12 10:59:07 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 42.058 08.12 10:59:08 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 42.058 08.12 10:59:08 连接控制器失败:192.168.1.88
+2.1.2.0: 42.199 08.12 10:59:08 主控制器未连接,启动重新连接.
+2.1.2.0: 42.199 08.12 10:59:08 HcModbusTcpClient::Connect() start...
+2.1.2.0: 43.197 08.12 10:59:09 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 44.211 08.12 10:59:10 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 45.210 08.12 10:59:11 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 45.210 08.12 10:59:11 连接控制器失败:192.168.1.88
+2.1.2.0: 45.350 08.12 10:59:11 主控制器未连接,启动重新连接.
+2.1.2.0: 45.350 08.12 10:59:11 HcModbusTcpClient::Connect() start...
+2.1.2.0: 46.348 08.12 10:59:12 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 47.362 08.12 10:59:13 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 48.361 08.12 10:59:14 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 48.361 08.12 10:59:14 连接控制器失败:192.168.1.88
+2.1.2.0: 48.501 08.12 10:59:15 主控制器未连接,启动重新连接.
+2.1.2.0: 48.501 08.12 10:59:15 HcModbusTcpClient::Connect() start...
+2.1.2.0: 49.500 08.12 10:59:16 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 50.514 08.12 10:59:17 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 51.512 08.12 10:59:18 Client Cannot Connect the server 192.168.1.88:502.
+2.1.2.0: 51.512 08.12 10:59:18 连接控制器失败:192.168.1.88
+2.1.2.0: 51.512 08.12 10:59:18 User: 管理员, Perform the action: Software Exit Start
+2.1.2.0: 51.949 08.12 10:59:18 User: 管理员, Perform the action: Software Exit, Exit State: Successful
+2.1.2.0: 51.964 08.12 10:59:18 System Thread Triggered Quit Command...
+2.1.2.0: 51.964 08.12 10:59:18 System Thread Quit Complete!
+2.1.2.0: 51.964 08.12 10:59:18 System Thread Deleted Successfully!
+2.1.2.0: 51.964 08.12 10:59:18  Thread Triggered Quit Command...
+2.1.2.0: 51.980 08.12 10:59:18  Thread Quit Complete!
+2.1.2.0: 51.980 08.12 10:59:18  Thread Deleted Successfully!
+2.1.2.0: 51.980 08.12 10:59:18  Thread Triggered Quit Command...
+2.1.2.0: 51.980 08.12 10:59:18  Thread Deleted Successfully!
+2.1.2.0: 51.980 08.12 10:59:18  Thread Triggered Quit Command...
+2.1.2.0: 51.980 08.12 10:59:18  Thread Quit Complete!
+2.1.2.0: 51.980 08.12 10:59:18  Thread Deleted Successfully!
+2.1.2.0: 51.980 08.12 10:59:18  Thread Triggered Quit Command...
+2.1.2.0: 51.980 08.12 10:59:18  Thread Deleted Successfully!
+2.1.2.0: 51.980 08.12 10:59:18 Run0 Thread Triggered Quit Command...
+2.1.2.0: 52.074 08.12 10:59:18 Run0 Thread Quit Complete!
+2.1.2.0: 52.074 08.12 10:59:18 Run0 Thread Deleted Successfully!
+2.1.2.0: 52.074 08.12 10:59:18 Run0 Thread Triggered Quit Command...
+2.1.2.0: 52.074 08.12 10:59:18 Run0 Thread Deleted Successfully!
+2.1.2.0: 52.074 08.12 10:59:18 CheckSwitch Thread Triggered Quit Command...
+2.1.2.0: 52.074 08.12 10:59:18 CheckSwitch Thread Quit Complete!
+2.1.2.0: 52.074 08.12 10:59:18 CheckSwitch Thread Deleted Successfully!
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 HFC9014.SetServoOn().
+2.1.2.0: 52.074 08.12 10:59:18 deleting MachineTimeManager...
+2.1.2.0: 52.074 08.12 10:59:18 deleting ModuleManager...
+2.1.2.0: 52.074 08.12 10:59:18 deleting CDeviceManager object...
+2.1.2.0: 52.074 08.12 10:59:18 deleting EventManager object...
+2.1.2.0: 52.074 08.12 10:59:18 Machine Shut Down Sequence Done, Software Will Now Exit

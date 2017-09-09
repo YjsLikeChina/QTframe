@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{66691cc7-a56d-4a95-9f79-4b100e027997}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{5d97e826-1522-4c41-b3cf-cd4635669881}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\UI_Head">
+      <UniqueIdentifier>{f6149c64-89ca-4e7b-88fb-dc771c771623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DP_Head">
+      <UniqueIdentifier>{4421f07d-050b-4460-9ef7-dbda85d08dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OP_Head">
+      <UniqueIdentifier>{978f5968-0a31-40da-b783-79249391b060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DP_Source">
+      <UniqueIdentifier>{41d44957-ac05-4aea-a1b0-48e0bfeac13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OP_Source">
+      <UniqueIdentifier>{94c2fba5-1fc5-497b-9a78-0276e26b5e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI_Source">
+      <UniqueIdentifier>{547de23b-e3ad-445b-ac3e-5f019234ef29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{e4c8db54-0b6d-424e-b9e0-c707a762eaf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\AutoProduction">
+      <UniqueIdentifier>{7195c201-acd8-4732-ac7b-0a115dc4aa6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\FilmTrimmer">
+      <UniqueIdentifier>{12b0ab4d-7886-481c-806e-af5c657adfc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\BaseCtrl">
+      <UniqueIdentifier>{d13c1176-6c25-4bc5-aca9-c1c152c17cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{49233aad-e0bb-4885-8dd9-a0ade2cd1065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\IODebug">
+      <UniqueIdentifier>{beac717e-e094-48b3-a55c-fa558b398f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\MotorDebug">
+      <UniqueIdentifier>{ff0eb0d8-6774-4c1a-8484-d313ff17b819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\ParameterSet">
+      <UniqueIdentifier>{d4253c6d-fba3-45ff-8696-0c9f29fd3f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\ProductEditor">
+      <UniqueIdentifier>{c215babc-5ebb-4921-b3c3-17e957f05d02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LOG">
+      <UniqueIdentifier>{2204c768-8ce7-4b93-b53c-55dd758ab880}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_filmtrimmer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DP_LaserInteraction.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DP_LaserInteraction.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_FloatingWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_FloatingWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_MessageBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DP_CfgInterface.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DP_CfgInterface.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_AutoProduction.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_AutoProduction.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OP_MachineSoftWareMain.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OP_MachineSoftWareMain.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_IODebug.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_IODebug.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_MotorDebug.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_MotorDebug.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_ParameterSetting.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_ParameterSetting.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_ProductEditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_ProductEditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_HistoricalInformation.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_HistoricalInformation.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_CfgInterface.cpp">
+      <Filter>Source Files\DP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_FileOperator.cpp">
+      <Filter>Source Files\DP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_HCPLCInteraction.cpp">
+      <Filter>Source Files\DP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_LaserInteraction.cpp">
+      <Filter>Source Files\DP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OP_MachineSoftWareMain.cpp">
+      <Filter>Source Files\OP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_AutoProduction.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_FloatingWindow.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_HistoricalInformation.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_IODebug.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_MessageBox.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_MotorDebug.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_ParameterSetting.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_ProductEditor.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OP_AutoUpdateData.cpp">
+      <Filter>Source Files\OP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OP_AutoUpdateData.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OP_AutoUpdateData.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_filmtrimmer.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_filmtrimmer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_filmtrimmer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_InterfaceBase.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_autoproduction.cpp">
+      <Filter>Controller\AutoProduction</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CTRL_autoproduction.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CTRL_autoproduction.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_filmtrimmer.cpp">
+      <Filter>Controller\FilmTrimmer</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CTRL_filmtrimmer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CTRL_filmtrimmer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_Base.cpp">
+      <Filter>Controller\BaseCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CTRL_Base.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CTRL_Base.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_iodebug.cpp">
+      <Filter>Controller\IODebug</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_motordebug.cpp">
+      <Filter>Controller\MotorDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_MotorCtrlInteraction.cpp">
+      <Filter>Source Files\DP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_parameterset.cpp">
+      <Filter>Controller\ParameterSet</Filter>
+    </ClCompile>
+    <ClCompile Include="CTRL_producteditor.cpp">
+      <Filter>Controller\ProductEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DP_MotorCtrlInteraction.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Simpledialog.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_Simpledialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UI_Simpledialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="LogManager.cpp">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="OP_MachineStatusCtrl.cpp">
+      <Filter>Source Files\OP_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OP_MachineStatusCtrl.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OP_MachineStatusCtrl.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UI_WorkSpeedInputDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_WorkSpeedInputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="filmtrimmer.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_filmtrimmer.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_FloatingWindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_MessageBox.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_AutoProduction.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_IODebug.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_MotorDebug.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_ParameterSetting.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_ProductEditor.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_HistoricalInformation.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_AutoProduction.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_FloatingWindow.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_HistoricalInformation.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_IODebug.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_MessageBox.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_MotorDebug.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_ParameterSetting.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_ProductEditor.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DP_CfgInterface.hpp">
+      <Filter>Header Files\DP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DP_LaserInteraction.h">
+      <Filter>Header Files\DP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OP_MachineSoftWareMain.h">
+      <Filter>Header Files\OP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OP_AutoUpdateData.h">
+      <Filter>Header Files\OP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_filmtrimmer.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CTRL_autoproduction.h">
+      <Filter>Controller\AutoProduction</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CTRL_filmtrimmer.h">
+      <Filter>Controller\FilmTrimmer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CTRL_Base.h">
+      <Filter>Controller\BaseCtrl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DP_MotorCtrlInteraction.h">
+      <Filter>Header Files\DP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_Simpledialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_Simpledialog.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_WorkSpeedInputDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OP_MachineStatusCtrl.h">
+      <Filter>Header Files\OP_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_WorkSpeedInputDialog.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLaserClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_filmtrimmer.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_FloatingWindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_MessageBox.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_AutoProduction.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_IODebug.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_MotorDebug.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_ParameterSetting.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_ProductEditor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_HistoricalInformation.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DP_FileOperator.h">
+      <Filter>Header Files\DP_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="DP_HCPLCInteraction.h">
+      <Filter>Header Files\DP_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDataType.h">
+      <Filter>Header Files\DP_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="UI_InterfaceBase.h">
+      <Filter>Header Files\UI_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="CTRL_iodebug.h">
+      <Filter>Controller\IODebug</Filter>
+    </ClInclude>
+    <ClInclude Include="CTRL_motordebug.h">
+      <Filter>Controller\MotorDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="CTRL_parameterset.h">
+      <Filter>Controller\ParameterSet</Filter>
+    </ClInclude>
+    <ClInclude Include="CTRL_producteditor.h">
+      <Filter>Controller\ProductEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_Simpledialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="LogManager.h">
+      <Filter>LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_WorkSpeedInputDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

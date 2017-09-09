@@ -1,0 +1,6 @@
+FilmTrimmer:
+void SigSwitchPage(int nNextPage, bool bFlag, QMap<QString, QString>& ModifyVal);//切换页面信号,点击退出时下一个页面为-1
+void SigMachineCtrl(EM_MACHINE_SIGNAL emCtrl);	//设置控制
+
+AutoProduction:
+void SigItemChanged(int nModuleNum,int nChildNum,double dlData); //参数修改

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FilmTrimmer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="FilmTrimmer" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DUNICODE" />
+					<Add option="-DWIN32" />
+					<Add option="-DQT_DLL" />
+					<Add option="-DQT_CORE_LIB" />
+					<Add option="-DQT_GUI_LIB" />
+					<Add option="-DQT_WIDGETS_LIB" />
+					<Add option="-D_AFXDLL" />
+					<Add option="-D_WIN32_WINNT=0x0601" />
+					<Add directory="./GeneratedFiles" />
+					<Add directory="." />
+					<Add directory="$(QTDIR)/include" />
+					<Add directory="./GeneratedFiles/" />
+					<Add directory="$(QTDIR)/include/QtCore" />
+					<Add directory="$(QTDIR)/include/QtGui" />
+					<Add directory="$(QTDIR)/include/QtWidgets" />
+					<Add directory="D:/ControlLibrary/Include" />
+					<Add directory="E:/Visual_Studio_2015/VC/atlmfc/include/" />
+					<Add directory="E:/C-Free 5/mingw/include/c++/3.4.5/backward/" />
+				</Compiler>
+				<Linker>
+					<Add library="qtmaind.lib" />
+					<Add library="Qt5Cored.lib" />
+					<Add library="Qt5Guid.lib" />
+					<Add library="Qt5Widgetsd.lib" />
+					<Add library="Iphlpapi.lib" />
+					<Add library="LibraryBase.lib" />
+					<Add library="CommonSupport.lib" />
+					<Add library="EasyAutoControl.lib" />
+					<Add directory="$(QTDIR)/lib" />
+					<Add directory="D:/ControlLibrary/Lib" />
+					<Add directory="E:/Wo_Shi_Ji/Qt框架/lib" />
+				</Linker>
+				<Environment>
+					<Variable name="QTDIR" value="E:\QT5.6\5.6\msvc2015" />
+				</Environment>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="FilmTrimmer" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DUNICODE" />
+					<Add option="-DWIN32" />
+					<Add option="-DQT_DLL" />
+					<Add option="-DQT_NO_DEBUG" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DQT_CORE_LIB" />
+					<Add option="-DQT_GUI_LIB" />
+					<Add option="-DQT_WIDGETS_LIB" />
+					<Add directory="./GeneratedFiles" />
+					<Add directory="." />
+					<Add directory="$(QTDIR)/include" />
+					<Add directory="./GeneratedFiles/" />
+					<Add directory="$(QTDIR)/include/QtCore" />
+					<Add directory="$(QTDIR)/include/QtGui" />
+					<Add directory="$(QTDIR)/include/QtWidgets" />
+				</Compiler>
+				<Linker>
+					<Add library="qtmain.lib" />
+					<Add library="Qt5Core.lib" />
+					<Add library="Qt5Gui.lib" />
+					<Add library="Qt5Widgets.lib" />
+					<Add directory="$(QTDIR)/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="BaseDataType.h" />
+		<Unit filename="CLaserClient.h" />
+		<Unit filename="CTRL_Base.cpp" />
+		<Unit filename="CTRL_Base.h" />
+		<Unit filename="CTRL_autoproduction.cpp" />
+		<Unit filename="CTRL_autoproduction.h" />
+		<Unit filename="CTRL_filmtrimmer.cpp" />
+		<Unit filename="CTRL_filmtrimmer.h" />
+		<Unit filename="CTRL_iodebug.cpp" />
+		<Unit filename="CTRL_iodebug.h" />
+		<Unit filename="CTRL_motordebug.cpp" />
+		<Unit filename="CTRL_motordebug.h" />
+		<Unit filename="CTRL_parameterset.cpp" />
+		<Unit filename="CTRL_parameterset.h" />
+		<Unit filename="CTRL_producteditor.cpp" />
+		<Unit filename="CTRL_producteditor.h" />
+		<Unit filename="DP_CfgInterface.cpp" />
+		<Unit filename="DP_CfgInterface.hpp" />
+		<Unit filename="DP_FileOperator.cpp" />
+		<Unit filename="DP_FileOperator.h" />
+		<Unit filename="DP_HCPLCInteraction.cpp" />
+		<Unit filename="DP_HCPLCInteraction.h" />
+		<Unit filename="DP_LaserInteraction.cpp" />
+		<Unit filename="DP_LaserInteraction.h" />
+		<Unit filename="DP_MotorCtrlInteraction.cpp" />
+		<Unit filename="DP_MotorCtrlInteraction.h" />
+		<Unit filename="GeneratedFiles/Debug/moc_CTRL_Base.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_CTRL_autoproduction.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_CTRL_filmtrimmer.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_DP_CfgInterface.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_DP_LaserInteraction.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_DP_MotorCtrlInteraction.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_OP_AutoUpdateData.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_OP_MachineSoftWareMain.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_AutoProduction.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_FloatingWindow.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_HistoricalInformation.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_IODebug.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_MessageBox.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_MotorDebug.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_ParameterSetting.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_ProductEditor.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_Simpledialog.cpp" />
+		<Unit filename="GeneratedFiles/Debug/moc_UI_filmtrimmer.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_CTRL_Base.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_CTRL_autoproduction.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_CTRL_filmtrimmer.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_DP_CfgInterface.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_DP_LaserInteraction.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_OP_AutoUpdateData.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_OP_MachineSoftWareMain.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_AutoProduction.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_FloatingWindow.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_HistoricalInformation.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_IODebug.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_MotorDebug.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_ParameterSetting.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_ProductEditor.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_Simpledialog.cpp" />
+		<Unit filename="GeneratedFiles/Release/moc_UI_filmtrimmer.cpp" />
+		<Unit filename="GeneratedFiles/qrc_filmtrimmer.cpp" />
+		<Unit filename="GeneratedFiles/ui_UI_AutoProduction.h" />
+		<Unit filename="GeneratedFiles/ui_UI_FloatingWindow.h" />
+		<Unit filename="GeneratedFiles/ui_UI_HistoricalInformation.h" />
+		<Unit filename="GeneratedFiles/ui_UI_IODebug.h" />
+		<Unit filename="GeneratedFiles/ui_UI_MessageBox.h" />
+		<Unit filename="GeneratedFiles/ui_UI_MotorDebug.h" />
+		<Unit filename="GeneratedFiles/ui_UI_ParameterSetting.h" />
+		<Unit filename="GeneratedFiles/ui_UI_ProductEditor.h" />
+		<Unit filename="GeneratedFiles/ui_UI_Simpledialog.h" />
+		<Unit filename="GeneratedFiles/ui_UI_filmtrimmer.h" />
+		<Unit filename="Log.cpp" />
+		<Unit filename="Log.h" />
+		<Unit filename="LogManager.cpp" />
+		<Unit filename="LogManager.h" />
+		<Unit filename="OP_AutoUpdateData.cpp" />
+		<Unit filename="OP_AutoUpdateData.h" />
+		<Unit filename="OP_MachineSoftWareMain.cpp" />
+		<Unit filename="OP_MachineSoftWareMain.h" />
+		<Unit filename="Ping.cpp" />
+		<Unit filename="Ping.h" />
+		<Unit filename="UI_AutoProduction.cpp" />
+		<Unit filename="UI_AutoProduction.h" />
+		<Unit filename="UI_FloatingWindow.cpp" />
+		<Unit filename="UI_FloatingWindow.h" />
+		<Unit filename="UI_HistoricalInformation.cpp" />
+		<Unit filename="UI_HistoricalInformation.h" />
+		<Unit filename="UI_IODebug.cpp" />
+		<Unit filename="UI_IODebug.h" />
+		<Unit filename="UI_InterfaceBase.cpp" />
+		<Unit filename="UI_InterfaceBase.h" />
+		<Unit filename="UI_MessageBox.cpp" />
+		<Unit filename="UI_MessageBox.h" />
+		<Unit filename="UI_MotorDebug.cpp" />
+		<Unit filename="UI_MotorDebug.h" />
+		<Unit filename="UI_ParameterSetting.cpp" />
+		<Unit filename="UI_ParameterSetting.h" />
+		<Unit filename="UI_ProductEditor.cpp" />
+		<Unit filename="UI_ProductEditor.h" />
+		<Unit filename="UI_Simpledialog.cpp" />
+		<Unit filename="UI_Simpledialog.h" />
+		<Unit filename="UI_filmtrimmer.cpp" />
+		<Unit filename="UI_filmtrimmer.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
