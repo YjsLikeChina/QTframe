@@ -36,6 +36,7 @@ private:
 	QListWidgetItem* m_pCurPkgItem;				//当前产品的Item
 	QIcon m_qIconCurPkgIndicate;				//当前产品图标
 	QIcon m_qIconLastPkgIndicate;				//上一次当前产品图标
+	UI_LineEdit* m_pLaserLineEdit;
 
 private:
 	void initVal();
@@ -52,7 +53,8 @@ protected Q_SLOTS:
 	void SlotAddPackageStep();									//添加产品极耳间距
 	void SlotSwitchPackage(QListWidgetItem *item);				//切换产品
 	void SlotDeleteStep(int nButton);							//删除极耳间距
-	void SlotItemDoubleClick(QTreeWidgetItem* item, int nColumn);//电机显示激光软件
+	//void SlotItemDoubleClick(QTreeWidgetItem* item, int nColumn);//
+	void SlotLaserFileSel();									//激光文件选择
 	void SlotItemChanged();										//产品参数被修改
 
 public:

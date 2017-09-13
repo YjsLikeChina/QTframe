@@ -1,5 +1,5 @@
 #include "UI_AutoProduction.h"
-#include "QCoreApplication"
+#include <QCoreApplication>
 #define ROWWIDTH	271
 #define ROWHEIGHT	40
 
@@ -59,16 +59,16 @@ void UI_AutoProduction::initUI()
 	qslHead << QString::fromLocal8Bit("模组名") << QString::fromLocal8Bit("值");
 	ui.TRW_ModuleTree->setHeaderLabels(qslHead);
 	ui.TRW_ModuleTree->setColumnWidth(0, 140);
-	ui.LCD_OnloadDiameter->setDigitCount(6);
-	ui.LCD_OnloadDiameter->setSmallDecimalPoint(true);
-	ui.LCD_OnloadTension->setDigitCount(6);
-	ui.LCD_OnloadTension->setSmallDecimalPoint(true);
-	ui.LCD_RecvDiameter->setDigitCount(6);
-	ui.LCD_RecvDiameter->setSmallDecimalPoint(true);
-	ui.LCD_RecvTension->setDigitCount(6);
-	ui.LCD_RecvTension->setSmallDecimalPoint(true);
-	ui.LCD_WorkSpeedShow->setDigitCount(6);
-	ui.LCD_WorkSpeedShow->setSmallDecimalPoint(true);
+	//ui.LCD_OnloadDiameter->setDigitCount(6);
+	//ui.LCD_OnloadDiameter->setSmallDecimalPoint(true);
+	//ui.LCD_OnloadTension->setDigitCount(6);
+	//ui.LCD_OnloadTension->setSmallDecimalPoint(true);
+	//ui.LCD_RecvDiameter->setDigitCount(6);
+	//ui.LCD_RecvDiameter->setSmallDecimalPoint(true);
+	//ui.LCD_RecvTension->setDigitCount(6);
+	//ui.LCD_RecvTension->setSmallDecimalPoint(true);
+	//ui.LCD_WorkSpeedShow->setDigitCount(6);
+	//ui.LCD_WorkSpeedShow->setSmallDecimalPoint(true);
 	//设置背景
 	QString qstrIconFile = QCoreApplication::applicationDirPath();
 	QString qstrIconPath = qstrIconFile + "/Image/Background.png";
@@ -83,7 +83,7 @@ void UI_AutoProduction::initUI()
 	m_qPixmapOtherDataHide.load(qstrIconPath);
 	ui.LB_DataListShow->setPixmap(m_qPixmapOtherDataShow);
 	ui.LB_DataListShow->setScaledContents(true);
-	ui.LB_DataListShow->setStyleSheet("background:transparent;");
+	ui.LB_DataListShow->setStyleSheet("background: transparent;");
 	ui.LB_Info->setVisible(false);
 
 	//ui.TRW_ModuleTree->setStyleSheet("QTreeWiget::item {border: 1px solid #d9d9d9;border-top-color: transparent;border-bottom-color: transparent;}");
@@ -91,9 +91,10 @@ void UI_AutoProduction::initUI()
 	//产量清空
 	qstrIconPath = qstrIconFile + "/Image/LaserStepDelete.png"; 
 	ui.PB_CleanYield->setIcon(QIcon(qstrIconPath));
-	ui.PB_CleanYield->setIconSize(QSize(25, 25));
+	ui.PB_CleanYield->setIconSize(QSize(25, 25)); // border-style: outset;
 	ui.PB_CleanYield->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	//隐藏按钮
@@ -108,8 +109,8 @@ void UI_AutoProduction::initUI()
 	ui.PB_OnloadDirection->setIcon(m_qIconOnloadDirFW);
 	ui.PB_OnloadDirection->setIconSize(QSize(30, 30));
 	ui.PB_OnloadDirection->setStyleSheet(
-		"QPushButton{background: rgb(1,172,179);color: white; border-radius: 10px; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	//设置放卷方向按钮
@@ -120,8 +121,8 @@ void UI_AutoProduction::initUI()
 	ui.PB_RunDirection->setIcon(m_qIconRunDirFW);
 	ui.PB_RunDirection->setIconSize(QSize(30, 30));
 	ui.PB_RunDirection->setStyleSheet(
-		"QPushButton{background: rgb(1,172,179);color: white; border-radius: 10px; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	//设置收放卷、主牵引图标
@@ -129,42 +130,48 @@ void UI_AutoProduction::initUI()
 	ui.PB_SendloadFW->setIcon(QIcon(qstrIconPath));
 	ui.PB_SendloadFW->setIconSize(QSize(25, 25));
 	ui.PB_SendloadFW->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/OnloadDirectionB.png"; //放卷反转
 	ui.PB_SendloadRE->setIcon(QIcon(qstrIconPath));
 	ui.PB_SendloadRE->setIconSize(QSize(25, 25));
 	ui.PB_SendloadRE->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/OnloadDirectionA.png"; //主牵引正转 
 	ui.PB_MainAxisFW->setIcon(QIcon(qstrIconPath));
 	ui.PB_MainAxisFW->setIconSize(QSize(25, 25));
 	ui.PB_MainAxisFW->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/OnloadDirectionB.png"; //主牵引反转
 	ui.PB_MainAxisRE->setIcon(QIcon(qstrIconPath));
 	ui.PB_MainAxisRE->setIconSize(QSize(25, 25));
 	ui.PB_MainAxisRE->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/OnloadDirectionA.png"; //收卷正转 
 	ui.PB_RecvloadFW->setIcon(QIcon(qstrIconPath));
 	ui.PB_RecvloadFW->setIconSize(QSize(25, 25));
 	ui.PB_RecvloadFW->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/OnloadDirectionB.png"; //收卷反转
 	ui.PB_RecvloadRE->setIcon(QIcon(qstrIconPath));
 	ui.PB_RecvloadRE->setIconSize(QSize(25, 25));
 	ui.PB_RecvloadRE->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	//激光图标设定
@@ -187,7 +194,7 @@ void UI_AutoProduction::initVal()
 	m_pCtrlAutoProduction = NULL;
 	m_pWorkSpeedInputDlg = new UI_WorkSpeedInputDlg;
 	m_nLastSetWorkSpeed = ReadIntFromFile(_T("默认参数"),_T("工作速度设置"),20, m_cstrFilmTrimmerCfgPath);
-	m_Painter = new QPainter(this);
+
 }
 void UI_AutoProduction::PaintElectronicMeter(double x, double y, double r, bool Release)
 {
@@ -341,7 +348,7 @@ void UI_AutoProduction::DataListShowClick()
 		ui.LB_Background1->setVisible(false);
 		ui.LB_Info->setVisible(false);
 		ui.LB_DataListShow->setPixmap(m_qPixmapOtherDataShow);
-		ui.LB_DataListShow->move(QPoint(922, 320));
+		ui.LB_DataListShow->move(QPoint(932, 320));
 	}
 	else
 	{
@@ -349,7 +356,7 @@ void UI_AutoProduction::DataListShowClick()
 		ui.TRW_ModuleTree->setVisible(true);
 		ui.LB_Info->setVisible(true);
 		ui.LB_DataListShow->setPixmap(m_qPixmapOtherDataHide);
-		ui.LB_DataListShow->move(QPoint(663, 320));
+		ui.LB_DataListShow->move(QPoint(670, 320));
 	}
 }
 
@@ -365,7 +372,7 @@ void UI_AutoProduction::SlotSetWorkSpeed()
 void UI_AutoProduction::paintEvent(QPaintEvent* ev)
 {
 	//ui.TRW_ModuleTree->setVisible(false);
-	m_Painter->begin(m_Painter->device());
+	m_Painter = new QPainter(this);
 	QPen *qpen = new QPen;
 	qpen->setColor(Qt::red);
 	qpen->setWidth(2);
@@ -374,7 +381,6 @@ void UI_AutoProduction::paintEvent(QPaintEvent* ev)
 	PaintConnectLine();
 	PaintElectronicMeter((ui.label_9->x() + ui.label_9->width() / 2.0) - 75, ui.label_9->y() - 80, 150);
 	PaintElectronicMeter((ui.label_10->x() + ui.label_10->width() / 2.0) - 75, ui.label_10->y() - 80, 150, false);
-	m_Painter->end();
 }
 
 bool UI_AutoProduction::GetModifyParam(QVector<ST_CHANGE_POINT>& qVecModifyVal)
@@ -419,7 +425,7 @@ bool UI_AutoProduction::insertModule(QVector<ST_MODULE>* pQVector)
 		}
 		m_ModuleVector.push_back(_moduleItem);
 	}
-	m_nModuleNum = m_ModuleVector.length();
+	//m_nModuleNum = m_ModuleVector.length();
 	return true;
 }
 
@@ -441,32 +447,27 @@ bool UI_AutoProduction::AutoUpdateData(QList<ST_UPDATEDATA> AutoUpdateVal)
 			{
 			case 0: //放卷卷径
 				{
-					m_ReRollingDiameter = qstrVal.toDouble();
-					ui.LCD_OnloadDiameter->display(m_ReRollingDiameter);
+					ui.LCD_OnloadDiameter->setText(qstrVal);
 				}
 				break;
 			case 1: //放卷张力
 				{
-					m_ReCurtension = qstrVal.toDouble();
-					ui.LCD_OnloadTension->display(m_ReCurtension);
+					ui.LCD_OnloadTension->setText(qstrVal);
 				}
 				break;
 			case 2: //放卷卷径
 				{
-					m_PuRollingDiameter = qstrVal.toDouble();
-					ui.LCD_RecvDiameter->display(m_PuRollingDiameter);
+					ui.LCD_RecvDiameter->setText(qstrVal);
 				}
 				break;
 			case 3: //放卷张力
 				{
-					m_PuCurtension = qstrVal.toDouble();
-					ui.LCD_RecvTension->display(m_PuCurtension);
+					ui.LCD_RecvTension->setText(qstrVal);
 				}
 				break;
 			case 4: //工作速度
 				{
-					m_WorkSpeed = qstrVal.toDouble();
-					ui.LCD_WorkSpeedShow->display(m_WorkSpeed);
+					ui.LCD_WorkSpeedShow->setText(qstrVal);
 				}
 			case 5: //激光1步数
 				{
@@ -514,7 +515,12 @@ bool UI_AutoProduction::AutoUpdateData(QList<ST_UPDATEDATA> AutoUpdateVal)
 			nChildItem = AutoUpdateVal.at(i).nChildItem;
 
 			//查找到修改的Item
-			QTreeWidgetItem* DataItem = m_ModuleVector.at(nModuleItem).ChildModuleItems.at(nChildItem);// ->setText(1, qstrVal);
+			if (m_ModuleVector.length() == 0)
+			{
+				m_bAutoUpdateLock = false;
+				return false;
+			}
+			QTreeWidgetItem* DataItem = m_ModuleVector.at(nModuleItem).ChildModuleItems.at(nChildItem);//
 			UI_LineEdit* DataLineEdit = (UI_LineEdit*)ui.TRW_ModuleTree->itemWidget(DataItem, 1);
 			DataLineEdit->setText(qstrVal);
 		}
@@ -532,15 +538,15 @@ bool UI_AutoProduction::AutoUpdateData(QList<ST_UPDATEDATA> AutoUpdateVal)
 			{
 				ui.label_Laser1->setPixmap(m_qPixmapLaserStatusNoEnable);
 			}
-			else if (0 == nLaserStatus)
+			else if (1 == nLaserStatus)
 			{
 				ui.label_Laser1->setPixmap(m_qPixmapLaserStatusEnableNoConnect);
 			}
-			else if (1 == nLaserStatus)
+			else if (2 == nLaserStatus)
 			{
 				ui.label_Laser1->setPixmap(m_qPixmapLaserStatusConnectNoRun);
 			}
-			else
+			else if(nLaserStatus > 2)
 			{
 				ui.label_Laser1->setPixmap(m_qPixmapLaserStatusRun);
 			}
@@ -551,15 +557,15 @@ bool UI_AutoProduction::AutoUpdateData(QList<ST_UPDATEDATA> AutoUpdateVal)
 			{
 				ui.label_Laser2->setPixmap(m_qPixmapLaserStatusNoEnable);
 			}
-			else if (0 == nLaserStatus)
+			else if (1 == nLaserStatus)
 			{
 				ui.label_Laser2->setPixmap(m_qPixmapLaserStatusEnableNoConnect);
 			}
-			else if (1 == nLaserStatus)
+			else if (2 == nLaserStatus)
 			{
 				ui.label_Laser2->setPixmap(m_qPixmapLaserStatusConnectNoRun);
 			}
-			else
+			else if(nLaserStatus > 2)
 			{
 				ui.label_Laser2->setPixmap(m_qPixmapLaserStatusRun);
 			}
@@ -646,6 +652,7 @@ void UI_AutoProduction::SlotRunDirection()
 		ui.PB_RunDirection->setText(QString::fromLocal8Bit("反向运行"));
 		ui.PB_RunDirection->setIcon(m_qIconRunDirRE);
 	}
+	emit SigMachineRunDir(bRes);
 }
 
 void UI_AutoProduction::SlotOnloadDirection()
@@ -661,6 +668,7 @@ void UI_AutoProduction::SlotOnloadDirection()
 		ui.PB_OnloadDirection->setText(QString::fromLocal8Bit("逆时针放卷"));
 		ui.PB_OnloadDirection->setIcon(m_qIconOnloadDirRE);
 	}
+	
 }
 
 void UI_AutoProduction::SlotOnloadClockwiseP()

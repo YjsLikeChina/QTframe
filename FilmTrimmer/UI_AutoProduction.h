@@ -2,7 +2,6 @@
 #include "UI_InterfaceBase.h"
 #include <qwidget.h>
 #include "ui_UI_AutoProduction.h"
-#include "BaseDataType.h"
 #include <QVector>
 #include <QPainter>
 #include "CTRL_autoproduction.h"
@@ -100,5 +99,6 @@ protected Q_SLOTS:
 Q_SIGNALS:
 	void SigItemChanged(int nModuleNum,int nChildNum,double dlData);
 	void SigSetLaserParam(int nCard);							//设置激光参数，将信号发送到FilmTrimmer
+	void SigMachineRunDir(bool bFlag);							//将设备运行方向传递给UI_FilmTrimmer
 };
 

@@ -50,11 +50,11 @@ public:
     void WriteLog(LOG_LEVEL level, const char *pLogText, ...);
     void WriteLog(string logText, LOG_LEVEL level = LL_ERROR);
     void WriteLogEx(LOG_LEVEL level, const char *pLogText, ...);
-	void WriteLogQstring(LOG_LEVEL level, QString qLogText,...);
+	void WriteLogQstring(int level, QString qLogText,...);
 	void WriteLogRunThread(); //work写log
 	void ExitLogRunThread();//退出写log线程
 	void SetLofFilePath(const char *pFilePath); //修改log文件路径
-	void SetCurUserInfo(wchar_t* userTypename, wchar_t* usaername); //设置当前用户/用户权限
+	void SetCurUserInfo(const wchar_t* userTypename, const wchar_t* usaername); //设置当前用户/用户权限
 	void SetCurSoftWarever(wchar_t * CurSoftWarever);				//设置软件版本
 	// 得到日志文件大小
 	size_t GetLogFileSize();

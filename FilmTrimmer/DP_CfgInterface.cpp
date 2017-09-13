@@ -1,6 +1,7 @@
 ﻿#include "DP_CfgInterface.hpp"
 #include <QDir>
 #include "UI_MessageBox.h"
+#include <QDateTime>
 
 DP_CfgInterface* DP_CfgInterface::m_pInstanceObj = NULL;
 
@@ -15,7 +16,9 @@ DP_CfgInterface* DP_CfgInterface::GetInstanceObj()
 
 DP_CfgInterface::DP_CfgInterface(QObject * parent) : QObject(parent)
 {
-	
+	m_qstrHistoryInfoPath = QCoreApplication::applicationDirPath();
+	m_qstrHistoryInfoPath += QString::fromLocal8Bit("/Log/Lot History/");
+	m_bFirstWriteHistoryFile = true;
 }
 
 DP_CfgInterface::~DP_CfgInterface()
@@ -311,6 +314,80 @@ bool DP_CfgInterface::WriteValue(const QMap<QString, QString>& ModifyVal, QStrin
 		}
 		qMapTmp.remove(qstrChildInfoTmp); //remove Key
 	}
+	return true;
+}
+
+bool DP_CfgInterface::WriteHistoryInfo(QString qstrInfo, QString qstrFileName, bool bScreenFlag/* = false*/)
+{
+	HistoryLock.lock();
+	QDateTime systemtime = QDateTime::currentDateTime();
+	QString qstrPath = m_qstrHistoryInfoPath + qstrFileName + QString::fromLocal8Bit(".csv");
+	if (m_bFirstWriteHistoryFile) //第一次写文件时判断文件大小，是否存在
+	{
+		m_bFirstWriteHistoryFile = false;
+		//判断文件是否存在
+		if (!JudgeFileIsExist(qstrPath)) //不存在
+		{
+			if (!DP_CfgInterface::CreateFile(qstrPath))
+			{
+				MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("创建历史文件失败!"), DOMODEL, 0);
+				HistoryLock.unlock();
+				return false;
+			}
+		}
+		else //判断文件大小，超过1M时，新建历史文件
+		{
+			QFileInfo fileinfo(qstrPath);
+			long long fileSize = fileinfo.size();
+			if (fileSize > 1024 * 1024)
+			{
+				QString qstrNewName = systemtime.toString("yyyyMMdd");
+				qstrNewName = m_qstrHistoryInfoPath + qstrNewName + "_" + qstrFileName + QString::fromLocal8Bit(".csv");
+				if (!QFile::rename(qstrPath, qstrNewName)) //重命名
+				{
+					MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("重命名历史文件失败!"), DOMODEL, 0);
+					HistoryLock.unlock();
+					return false;
+				}
+				else //重命名成功后新建历史文件
+				{
+					if (!DP_CfgInterface::CreateFile(qstrPath)) //新建历史文件
+					{
+						MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("创建历史文件失败!"), DOMODEL, 0);
+						HistoryLock.unlock();
+						return false;
+					}
+				}
+			}
+		}
+	}
+	//写入历史文件
+	FILE* m_pLotfile;
+	CString cstrFilePath = qstrPath.toStdWString().data();
+	if (_tfopen_s(&m_pLotfile, cstrFilePath, _T("a+, ccs=UTF-8")) == 0)//, ccs=UNICODE
+	{
+	}
+	else
+	{
+		HistoryLock.unlock();
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("打开历史文件失败!"), NODOMODEL);
+		return false;
+	}
+	if (!bScreenFlag) //写入文件信息,+ 时间
+	{
+		qstrInfo = qstrInfo + QString::fromLocal8Bit(",") + systemtime.toString("yyyy/MM/dd hh:mm:ss");
+		CString cstrWriteInfo = qstrInfo.toStdWString().data();
+		_ftprintf_s(m_pLotfile, _T("%s\n"), cstrWriteInfo.GetBuffer());
+		cstrWriteInfo.ReleaseBuffer();
+	}
+	else
+	{
+		CString cstrWriteInfo = qstrInfo.toStdWString().data();
+		_ftprintf_s(m_pLotfile, _T("%s"), cstrWriteInfo.GetBuffer());
+		cstrWriteInfo.ReleaseBuffer();
+	}
+	fclose(m_pLotfile);
+	HistoryLock.unlock();
 	return true;
 }
 

@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTreeWidget>
@@ -37,16 +36,11 @@ public:
     QLabel *label_10;
     QLabel *label_11;
     QLabel *label_12;
-    QLCDNumber *LCD_OnloadDiameter;
     QLabel *label_2;
     QLabel *label_13;
-    QLCDNumber *LCD_RecvDiameter;
-    QLCDNumber *LCD_WorkSpeedShow;
     QLabel *LB_WorkSpeedSet;
     QLabel *label_15;
-    QLCDNumber *LCD_OnloadTension;
     QLabel *label_16;
-    QLCDNumber *LCD_RecvTension;
     QLabel *LB_DataListShow;
     QLabel *label_17;
     QLabel *label_18;
@@ -85,6 +79,11 @@ public:
     QTreeWidget *TRW_ModuleTree;
     QPushButton *PB_RunDirection;
     QPushButton *PB_OnloadDirection;
+    QLabel *LCD_OnloadDiameter;
+    QLabel *LCD_OnloadTension;
+    QLabel *LCD_WorkSpeedShow;
+    QLabel *LCD_RecvTension;
+    QLabel *LCD_RecvDiameter;
 
     void setupUi(QWidget *AutoProduWidget)
     {
@@ -178,10 +177,6 @@ public:
 "border-color: red;"));
         label_12->setFrameShape(QFrame::NoFrame);
         label_12->setScaledContents(true);
-        LCD_OnloadDiameter = new QLCDNumber(AutoProduWidget);
-        LCD_OnloadDiameter->setObjectName(QStringLiteral("LCD_OnloadDiameter"));
-        LCD_OnloadDiameter->setGeometry(QRect(120, 615, 80, 30));
-        LCD_OnloadDiameter->setFont(font);
         label_2 = new QLabel(AutoProduWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(130, 595, 71, 21));
@@ -194,6 +189,7 @@ public:
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(12);
         label_2->setFont(font1);
+        label_2->setFrameShape(QFrame::Box);
         label_13 = new QLabel(AutoProduWidget);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(765, 598, 71, 21));
@@ -203,14 +199,6 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
         label_13->setPalette(palette2);
         label_13->setFont(font1);
-        LCD_RecvDiameter = new QLCDNumber(AutoProduWidget);
-        LCD_RecvDiameter->setObjectName(QStringLiteral("LCD_RecvDiameter"));
-        LCD_RecvDiameter->setGeometry(QRect(757, 620, 80, 30));
-        LCD_RecvDiameter->setFont(font);
-        LCD_WorkSpeedShow = new QLCDNumber(AutoProduWidget);
-        LCD_WorkSpeedShow->setObjectName(QStringLiteral("LCD_WorkSpeedShow"));
-        LCD_WorkSpeedShow->setGeometry(QRect(652, 280, 80, 30));
-        LCD_WorkSpeedShow->setFont(font);
         LB_WorkSpeedSet = new QLabel(AutoProduWidget);
         LB_WorkSpeedSet->setObjectName(QStringLiteral("LB_WorkSpeedSet"));
         LB_WorkSpeedSet->setGeometry(QRect(660, 250, 71, 21));
@@ -222,33 +210,25 @@ public:
         LB_WorkSpeedSet->setFont(font1);
         label_15 = new QLabel(AutoProduWidget);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(230, 80, 71, 21));
+        label_15->setGeometry(QRect(220, 80, 91, 21));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
         label_15->setPalette(palette4);
         label_15->setFont(font1);
-        LCD_OnloadTension = new QLCDNumber(AutoProduWidget);
-        LCD_OnloadTension->setObjectName(QStringLiteral("LCD_OnloadTension"));
-        LCD_OnloadTension->setGeometry(QRect(220, 110, 80, 30));
-        LCD_OnloadTension->setFont(font);
         label_16 = new QLabel(AutoProduWidget);
         label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setGeometry(QRect(860, 80, 71, 21));
+        label_16->setGeometry(QRect(850, 80, 91, 21));
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
         palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
         label_16->setPalette(palette5);
         label_16->setFont(font1);
-        LCD_RecvTension = new QLCDNumber(AutoProduWidget);
-        LCD_RecvTension->setObjectName(QStringLiteral("LCD_RecvTension"));
-        LCD_RecvTension->setGeometry(QRect(852, 110, 80, 30));
-        LCD_RecvTension->setFont(font);
         LB_DataListShow = new QLabel(AutoProduWidget);
         LB_DataListShow->setObjectName(QStringLiteral("LB_DataListShow"));
-        LB_DataListShow->setGeometry(QRect(925, 320, 25, 51));
+        LB_DataListShow->setGeometry(QRect(935, 320, 18, 51));
         label_17 = new QLabel(AutoProduWidget);
         label_17->setObjectName(QStringLiteral("label_17"));
         label_17->setGeometry(QRect(180, 430, 130, 130));
@@ -263,7 +243,7 @@ public:
         label_18->setScaledContents(true);
         label_19 = new QLabel(AutoProduWidget);
         label_19->setObjectName(QStringLiteral("label_19"));
-        label_19->setGeometry(QRect(60, 520, 41, 20));
+        label_19->setGeometry(QRect(60, 530, 41, 20));
         QPalette palette6;
         palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
@@ -418,7 +398,7 @@ public:
         PB_CleanYield->setStyleSheet(QStringLiteral(""));
         PB_MainAxisFW = new QPushButton(AutoProduWidget);
         PB_MainAxisFW->setObjectName(QStringLiteral("PB_MainAxisFW"));
-        PB_MainAxisFW->setGeometry(QRect(595, 392, 101, 35));
+        PB_MainAxisFW->setGeometry(QRect(595, 392, 91, 30));
         QPalette palette8;
         palette8.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette8.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -427,7 +407,7 @@ public:
         PB_MainAxisFW->setFont(font);
         PB_MainAxisRE = new QPushButton(AutoProduWidget);
         PB_MainAxisRE->setObjectName(QStringLiteral("PB_MainAxisRE"));
-        PB_MainAxisRE->setGeometry(QRect(700, 392, 101, 35));
+        PB_MainAxisRE->setGeometry(QRect(700, 392, 91, 30));
         QPalette palette9;
         palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette9.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -445,7 +425,7 @@ public:
         label_35->setFont(font);
         label_20 = new QLabel(AutoProduWidget);
         label_20->setObjectName(QStringLiteral("label_20"));
-        label_20->setGeometry(QRect(230, 520, 41, 20));
+        label_20->setGeometry(QRect(230, 530, 41, 20));
         QPalette palette11;
         palette11.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
@@ -463,7 +443,7 @@ public:
         label_22->setFont(font);
         PB_SendloadFW = new QPushButton(AutoProduWidget);
         PB_SendloadFW->setObjectName(QStringLiteral("PB_SendloadFW"));
-        PB_SendloadFW->setGeometry(QRect(20, 562, 101, 35));
+        PB_SendloadFW->setGeometry(QRect(30, 562, 91, 30));
         QPalette palette13;
         palette13.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette13.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -472,7 +452,7 @@ public:
         PB_SendloadFW->setFont(font);
         PB_SendloadRE = new QPushButton(AutoProduWidget);
         PB_SendloadRE->setObjectName(QStringLiteral("PB_SendloadRE"));
-        PB_SendloadRE->setGeometry(QRect(196, 562, 101, 35));
+        PB_SendloadRE->setGeometry(QRect(200, 562, 91, 30));
         QPalette palette14;
         palette14.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette14.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -481,7 +461,7 @@ public:
         PB_SendloadRE->setFont(font);
         PB_RecvloadFW = new QPushButton(AutoProduWidget);
         PB_RecvloadFW->setObjectName(QStringLiteral("PB_RecvloadFW"));
-        PB_RecvloadFW->setGeometry(QRect(660, 567, 101, 35));
+        PB_RecvloadFW->setGeometry(QRect(660, 567, 91, 30));
         QPalette palette15;
         palette15.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette15.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -490,7 +470,7 @@ public:
         PB_RecvloadFW->setFont(font);
         PB_RecvloadRE = new QPushButton(AutoProduWidget);
         PB_RecvloadRE->setObjectName(QStringLiteral("PB_RecvloadRE"));
-        PB_RecvloadRE->setGeometry(QRect(830, 567, 101, 35));
+        PB_RecvloadRE->setGeometry(QRect(830, 567, 91, 30));
         QPalette palette16;
         palette16.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette16.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -586,6 +566,61 @@ public:
         palette24.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
         PB_OnloadDirection->setPalette(palette24);
         PB_OnloadDirection->setFont(font);
+        LCD_OnloadDiameter = new QLabel(AutoProduWidget);
+        LCD_OnloadDiameter->setObjectName(QStringLiteral("LCD_OnloadDiameter"));
+        LCD_OnloadDiameter->setGeometry(QRect(120, 620, 91, 20));
+        QPalette palette25;
+        palette25.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LCD_OnloadDiameter->setPalette(palette25);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(11);
+        LCD_OnloadDiameter->setFont(font2);
+        LCD_OnloadDiameter->setAlignment(Qt::AlignCenter);
+        LCD_OnloadTension = new QLabel(AutoProduWidget);
+        LCD_OnloadTension->setObjectName(QStringLiteral("LCD_OnloadTension"));
+        LCD_OnloadTension->setGeometry(QRect(215, 102, 91, 20));
+        QPalette palette26;
+        palette26.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LCD_OnloadTension->setPalette(palette26);
+        LCD_OnloadTension->setFont(font2);
+        LCD_OnloadTension->setAlignment(Qt::AlignCenter);
+        LCD_WorkSpeedShow = new QLabel(AutoProduWidget);
+        LCD_WorkSpeedShow->setObjectName(QStringLiteral("LCD_WorkSpeedShow"));
+        LCD_WorkSpeedShow->setGeometry(QRect(647, 270, 91, 20));
+        QPalette palette27;
+        palette27.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette27.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette27.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LCD_WorkSpeedShow->setPalette(palette27);
+        LCD_WorkSpeedShow->setFont(font2);
+        LCD_WorkSpeedShow->setAlignment(Qt::AlignCenter);
+        LCD_RecvTension = new QLabel(AutoProduWidget);
+        LCD_RecvTension->setObjectName(QStringLiteral("LCD_RecvTension"));
+        LCD_RecvTension->setGeometry(QRect(844, 101, 91, 20));
+        QPalette palette28;
+        palette28.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LCD_RecvTension->setPalette(palette28);
+        LCD_RecvTension->setFont(font2);
+        LCD_RecvTension->setAlignment(Qt::AlignCenter);
+        LCD_RecvDiameter = new QLabel(AutoProduWidget);
+        LCD_RecvDiameter->setObjectName(QStringLiteral("LCD_RecvDiameter"));
+        LCD_RecvDiameter->setGeometry(QRect(754, 620, 91, 20));
+        QPalette palette29;
+        palette29.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LCD_RecvDiameter->setPalette(palette29);
+        LCD_RecvDiameter->setFont(font2);
+        LCD_RecvDiameter->setAlignment(Qt::AlignCenter);
+        LCD_WorkSpeedShow->raise();
+        LCD_RecvTension->raise();
         LB_Info->raise();
         label->raise();
         label_3->raise();
@@ -598,16 +633,11 @@ public:
         label_10->raise();
         label_11->raise();
         label_12->raise();
-        LCD_OnloadDiameter->raise();
         label_2->raise();
         label_13->raise();
-        LCD_RecvDiameter->raise();
-        LCD_WorkSpeedShow->raise();
         LB_WorkSpeedSet->raise();
         label_15->raise();
-        LCD_OnloadTension->raise();
         label_16->raise();
-        LCD_RecvTension->raise();
         LB_DataListShow->raise();
         label_17->raise();
         label_18->raise();
@@ -634,6 +664,9 @@ public:
         TRW_ModuleTree->raise();
         PB_RunDirection->raise();
         PB_OnloadDirection->raise();
+        LCD_OnloadDiameter->raise();
+        LCD_OnloadTension->raise();
+        LCD_RecvDiameter->raise();
 
         retranslateUi(AutoProduWidget);
 
@@ -658,8 +691,8 @@ public:
         label_2->setText(QApplication::translate("AutoProduWidget", "\346\224\276\345\215\267\345\215\267\345\276\204", 0));
         label_13->setText(QApplication::translate("AutoProduWidget", "\346\224\266\345\215\267\345\215\267\345\276\204", 0));
         LB_WorkSpeedSet->setText(QApplication::translate("AutoProduWidget", "\345\267\245\344\275\234\351\200\237\345\272\246", 0));
-        label_15->setText(QApplication::translate("AutoProduWidget", "\346\224\276\345\215\267\345\274\240\345\212\233", 0));
-        label_16->setText(QApplication::translate("AutoProduWidget", "\346\224\266\345\215\267\345\274\240\345\212\233", 0));
+        label_15->setText(QApplication::translate("AutoProduWidget", "\346\224\276\345\215\267\345\212\233\350\207\202\344\275\215", 0));
+        label_16->setText(QApplication::translate("AutoProduWidget", "\346\224\266\345\215\267\345\212\233\350\207\202\344\275\215", 0));
         LB_DataListShow->setText(QString());
         label_17->setText(QString());
         label_18->setText(QString());
@@ -699,6 +732,11 @@ public:
         LB_Background1->setText(QString());
         PB_RunDirection->setText(QApplication::translate("AutoProduWidget", "\346\255\243\345\220\221\350\277\220\350\241\214", 0));
         PB_OnloadDirection->setText(QApplication::translate("AutoProduWidget", "\351\241\272\346\227\266\351\222\210\346\224\276\345\215\267", 0));
+        LCD_OnloadDiameter->setText(QApplication::translate("AutoProduWidget", "TextLabel", 0));
+        LCD_OnloadTension->setText(QApplication::translate("AutoProduWidget", "TextLabel", 0));
+        LCD_WorkSpeedShow->setText(QApplication::translate("AutoProduWidget", "TextLabel", 0));
+        LCD_RecvTension->setText(QApplication::translate("AutoProduWidget", "TextLabel", 0));
+        LCD_RecvDiameter->setText(QApplication::translate("AutoProduWidget", "TextLabel", 0));
     } // retranslateUi
 
 };

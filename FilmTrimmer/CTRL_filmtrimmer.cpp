@@ -1,12 +1,13 @@
 ﻿#include "CTRL_filmtrimmer.h"
-
-CTRL_FilmTrimmer::CTRL_FilmTrimmer(QObject * parent) : CTRL_Base(parent) {
-
+#include "QCUserManager.h"
+CTRL_FilmTrimmer::CTRL_FilmTrimmer(QObject * parent) : CTRL_Base(parent) 
+{
 	InitValue();
 	InitConnect();
 }
 
-CTRL_FilmTrimmer::~CTRL_FilmTrimmer() {
+CTRL_FilmTrimmer::~CTRL_FilmTrimmer() 
+{
 
 }
 
@@ -42,11 +43,6 @@ EN_Resoult CTRL_FilmTrimmer::SwitchPage(int NextPage,bool bFlag)
 	return reslout;
 }
 
-bool CTRL_FilmTrimmer::MachineCtrl(EM_MACHINE_SIGNAL emCtrl)
-{
-	return true;
-}
-
 
 void CTRL_FilmTrimmer::InitConnect()
 {
@@ -60,10 +56,11 @@ void CTRL_FilmTrimmer::InitValue()
 
 QString CTRL_FilmTrimmer::UserLogin()
 {
-	return "";
+	QStringList UserName = 	USERMANAGER.Login();
+	return UserName.at(0);
 }
 
 bool CTRL_FilmTrimmer::ResultUserName()
 {
-	return false;
+	return USERMANAGER.LogOut();
 }

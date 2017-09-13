@@ -47,24 +47,52 @@ typedef enum EM_MACHINE_SIGNAL
 	MACHINE_OTHER, //
 }EM_MACHINE_SIGNAL;
 
-//设备状态机
-typedef enum EM_MACHINE_STATUS_CTRL
+typedef enum MACHINE_STATUS
 {
 	BEGIN_STATUS = 0,//开始状态
 	INITIALIZATION_STATUS,		//初始化状态
 	READY_STATUS,				//准备状态
 	RUN_STATUS,					//运行状态
-	ERROR_STATUS = 4,//错误状态
-}EM_MACHINE_STATUS_CTRL;
+	ALARM_STATUS,				//报警状态
+}MACHINE_STATUS;
 
-typedef enum EM_MACHINE_WORK_TASK
+typedef enum MACHINE_FLAG
 {
-	SET_CURRENT_PACKAGE = 0, //设置当前产品
-	SET_MACHINE_START,
-	SET_MACHINE_RESET,
-	SET_MACHINE_STOP,
-	SET_MACHINE_ESTOP,
-}EM_MACHINE_WORK_TASK;
+	OPERATOR_ING,				//动作执行中
+	OPERATOR_END,				//动作执行完成
+	OPERATOR_FAIL,				//动作执行失败
+}MACHINE_FLAG;
+
+typedef enum MACHINE_STATUSTOOL_COLOR
+{
+	COLOR_GREEN = 1,
+	COLOR_GRAY,
+	COLOR_YELLOW,
+	COLOR_RED,
+}MACHINE_STATUSTOOL_COLOR;
+
+//设备事件
+typedef enum MACHINE_EVENT
+{
+	NULL_EVENT = -1,	 //无事件
+	START_EVENT = 0,     //开始事件
+	STOP_EVENT,		     //停止事件
+	RESET_EVENT,		 //复位事件
+	ESTOP_EVENT,		 //急停事件
+	NUM_EVENT,           //事件数量
+}MACHINE_EVENT;
+
+typedef enum MACHINE_TASK
+{
+	MACHINE_NULL_TASK = 0,	//无任务
+	MACHINE_INIT_TASK = 1,	//初始化任务
+	MACHINE_RESET_TASK,		//复位任务
+	MACHINE_START_TASK,		//启动任务
+	MACHINE_CLEAN_ALARM_TASK,//	报警清除任务
+	MACHINE_STOP_TASK,		//停止任务
+	MACHINE_ESTOP_TASK,		//急停任务
+	MACHINE_MAINTAIN_TASK,	//设备维护任务
+}MACHINE_TASK;
 
 //停机类型
 typedef enum EM_MACHINE_STOP_TYPE
@@ -135,18 +163,18 @@ typedef struct _LASER_DATA
 
 	_LASER_DATA()
 	{
-		strLaserFilePath = _T("");
-		strLaserFileName = _T("");
-		nLaserStep = 0;
-		strLaserStepInfo = _T("");
-		dlEarWidth = 0.0;
-		dlEarHeight = 0.0;
-		dlLaser1Power = 0.0;
-		dlLaser1Freq = 0.0;
-		dlLaser2Power = 0.0;
-		dlLaser2Freq = 0.0;
+		strLaserFilePath	= _T("");
+		strLaserFileName	= _T("");
+		nLaserStep			= 0;
+		strLaserStepInfo	= _T("");
+		dlEarWidth			= 0.0;
+		dlEarHeight			= 0.0;
+		dlLaser1Power		= 0.0;
+		dlLaser1Freq		= 0.0;
+		dlLaser2Power		= 0.0;
+		dlLaser2Freq		= 0.0;
 	};
-}ST_LASER_DATA, *ST_PLASER_DATA;
+}ST_LASER_DATA,*ST_PLASER_DATA;
 
 typedef enum EM_Type //配置文件时使用
 {
@@ -162,7 +190,7 @@ typedef enum EM_Type //配置文件时使用
 //对话框模式
 typedef enum EM_DIALOG_MODEL
 {
-	DOMODEL = 0,	//模式对话框
+	DOMODEL	  = 0,	//模式对话框
 	NODOMODEL = 1,	//非模式对话框
 	NOMESSAGE,		//无信息
 }EM_DIALOG_MODEL;
@@ -179,6 +207,7 @@ typedef enum EM_CHILDPAGEITEM
 	MESONLOAD,		 //MES页面
 	EXIT,			 //退出
 	FILMTRIMMER,	 //UI主框架
+	ALARMLIST,		//报警信息配置文件
 }EM_CHILDPAGEITEM;
 
 typedef struct MODULEITEM						//单个模组
@@ -216,7 +245,7 @@ typedef struct _UPDATEDATA //自动更新数据信息
 	double dlData;			//更新数据
 	QString qstrData;		//更新数据
 	QString qstrModultName;	//模组名称
-							//数据处理层使用
+	//数据处理层使用
 	int nAccuracy;			//数值精度
 	DWORD dwPLCAddr;		//PLC地址
 	EM_Type PLCAddrType;	//PLC地址类型
@@ -272,12 +301,17 @@ typedef enum EM_AUTOURLDETECT_DEFAULT_ORDER
 //FilmTrimmer默认参数排序
 typedef enum EM_FILM_DEFAULT_ORDER
 {
-	CTRL_MACHINE_START = 0,		//向PLC中写入
+	CTRL_MACHINE_MODEL = 0,			//设备手自动模式
+	CTRL_MACHINE_HARDWARE_STATUS,	//从PLC中读取硬件按钮状态
+	CTRL_MACHINE_START,				//向PLC中写入
 	CTRL_MACHINE_STOP,
 	CTRL_MACHINE_RESET,
 	CTRL_MACHINE_ESTOP,
-	CTRL_MACHINE_MAINTAIN,		//设备维护
-	CTRL_MACHINE_WORKSPEED,		//工作速度设置
+	CTRL_MACHINE_MAINTAIN,			//设备维护
+	CTRL_MACHINE_WORKSPEED,			//工作速度设置
+	CTRL_MACHINE_STATUS,			//状态机读取地址(只读)
+	CTRL_MACHINE_ALARM,				//状态机读取地址(报警状态)
+	CTRL_MACHINE_FLAG,				//状态机标志位(只读)
 }EM_FILM_DEFAULT_ORDER;
 
 //产品编辑页面默认排序

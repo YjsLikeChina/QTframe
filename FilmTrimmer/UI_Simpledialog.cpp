@@ -10,14 +10,18 @@ UI_Simpledialog::UI_Simpledialog(QWidget *parent)
 	QString strIconPath = strIconFile + "/Image/OK.png";
 	ui.PB_OK->setIcon(QIcon(strIconPath));
 	ui.PB_OK->setIconSize(QSize(30, 25));
-	ui.PB_OK->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_OK->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 
 	strIconPath = strIconFile + "/Image/Cancel.png";
 	ui.PB_Cancel->setIcon(QIcon(strIconPath));
 	ui.PB_Cancel->setIconSize(QSize(30, 25));
-	ui.PB_Cancel->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_Cancel->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 	initConnect();
 }
 
@@ -41,6 +45,19 @@ void UI_Simpledialog::SetShow(QStringList Name, QVector<ST_CHANGE_POINT> &Point)
 	}
 	initQlableAndQlinedit();
 	this->exec();
+	for (int i = 0; i < Name.length(); i++)
+	{
+		ui.gridLayout->removeWidget(m_QVQlabel.at(i));
+		delete (*(m_QVQlabel.data() + i));
+		ui.gridLayout->removeWidget(m_QVQlineEdit.at(i));
+		delete (*(m_QVQlineEdit.data() + i));
+	}
+	//QLayoutItem *child;
+	//while ((child = ui.gridLayout->takeAt(0)) != 0)
+	//{
+	//	delete child;
+	//	child = NULL;
+	//}
 	m_QVQlabel.clear();
 	m_QVQlineEdit.clear();
 	return ;

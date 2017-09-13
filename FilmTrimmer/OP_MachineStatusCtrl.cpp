@@ -3,7 +3,7 @@
 #include "DP_LaserInteraction.h"
 #include "DP_CfgInterface.hpp"
 #include "DP_MotorCtrlInteraction.h"
-#include "ui_UI_MessageBox.h"
+#include "UI_MessageBox.h"
 
 
 QString g_qstrMachineCfgPath = QString::fromLocal8Bit("/System/FilmTrimmer.cfg");
@@ -12,47 +12,74 @@ QString g_qstrPackageFilePath = QString::fromLocal8Bit("/Data/Package/");
 OP_MachineStatusCtrl::OP_MachineStatusCtrl()
 {
 	InitVal();
-	LASERINTERFACE.ConnectLaser(); //test
 }
 
 
 OP_MachineStatusCtrl::~OP_MachineStatusCtrl()
 {
-	//delete m_pMessageBox;
 }
 
 void OP_MachineStatusCtrl::InitVal()
 {
-	m_qstrFilmCfgPath = QCoreApplication::applicationDirPath() + g_qstrMachineCfgPath;
+	QString qstrCurPath = QCoreApplication::applicationDirPath();
+	m_qstrFilmCfgPath = qstrCurPath + g_qstrMachineCfgPath;
 	m_cstrFilmCfgPath = m_qstrFilmCfgPath.toStdWString().data();
-	m_qstrPackageFilePath = QCoreApplication::applicationDirPath() + g_qstrPackageFilePath;
+
+	m_qstrPackageFilePath = qstrCurPath + g_qstrPackageFilePath;
+
+	m_qstrHistoryFilePath = qstrCurPath + QString::fromLocal8Bit("/Log/Lot History/");
+
 	m_bSoftwareIsFirstStart = true;
 	//是否为脱机卡
 	m_bComputerCard = ReadIntFromFile(_T("Run"), _T("ComputerCard"), 1, m_cstrFilmCfgPath);
 	LASERINTERFACE.SetLaserType(m_bComputerCard); 
 	m_bIsAutoMoveToPos = false;
+
+	m_stCurSpeed = MACHINECTRL.m_QveAutoProduction.at(0).Value_.at(WORK_SPEED);
 }
 
 void OP_MachineStatusCtrl::run()
 {
 	while (true)
 	{
-		switch (m_emMachineWorkTask)
+		MACHINECTRL.m_pFSM->GetMachineTask();
+		Sleep(20);
+		switch (m_emMachineTask)
 		{
-		case SET_CURRENT_PACKAGE:
-			
+		case MACHINE_NULL_TASK:
 			break;
-		case SET_MACHINE_START:
+		case MACHINE_INIT_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlInit();
 			break;
-		case SET_MACHINE_RESET:
+		case MACHINE_RESET_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlReset();
 			break;
-		case SET_MACHINE_STOP:
+		case MACHINE_START_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlStart();
 			break;
-		case SET_MACHINE_ESTOP:
+		case MACHINE_CLEAN_ALARM_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlCleanAlarm();
+			break;
+		case MACHINE_STOP_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlStop();
+			break;
+		case MACHINE_ESTOP_TASK:
+			m_emMachineTask = MACHINE_NULL_TASK;
+			MachineCtrlEStop();
+			break;
+		case MACHINE_MAINTAIN_TASK:
+			MachineCtrlMaintain();
 			break;
 		default:
 			break;
 		}
+		//检查设备停机
+		CheckMachineStop();
 		Sleep(50);
 	}
 }
@@ -60,88 +87,106 @@ void OP_MachineStatusCtrl::run()
 bool OP_MachineStatusCtrl::MachineCtrlStart()
 {
 	//判断是否勾选电机自动定位
-	if (GetIsAutoMovePos())
+	if (m_bMachineRunDir)	//正向运行
 	{
-		//1、判断电机位置是否正确
-		if (!GetMotorIsInplace())
+		if (GetIsAutoMovePos())
 		{
-			emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("有电机不在工作位"),DOMODEL,0);
+			//1、判断电机位置是否正确
+			if (!GetMotorIsInplace())
+			{
+				emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("有电机不在工作位"), DOMODEL, 0);
+				return false;
+			}
+		}
+		//上传激光
+		QString qstrPath = m_qstrPackageFilePath + m_qstrCurPkgName + QString::fromLocal8Bit(".pkg");
+
+		ST_LASER_DATA stLaserData = m_stCurLaserData;
+
+		if (!LASERINTERFACE.UploadLaserData(stLaserData))
+		{
+			//上传激光数据失败
 			return false;
 		}
 	}
-	//上传激光
-	QString qstrPath = m_qstrPackageFilePath + m_qstrCurPkgName + QString::fromLocal8Bit(".pkg");
-
-	ST_LASER_DATA stLaserData = m_stCurLaserData;
-
-	if (!LASERINTERFACE.UploadLaserData(stLaserData))
-	{
-		//上传激光数据失败
-		return false;
-	}
-
-	//获取启动地址
 
 	//启动
-
-	return true;
+	bool bRes = HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stStart.Addr.toInt(), m_stStart.Addr_Type);
+	if(bRes)
+		m_bMachineLasetStatus = true;
+	return bRes;
 }
 
 bool OP_MachineStatusCtrl::MachineCtrlStop()
 {
-	return true;
+	return HC_PLC_INTERFACE.SetBOOLToPLC(true,m_stStop.Addr.toInt(),m_stStop.Addr_Type);
 }
 
 bool OP_MachineStatusCtrl::MachineCtrlReset()
 {
-	if (m_bMachineCurModel)//自动
+	return HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stReset.Addr.toInt(), m_stReset.Addr_Type);
+}
+
+bool OP_MachineStatusCtrl::MachineCtrlEStop()
+{
+	return HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stEStop.Addr.toInt(), m_stEStop.Addr_Type);
+}
+
+bool OP_MachineStatusCtrl::MachineCtrlMaintain()
+{
+	return HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stMaintain.Addr.toInt(), m_stMaintain.Addr_Type);
+}
+
+bool OP_MachineStatusCtrl::MachineCtrlInit()
+{
+	//下发设备基本参数(电机速度、产品参数、基本运行数据)
+	DWORD dwStartTime = GetTickCount();
+	while (1)
 	{
-		switch (m_emMachineStatusCtrl)
+		if (MACHINECTRL.GetOnloadConfigStatus())
 		{
-		case BEGIN_STATUS:
+			//连接激光
+			if (!LASERINTERFACE.GetLaserIsConnect())
 			{
-				if (m_bMachineCurModel)//自动
-				{
-					//
-				}
-				else
-				{
-					//
-				}
+				LASERINTERFACE.ConnectLaser();
+			}
+			//1、下发电机参数
+			SetMotorSpeed();
+			//2、下发产品数
+			//获取当前产品
+			CString m_cstrCurPkgName = ReadStringFromFile(_T("Run"), _T("当前产品文件名"), _T("Demo"), m_cstrFilmCfgPath);
+			QString qstrCurPkgName = QString::fromStdWString(m_cstrCurPkgName.GetBuffer());
+			m_cstrCurPkgName.ReleaseBuffer();
+			if (!SetCrurentPackage(qstrCurPkgName))
+			{
+				QString strMsg = QString::fromLocal8Bit("设置当前产品\"%1\"失败").arg(qstrCurPkgName);
+				emit MESSAGEBOX.SigNalMessAgeBoxData(strMsg, DOMODEL, 0);
+				return false;
+			}
+			//3、下发其他参数
+			if (!SetOtherData())
+			{
+				emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("下发数据到PLC失败!"), DOMODEL, 0);
+				return false;
 			}
 			break;
-		case INITIALIZATION_STATUS:
-			if (m_bMachineCurModel)//自动
+		}
+		else
+		{
+			if (GetTickCount() - dwStartTime > 10000)	//加载配置文件超时
 			{
-				//
+				emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("获取设备数据失败!"), DOMODEL, 0);
+				return false;
 			}
-			else
-			{
-				//进行初始化
-				InitMachineCtrl();
-			}
-			break;
-		case READY_STATUS:
-			break;
-		case RUN_STATUS:
-			break;
-		case ERROR_STATUS:
-			break;
-		default:
-			break;
+			Sleep(10);
 		}
 	}
 	return true;
 }
 
-bool OP_MachineStatusCtrl::MachineCtrlEStop()
+bool OP_MachineStatusCtrl::MachineCtrlCleanAlarm()
 {
-	return true;
-}
-
-bool OP_MachineStatusCtrl::MachineCtrlMaintain()
-{
-	return true;
+	return HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stReset.Addr.toInt(), m_stReset.Addr_Type);
 }
 
 bool OP_MachineStatusCtrl::SetOtherData()
@@ -157,10 +202,10 @@ bool OP_MachineStatusCtrl::SetOtherData()
 	nVel = MACHINECTRL.m_QveAutoProduction.at(0).Value_.at(MACHINE_ONLOAD_DIR).Vel;
 	HC_PLC_INTERFACE.SetBOOLToPLC(nVel, dwAddr, emType);
 	//工作速度
-	dwAddr = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt();
-	emType = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type;
-	nVel = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel;
-	int nAccuracy = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;
+	dwAddr = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt();
+	emType = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type;
+	nVel = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel;
+	int nAccuracy = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;
 	HC_PLC_INTERFACE.SetBOOLToPLC(nVel*nAccuracy, dwAddr, emType);
 
 	//参数设置页面数据下发
@@ -252,76 +297,30 @@ bool OP_MachineStatusCtrl::GetIsAutoMovePos()
 	return ReadBoolFromFile(_T("复位时电机自动定位"), _T("Vel"), false, cstrPath);
 }
 
-bool OP_MachineStatusCtrl::SetMachineAlarm()
+bool OP_MachineStatusCtrl::CheckMachineStop()
 {
+	//上一次状态、实际速度、运行方向
+	if (m_bMachineLasetStatus)
+	{
+		DWORD  dwCurSpeed = HC_PLC_INTERFACE.GetDWORDFromPLC(m_stCurSpeed.Addr.toInt(),m_stCurSpeed.Addr_Type);
+	}
 	return true;
 }
 
-bool OP_MachineStatusCtrl::InitMachineCtrl()
+void OP_MachineStatusCtrl::WriteWorkHistoryLog()
 {
-	//下发设备基本参数(电机速度、产品参数、基本运行数据)
-	DWORD dwStartTime = GetTickCount();
-	while (1)
-	{
-		if (MACHINECTRL.GetOnloadConfigStatus())
-		{
-			//连接激光
-			if (!LASERINTERFACE.GetLaserIsConnect())
-			{
-				LASERINTERFACE.ConnectLaser();
-			}
-			//1、下发电机参数
-			SetMotorSpeed();
-			//2、下发产品数
-			//获取当前产品
-			CString m_cstrCurPkgName = ReadStringFromFile(_T("Run"), _T("当前产品文件名"), _T("Demo"), m_cstrFilmCfgPath);
-			QString qstrCurPkgName = QString::fromStdWString(m_cstrCurPkgName.GetBuffer());
-			m_cstrCurPkgName.ReleaseBuffer();
-			if (!SetCrurentPackage(qstrCurPkgName))
-			{
-				QString strMsg = QString::fromLocal8Bit("设置当前产品\"%1\"失败").arg(qstrCurPkgName);
-				emit MESSAGEBOX.SigNalMessAgeBoxData(strMsg, DOMODEL,0);
-				return false;
-			}
-			//3、下发其他参数
-			if (!SetOtherData())
-			{
-				emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("下发数据到PLC失败!"), DOMODEL,0);
-				return false;
-			}
-			break;
-		}
-		else
-		{
-			if (GetTickCount() - dwStartTime > 10000)	//加载配置文件超时
-			{
-				emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("获取设备数据失败!"), DOMODEL,0);
-				return false;
-			}
-			Sleep(10);
-		}
-	}
-	return true;
+	//
+}
+
+void OP_MachineStatusCtrl::WriteAlarmHistoryLog()
+{
+	//
 }
 
 bool OP_MachineStatusCtrl::InitMachineWork()
 {
 	//启动线程
 	start();
-	return true;
-}
-
-bool OP_MachineStatusCtrl::SetMachineStatus(EM_MACHINE_STATUS_CTRL emStatus, bool bFlag)
-{
-	m_emMachineStatusCtrl = emStatus;
-	m_bMachineCurModel = bFlag;
-	return true;
-}
-
-bool OP_MachineStatusCtrl::SetMachineWorkTask(EM_MACHINE_WORK_TASK emWork, bool bFlag)
-{
-	m_emMachineWorkTask = emWork;
-	m_bMachineCurModel = bFlag;
 	return true;
 }
 
@@ -463,6 +462,12 @@ bool OP_MachineStatusCtrl::SetCrurentPackage(QString qstrCurPkgName)
 	return true;
 }
 
+bool OP_MachineStatusCtrl::SetMachineTask(MACHINE_TASK emMachineTask)
+{
+	m_emMachineTask = emMachineTask;
+	return true;
+}
+
 ST_LASER_DATA OP_MachineStatusCtrl::GetCurLaserData()
 {
 	return m_stCurLaserData;
@@ -471,5 +476,9 @@ ST_LASER_DATA OP_MachineStatusCtrl::GetCurLaserData()
 void OP_MachineStatusCtrl::SetLaserData(ST_LASER_DATA stLaserData)
 {
 	m_stCurLaserData = stLaserData;
+}
 
+void OP_MachineStatusCtrl::SetMachineRunDir(bool bFlag)
+{
+	m_bMachineRunDir = bFlag;
 }

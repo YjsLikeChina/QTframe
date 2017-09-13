@@ -1,4 +1,4 @@
-#include "CTRL_messagebox.h"
+#include "UI_MessageBox.h"
 
 CTRL_Messagebox* CTRL_Messagebox::m_pInstanceObj = NULL;
 

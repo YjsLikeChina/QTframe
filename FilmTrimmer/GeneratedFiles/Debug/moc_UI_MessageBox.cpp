@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UI_MessageBox_t {
-    QByteArrayData data[18];
-    char stringdata0[225];
+    QByteArrayData data[17];
+    char stringdata0[202];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,8 +45,7 @@ QT_MOC_LITERAL(12, 130, 9), // "SlotNever"
 QT_MOC_LITERAL(13, 140, 11), // "SlotTimeout"
 QT_MOC_LITERAL(14, 152, 16), // "SlotCloseDomodel"
 QT_MOC_LITERAL(15, 169, 21), // "SlotNewMessAgeBoxData"
-QT_MOC_LITERAL(16, 191, 10), // "EN_Resoult"
-QT_MOC_LITERAL(17, 202, 22) // "SlotNewMessAgeBoxData1"
+QT_MOC_LITERAL(16, 191, 10) // "EN_Resoult"
 
     },
     "UI_MessageBox\0SigNalMessAgeBoxData\0\0"
@@ -54,7 +53,7 @@ QT_MOC_LITERAL(17, 202, 22) // "SlotNewMessAgeBoxData1"
     "DomodelType\0SigNalCloseMessageBox\0"
     "SlotOk\0SlotCancel\0SlotNever\0SlotTimeout\0"
     "SlotCloseDomodel\0SlotNewMessAgeBoxData\0"
-    "EN_Resoult\0SlotNewMessAgeBoxData1"
+    "EN_Resoult"
 };
 #undef QT_MOC_LITERAL
 
@@ -64,7 +63,7 @@ static const uint qt_meta_data_UI_MessageBox[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -72,26 +71,22 @@ static const uint qt_meta_data_UI_MessageBox[] = {
        5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    5,  104,    2, 0x06 /* Public */,
-       1,    4,  115,    2, 0x26 /* Public | MethodCloned */,
-       1,    3,  124,    2, 0x26 /* Public | MethodCloned */,
-       1,    2,  131,    2, 0x26 /* Public | MethodCloned */,
-       9,    0,  136,    2, 0x06 /* Public */,
+       1,    5,   84,    2, 0x06 /* Public */,
+       1,    4,   95,    2, 0x26 /* Public | MethodCloned */,
+       1,    3,  104,    2, 0x26 /* Public | MethodCloned */,
+       1,    2,  111,    2, 0x26 /* Public | MethodCloned */,
+       9,    0,  116,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    0,  137,    2, 0x09 /* Protected */,
-      11,    0,  138,    2, 0x09 /* Protected */,
-      12,    0,  139,    2, 0x09 /* Protected */,
-      13,    0,  140,    2, 0x09 /* Protected */,
-      14,    0,  141,    2, 0x0a /* Public */,
-      15,    5,  142,    2, 0x0a /* Public */,
-      15,    4,  153,    2, 0x2a /* Public | MethodCloned */,
-      15,    3,  162,    2, 0x2a /* Public | MethodCloned */,
-      15,    2,  169,    2, 0x2a /* Public | MethodCloned */,
-      17,    5,  174,    2, 0x0a /* Public */,
-      17,    4,  185,    2, 0x2a /* Public | MethodCloned */,
-      17,    3,  194,    2, 0x2a /* Public | MethodCloned */,
-      17,    2,  201,    2, 0x2a /* Public | MethodCloned */,
+      10,    0,  117,    2, 0x09 /* Protected */,
+      11,    0,  118,    2, 0x09 /* Protected */,
+      12,    0,  119,    2, 0x09 /* Protected */,
+      13,    0,  120,    2, 0x09 /* Protected */,
+      14,    0,  121,    2, 0x0a /* Public */,
+      15,    5,  122,    2, 0x0a /* Public */,
+      15,    4,  133,    2, 0x2a /* Public | MethodCloned */,
+      15,    3,  142,    2, 0x2a /* Public | MethodCloned */,
+      15,    2,  149,    2, 0x2a /* Public | MethodCloned */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::Int, QMetaType::Bool, 0x80000000 | 7,    3,    4,    5,    6,    8,
@@ -110,10 +105,6 @@ static const uint qt_meta_data_UI_MessageBox[] = {
     0x80000000 | 16, QMetaType::QString, QMetaType::Int, QMetaType::Int, QMetaType::Bool,    3,    4,    5,    6,
     0x80000000 | 16, QMetaType::QString, QMetaType::Int, QMetaType::Int,    3,    4,    5,
     0x80000000 | 16, QMetaType::QString, QMetaType::Int,    3,    4,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::Int, QMetaType::Bool, 0x80000000 | 7,    3,    4,    5,    6,    8,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::Int, QMetaType::Bool,    3,    4,    5,    6,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::Int,    3,    4,    5,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int,    3,    4,
 
        0        // eod
 };
@@ -142,10 +133,6 @@ void UI_MessageBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
             if (_a[0]) *reinterpret_cast< EN_Resoult*>(_a[0]) = _r; }  break;
         case 13: { EN_Resoult _r = _t->SlotNewMessAgeBoxData((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< EN_Resoult*>(_a[0]) = _r; }  break;
-        case 14: _t->SlotNewMessAgeBoxData1((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4])),(*reinterpret_cast< DOMODELTYPE(*)>(_a[5]))); break;
-        case 15: _t->SlotNewMessAgeBoxData1((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4]))); break;
-        case 16: _t->SlotNewMessAgeBoxData1((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
-        case 17: _t->SlotNewMessAgeBoxData1((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -193,13 +180,13 @@ int UI_MessageBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 14)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 18;
+        _id -= 14;
     }
     return _id;
 }

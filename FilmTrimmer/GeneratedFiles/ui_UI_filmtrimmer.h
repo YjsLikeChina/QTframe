@@ -50,6 +50,7 @@ public:
     QLabel *LB_MachineOperatorHint;
     QLabel *LB_MachineModelLabel;
     QLabel *LB_MachineModel;
+    QLabel *LB_AlarmOrError_Text;
 
     void setupUi(QMainWindow *FrameWidget)
     {
@@ -91,7 +92,7 @@ public:
         font.setPointSize(14);
         LB_AlarmOrError_Show->setFont(font);
         LB_AlarmOrError_Show->setFrameShape(QFrame::NoFrame);
-        LB_AlarmOrError_Show->setAlignment(Qt::AlignCenter);
+        LB_AlarmOrError_Show->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         LB_Show2 = new QLabel(centralWidget);
         LB_Show2->setObjectName(QStringLiteral("LB_Show2"));
         LB_Show2->setGeometry(QRect(830, 14, 70, 20));
@@ -171,11 +172,11 @@ public:
         LB_SystemTime->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         LB_CtrlShow = new QLabel(centralWidget);
         LB_CtrlShow->setObjectName(QStringLiteral("LB_CtrlShow"));
-        LB_CtrlShow->setGeometry(QRect(-3, 709, 25, 60));
+        LB_CtrlShow->setGeometry(QRect(-3, 709, 20, 60));
         LB_CtrlShow->setFrameShape(QFrame::NoFrame);
         LB_CtrlHide = new QLabel(centralWidget);
         LB_CtrlHide->setObjectName(QStringLiteral("LB_CtrlHide"));
-        LB_CtrlHide->setGeometry(QRect(480, 709, 25, 60));
+        LB_CtrlHide->setGeometry(QRect(480, 709, 20, 60));
         LB_CtrlHide->setFrameShape(QFrame::NoFrame);
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
@@ -236,6 +237,17 @@ public:
         LB_MachineModel->setPalette(palette11);
         LB_MachineModel->setFont(font2);
         LB_MachineModel->setFrameShape(QFrame::NoFrame);
+        LB_AlarmOrError_Text = new QLabel(centralWidget);
+        LB_AlarmOrError_Text->setObjectName(QStringLiteral("LB_AlarmOrError_Text"));
+        LB_AlarmOrError_Text->setGeometry(QRect(250, 8, 551, 35));
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        LB_AlarmOrError_Text->setPalette(palette12);
+        LB_AlarmOrError_Text->setFont(font);
+        LB_AlarmOrError_Text->setFrameShape(QFrame::NoFrame);
+        LB_AlarmOrError_Text->setAlignment(Qt::AlignCenter);
         FrameWidget->setCentralWidget(centralWidget);
 
         retranslateUi(FrameWidget);
@@ -267,6 +279,7 @@ public:
         LB_MachineOperatorHint->setText(QApplication::translate("FrameWidget", "\346\223\215\344\275\234\346\217\220\347\244\272:", 0));
         LB_MachineModelLabel->setText(QApplication::translate("FrameWidget", "\350\256\276\345\244\207\346\250\241\345\274\217:", 0));
         LB_MachineModel->setText(QApplication::translate("FrameWidget", "\346\211\213\345\212\250\346\250\241\345\274\217", 0));
+        LB_AlarmOrError_Text->setText(QApplication::translate("FrameWidget", "\346\212\245\350\255\246\346\230\276\347\244\272", 0));
     } // retranslateUi
 
 };

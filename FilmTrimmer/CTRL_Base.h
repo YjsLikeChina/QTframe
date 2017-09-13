@@ -5,8 +5,7 @@
 #include "UI_InterfaceBase.h"
 #include "DP_HCPLCInteraction.h"
 #include "OP_MachineSoftWareMain.h"
-#include "UI_MessageBox.h"
-#include "DP_LaserInteraction.h"
+#include "DP_MotorCtrlInteraction.h"
 class CTRL_Base : public QObject {
 	Q_OBJECT
 public:

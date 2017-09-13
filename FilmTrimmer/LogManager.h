@@ -31,6 +31,6 @@ private:  // 私有成员
     static std::map<std::string, CLog*> m_logMap;  // 保存日志文件路径和日志对象的字典集合
 	static CLog *m_log ; //单个读写指针
 };
-#define  LOGMANANGER(x) LogManager::OpenLog(x);
-#define  LOGSTR LogManager::GetClogPtr();
+#define  LOGMANANGER(x) LogManager::OpenLog(x)
+#define  LOGSTR (*(LogManager::GetClogPtr()))
 #endif

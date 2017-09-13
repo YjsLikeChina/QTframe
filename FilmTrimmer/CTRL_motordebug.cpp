@@ -19,7 +19,6 @@ bool CTRL_MotorDebug::SaveMotolData(QVector<ST_CHANGE_POINT> VeChangePoint)
 	ST_VALUECFG*     ValuecfgTemp;
 	QMap<QString, QString> QmapString;
 	bool result = true;
-
 	for (int i = 0; i < VeChangePoint.size(); i++)
 	{
 		ChangeTemp = VeChangePoint.at(i);

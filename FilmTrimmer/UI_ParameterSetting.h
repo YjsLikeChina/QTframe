@@ -3,7 +3,7 @@
 #include <qwidget.h>
 #include "ui_UI_ParameterSetting.h"
 #include "CTRL_parameterset.h"
-
+#include "UI_UserManagerCtrol.h"
 class UI_ParameterSetting :
 	public QWidget,virtual public UI_InterfaceBase
 {
@@ -19,7 +19,7 @@ private:
 	bool m_bAutoUpdateLock;						//自动更新锁
 	QMap<int, int>	m_qMapDataOrder;			//
 	QMap<int, int>	m_qMapBoolOrder;
-
+	UI_UserManagerCtrol *m_UserMangerUi;		//用户管理窗口
 	CTRL_ParameterSet* m_pParameterSet;			//Ctrl指针
 private:
 	void initVal();

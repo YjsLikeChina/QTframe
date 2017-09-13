@@ -43,15 +43,19 @@ void UI_WorkSpeedInputDlg::initUI()
 	strIcon += "/Image/OK.png";
 	ui.PB_OK->setIcon(QIcon(strIcon));
 	ui.PB_OK->setIconSize(QSize(28,28));
-	ui.PB_OK->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_OK->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 
 	strIcon = QString::fromLocal8Bit(pBuffer);
 	strIcon += "/Image/Cancel.png";
 	ui.PB_Cancel->setIcon(QIcon(strIcon));
 	ui.PB_Cancel->setIconSize(QSize(28, 28));
-	ui.PB_Cancel->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_Cancel->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 
 	strIcon = QString::fromLocal8Bit(pBuffer);
 	strIcon += "/Image/Background.png";

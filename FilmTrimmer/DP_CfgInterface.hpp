@@ -5,12 +5,16 @@
 #include "DP_FileOperator.h"
 #include "BaseDataType.h"
 #include <QTreeWidget>
+#include <QStringList>
 
 class DP_CfgInterface : public QObject 
 {
 	Q_OBJECT
 private:
 	DP_CfgInterface(QObject * parent = Q_NULLPTR);
+	QMutex HistoryLock;
+	QString m_qstrHistoryInfoPath;
+	bool m_bFirstWriteHistoryFile;
 
 public:
 	static DP_CfgInterface* GetInstanceObj();
@@ -20,6 +24,8 @@ public:
 	//QVector<ST_MODULE> CfgValue;
 	bool WriteValue(const QVector<ST_MODULE>* CfgValue, int nModuleItem, QString strCfgPath); //配置工具使用，一次性重新整个模组及所有子项
 	bool WriteValue(const QMap<QString, QString>& ModifyVal, QString strKey,QString qstrCfgPath); //写入某个或某几个子项的值,strKey为配置文件中的key
+
+	bool WriteHistoryInfo(QString qstrInfo, QString qstrPath, bool bScreenFlag = false);		//历史信息文件,‘，’文件,bScreenFlag是否写入时间
 
 	static bool JudgeDirIsExist(const QString qstrDir); //判断目录是否存在
 	static bool JudgeFileIsExist(const QString qstrDir); //判断文件是否存在

@@ -100,7 +100,7 @@ void UI_MessageBox::initConnect()
 	connect(ui.PB_Cancel, SIGNAL(clicked()), this, SLOT(SlotCancel()));
 	connect(ui.NeverJump, SIGNAL(clicked()), this, SLOT(SlotNever()));
 	connect(m_pTimeout, SIGNAL(timeout()), this, SLOT(SlotTimeout()));
-	connect(this, SIGNAL(SigNalMessAgeBoxData(QString, int, int, bool, DOMODELTYPE)), this, SLOT(SlotNewMessAgeBoxData1(QString, int, int, bool, DOMODELTYPE)), Qt::QueuedConnection);
+	connect(this, SIGNAL(SigNalMessAgeBoxData(QString, int, int, bool, DOMODELTYPE)), this, SLOT(SlotNewMessAgeBoxData(QString, int, int, bool, DOMODELTYPE)), Qt::QueuedConnection);
 	connect(this, SIGNAL(SigNalCloseMessageBox()), this, SLOT(SlotCloseDomodel()), Qt::QueuedConnection);
 }
 
@@ -128,19 +128,25 @@ void UI_MessageBox::initUI()
 	strIconPath = strIconFile + "/Image/OK.png";
 	ui.PB_OK->setIcon(QIcon(strIconPath));
 	ui.PB_OK->setIconSize(QSize(30, 25));
-	ui.PB_OK->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_OK->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 
 	strIconPath = strIconFile + "/Image/Cancel.png";
 	ui.PB_Cancel->setIcon(QIcon(strIconPath));
 	ui.PB_Cancel->setIconSize(QSize(30, 25));
-	ui.PB_Cancel->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.PB_Cancel->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 
 	ui.NeverJump->setIcon(QIcon(strIconPath));
 	ui.NeverJump->setIconSize(QSize(30, 25));
-	ui.NeverJump->setStyleSheet("QPushButton{background-color:white;color: rgb(1,81,152); border-radius: 10px; border: 1px groove gray; border-style: outset;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-style: inset; }");
+	ui.NeverJump->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+		);
 	this->setWindowFlags(Qt::WindowTitleHint | Qt::CustomizeWindowHint);
 }
 
@@ -216,30 +222,4 @@ EN_Resoult UI_MessageBox::SlotNewMessAgeBoxData(QString message, int model, int 
 	return NewMessage(temp);
 }
 
-void UI_MessageBox::SlotNewMessAgeBoxData1(QString message, int model, int time /*= 2000*/, bool precedence /*= false*/, DOMODELTYPE DomodelType /*= TWOBUTTON*/)
-{
-	int a = m_CurStatius;
-	ST_MessageBoxData temp;
-	temp.message = message;
-	temp.model = model;
-	temp.time = time;
-	temp.DoModelType = DomodelType;
-	if (precedence)
-	{
-		if (m_CurStatius != NOMESSAGE)
-		{
-			m_STMessAgeData.insert(1, temp);
-			m_pTimeout->stop();
-			m_STMessAgeData.removeAt(CurMessageDataNumber);
-			accept();
-			m_CurStatius = NOMESSAGE;
-		}
-		else
-			m_STMessAgeData.push_back(temp);
-	}
-	else
-		m_STMessAgeData.push_back(temp);
-	NewMessage(temp);
-	return;
-}
 

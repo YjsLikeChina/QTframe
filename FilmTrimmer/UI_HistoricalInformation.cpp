@@ -35,27 +35,24 @@ void UI_HistoricalInformation::initUI()
 	ui.PB_CleanHistoryFile->setIcon(QIcon(qstrIconPath));
 	ui.PB_CleanHistoryFile->setIconSize(QSize(28, 28));
 	ui.PB_CleanHistoryFile->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	ui.PB_AlarmScreen->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
-	//ui.CB_HistoryInfoSel->
-	//	setStyleSheet("QComboBox QAbstractItemView::item{height:30px;}"
-	//		"QComboBox::drop-down{subcontrol-origin: padding;subcontrol-position:top right;width: 30px;border-left-width: 0px;border-left-color: white;}");
-
-	ui.TW_HistoryInfo->horizontalHeader()->setStretchLastSection(true); //设置充满表宽度
+	ui.TW_HistoryInfo->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); //自适应列宽
 	ui.TW_HistoryInfo->verticalHeader()->setDefaultSectionSize(35); //设置行高
-	ui.TW_HistoryInfo->setFrameShape(QFrame::NoFrame); //设置无边框
-	ui.TW_HistoryInfo->setShowGrid(false); //设置不显示格子线
 	ui.TW_HistoryInfo->verticalHeader()->setVisible(false); //设置垂直头不可见
-	ui.TW_HistoryInfo->setSelectionBehavior(QAbstractItemView::SelectRows);  //设置选择行为时每次选择一行
+	ui.TW_HistoryInfo->setSelectionMode(QAbstractItemView::SingleSelection); //只能单选
 	ui.TW_HistoryInfo->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
 	ui.TW_HistoryInfo->horizontalHeader()->setFixedHeight(38); //设置表头的高度
 	ui.TW_HistoryInfo->setSelectionBehavior(QAbstractItemView::SelectRows);
-	ui.TW_HistoryInfo->setStyleSheet("selection-background-color:lightblue;"); //设置选中背景色
+	ui.TW_HistoryInfo->setStyleSheet("selection-background-color:lightblue; gridline-color:white;"); //设置选中背景色
+	ui.TW_HistoryInfo->setFocusPolicy(Qt::NoFocus);
 }
 
 void UI_HistoricalInformation::initConnect()
@@ -92,15 +89,14 @@ void UI_HistoricalInformation::SlotSwitchSection(int nIndex)
 		QStringList qslFileInfo = FileInfoStream->readAll().split("\n");//每行以\n区分
 		ui.TW_HistoryInfo->setRowCount(0);
 		ui.TW_HistoryInfo->clearContents();
-		for (int i = qslFileInfo.count() - 1, nItem = 0; i >= 106; i--, nItem++)
+		for (int i = qslFileInfo.count() - 1, nItem = 0; i >= 0; i--, nItem++)
 		{
 			ui.TW_HistoryInfo->insertRow(nItem);
 			QStringList tempbar = qslFileInfo.at(i).split(",");//一行中的单元格以，区分
 			for (int j = 0; j <= tempbar.size() - 1; j++)
 			{
-				QString str = tempbar[j];
-				QString strInfo = str.toLocal8Bit();
-				ui.TW_HistoryInfo->setItem(nItem, j, new QTableWidgetItem(strInfo));
+				QString strinfo = tempbar[j];
+				ui.TW_HistoryInfo->setItem(nItem, j, new QTableWidgetItem(strinfo));
 				this->show();
 			}
 		}

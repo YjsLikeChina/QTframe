@@ -1,4 +1,5 @@
 #include"CTRL_Base.h"
+
 CTRL_Base::CTRL_Base(QObject * parent)
 {
 	m_pUI_Interface = NULL;

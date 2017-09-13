@@ -1,7 +1,8 @@
 ﻿#pragma once
 #include <QObject>
 #include "CTRL_Base.h"
-class CTRL_AutoProduction : public CTRL_Base {
+class CTRL_AutoProduction : public CTRL_Base 
+{
 	Q_OBJECT
 
 private:

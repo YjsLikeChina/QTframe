@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QTextStream>
 #include "DP_LaserInteraction.h"
+#include "OP_MachineSoftWareMain.h"
 
 OP_AutoUpdateData::OP_AutoUpdateData()
 {
@@ -18,6 +19,10 @@ OP_AutoUpdateData::~OP_AutoUpdateData()
 void OP_AutoUpdateData::initVal()
 {
 	m_bReadHistoryInfoLock = false;
+	m_dwMachineModelAddr = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_MODEL).Addr.toInt();
+	m_emMachineModelType = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_MODEL).Addr_Type;
+	m_qstrAlarmList = "";
+	m_qstrErrorList = "";
 }
 
 void OP_AutoUpdateData::run()
@@ -55,9 +60,11 @@ void OP_AutoUpdateData::run()
 			Sleep(200);
 			break;
 		}
-		m_qslMachineAlarmList.clear();
-		MachineAlarmUpdata(m_qslMachineAlarmList);
-		emit SigMachineAlarm(m_qslMachineAlarmList);
+		//设备报警及设备手自动模式
+		MachineAlarmUpdata(m_qstrAlarmList, m_qstrErrorList);
+		emit SigMachineAlarm(m_qstrAlarmList, m_qstrErrorList);
+		MachineModelUpdata(m_bMachineModel);
+		emit SigMachineModel(m_bMachineModel);
 		Sleep(50);
 	}
 	return;
@@ -74,7 +81,7 @@ void OP_AutoUpdateData::AutoUpdateCommon(QList<ST_UPDATEDATA>& _qLisAutoUpdata)
 		ST_UPDATEDATA _updata;
 		if (MD == CommonAutoUpdate.at(i).PLCAddrType || MW == CommonAutoUpdate.at(i).PLCAddrType || QW == CommonAutoUpdate.at(i).PLCAddrType)
 		{
-			_updata.dlData = j + i;//HC_PLC_INTERFACE.GetDWORDFromPLC(CommonAutoUpdate.at(i).dwPLCAddr, CommonAutoUpdate.at(i).PLCAddrType) / CommonAutoUpdate.at(i).nAccuracy;
+			_updata.dlData = HC_PLC_INTERFACE.GetDWORDFromPLC(CommonAutoUpdate.at(i).dwPLCAddr, CommonAutoUpdate.at(i).PLCAddrType) / CommonAutoUpdate.at(i).nAccuracy;
 		}
 		else
 		{
@@ -153,9 +160,37 @@ void OP_AutoUpdateData::AutoUpdataHistoryInfo(QList<ST_UPDATEDATA>& _qLisAutoUpd
 	m_bReadHistoryInfoLock = false;
 }
 
-bool OP_AutoUpdateData::MachineAlarmUpdata(QStringList& qslAlarm)
+bool OP_AutoUpdateData::MachineAlarmUpdata(QString& qslAlarm, QString& qslError)
 {
+	//更新设备报警
+	int nLength = m_qVecAlarmList.length();
+	qslAlarm.clear();
+	qslError.clear();
+	for (int i = 0; i < nLength; i++)
+	{
+		qslAlarm += m_qVecAlarmList.at(i).Function_name + ",";
+		//if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecAlarmList.at(i).Addr.toInt(), m_qVecAlarmList.at(i).Addr_Type))
+		//{
+		//	qslAlarm = qslAlarm + m_qVecAlarmList.at(i).Function_name + ",";
+		//}
+	}
+	//更新设备错误
+	nLength = m_qVecErrorList.length();
+	for (int i = 0; i < nLength; i++)
+	{
+		qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
+		//if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecErrorList.at(i).Addr.toInt(), m_qVecErrorList.at(i).Addr_Type))
+		//{
+		//	qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
+		//}
+	}
 	return true;
+}
+
+void OP_AutoUpdateData::MachineModelUpdata(bool& bMachineModel)
+{
+	//获取设备手自动模式
+	bMachineModel = HC_PLC_INTERFACE.GetBOOLFromPLC(m_dwMachineModelAddr, m_emMachineModelType);
 }
 
 void OP_AutoUpdateData::SwitchWorkTask(int nCurPage, int nCurModule)

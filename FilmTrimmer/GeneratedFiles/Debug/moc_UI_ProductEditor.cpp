@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UI_ProductEditor_t {
-    QByteArrayData data[17];
-    char stringdata0[248];
+    QByteArrayData data[15];
+    char stringdata0[220];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,10 +42,8 @@ QT_MOC_LITERAL(9, 142, 16), // "QListWidgetItem*"
 QT_MOC_LITERAL(10, 159, 4), // "item"
 QT_MOC_LITERAL(11, 164, 14), // "SlotDeleteStep"
 QT_MOC_LITERAL(12, 179, 7), // "nButton"
-QT_MOC_LITERAL(13, 187, 19), // "SlotItemDoubleClick"
-QT_MOC_LITERAL(14, 207, 16), // "QTreeWidgetItem*"
-QT_MOC_LITERAL(15, 224, 7), // "nColumn"
-QT_MOC_LITERAL(16, 232, 15) // "SlotItemChanged"
+QT_MOC_LITERAL(13, 187, 16), // "SlotLaserFileSel"
+QT_MOC_LITERAL(14, 204, 15) // "SlotItemChanged"
 
     },
     "UI_ProductEditor\0SlotSetCurrentPackage\0"
@@ -53,8 +51,7 @@ QT_MOC_LITERAL(16, 232, 15) // "SlotItemChanged"
     "SlotNewPackage\0SlotSavePackage\0"
     "SlotAddPackageStep\0SlotSwitchPackage\0"
     "QListWidgetItem*\0item\0SlotDeleteStep\0"
-    "nButton\0SlotItemDoubleClick\0"
-    "QTreeWidgetItem*\0nColumn\0SlotItemChanged"
+    "nButton\0SlotLaserFileSel\0SlotItemChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -80,8 +77,8 @@ static const uint qt_meta_data_UI_ProductEditor[] = {
        7,    0,   69,    2, 0x09 /* Protected */,
        8,    1,   70,    2, 0x09 /* Protected */,
       11,    1,   73,    2, 0x09 /* Protected */,
-      13,    2,   76,    2, 0x09 /* Protected */,
-      16,    0,   81,    2, 0x09 /* Protected */,
+      13,    0,   76,    2, 0x09 /* Protected */,
+      14,    0,   77,    2, 0x09 /* Protected */,
 
  // slots: parameters
     QMetaType::Void,
@@ -92,7 +89,7 @@ static const uint qt_meta_data_UI_ProductEditor[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 9,   10,
     QMetaType::Void, QMetaType::Int,   12,
-    QMetaType::Void, 0x80000000 | 14, QMetaType::Int,   10,   15,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -112,7 +109,7 @@ void UI_ProductEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 5: _t->SlotAddPackageStep(); break;
         case 6: _t->SlotSwitchPackage((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         case 7: _t->SlotDeleteStep((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: _t->SlotItemDoubleClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 8: _t->SlotLaserFileSel(); break;
         case 9: _t->SlotItemChanged(); break;
         default: ;
         }

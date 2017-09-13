@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UI_AutoProduction_t {
-    QByteArrayData data[27];
-    char stringdata0[460];
+    QByteArrayData data[29];
+    char stringdata0[483];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,34 +37,36 @@ QT_MOC_LITERAL(4, 45, 9), // "nChildNum"
 QT_MOC_LITERAL(5, 55, 6), // "dlData"
 QT_MOC_LITERAL(6, 62, 16), // "SigSetLaserParam"
 QT_MOC_LITERAL(7, 79, 5), // "nCard"
-QT_MOC_LITERAL(8, 85, 15), // "SlotItemChanged"
-QT_MOC_LITERAL(9, 101, 16), // "QTreeWidgetItem*"
-QT_MOC_LITERAL(10, 118, 4), // "item"
-QT_MOC_LITERAL(11, 123, 6), // "column"
-QT_MOC_LITERAL(12, 130, 16), // "SlotRunDirection"
-QT_MOC_LITERAL(13, 147, 19), // "SlotOnloadDirection"
-QT_MOC_LITERAL(14, 167, 20), // "SlotOnloadClockwiseP"
-QT_MOC_LITERAL(15, 188, 20), // "SlotOnloadClockwiseR"
-QT_MOC_LITERAL(16, 209, 24), // "SlotOnloadAnticlockwiseP"
-QT_MOC_LITERAL(17, 234, 24), // "SlotOnloadAnticlockwiseR"
-QT_MOC_LITERAL(18, 259, 22), // "SlotMainAxisClockwiseP"
-QT_MOC_LITERAL(19, 282, 22), // "SlotMainAxisClockwiseR"
-QT_MOC_LITERAL(20, 305, 26), // "SlotMainAxisAnticlockwiseP"
-QT_MOC_LITERAL(21, 332, 26), // "SlotMainAxisAnticlockwiseR"
-QT_MOC_LITERAL(22, 359, 18), // "SlotRecvClockwiseP"
-QT_MOC_LITERAL(23, 378, 18), // "SlotRecvClockwiseR"
-QT_MOC_LITERAL(24, 397, 22), // "SlotRecvAnticlockwiseP"
-QT_MOC_LITERAL(25, 420, 22), // "SlotRecvAnticlockwiseR"
-QT_MOC_LITERAL(26, 443, 16) // "SlotSetWorkSpeed"
+QT_MOC_LITERAL(8, 85, 16), // "SigMachineRunDir"
+QT_MOC_LITERAL(9, 102, 5), // "bFlag"
+QT_MOC_LITERAL(10, 108, 15), // "SlotItemChanged"
+QT_MOC_LITERAL(11, 124, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(12, 141, 4), // "item"
+QT_MOC_LITERAL(13, 146, 6), // "column"
+QT_MOC_LITERAL(14, 153, 16), // "SlotRunDirection"
+QT_MOC_LITERAL(15, 170, 19), // "SlotOnloadDirection"
+QT_MOC_LITERAL(16, 190, 20), // "SlotOnloadClockwiseP"
+QT_MOC_LITERAL(17, 211, 20), // "SlotOnloadClockwiseR"
+QT_MOC_LITERAL(18, 232, 24), // "SlotOnloadAnticlockwiseP"
+QT_MOC_LITERAL(19, 257, 24), // "SlotOnloadAnticlockwiseR"
+QT_MOC_LITERAL(20, 282, 22), // "SlotMainAxisClockwiseP"
+QT_MOC_LITERAL(21, 305, 22), // "SlotMainAxisClockwiseR"
+QT_MOC_LITERAL(22, 328, 26), // "SlotMainAxisAnticlockwiseP"
+QT_MOC_LITERAL(23, 355, 26), // "SlotMainAxisAnticlockwiseR"
+QT_MOC_LITERAL(24, 382, 18), // "SlotRecvClockwiseP"
+QT_MOC_LITERAL(25, 401, 18), // "SlotRecvClockwiseR"
+QT_MOC_LITERAL(26, 420, 22), // "SlotRecvAnticlockwiseP"
+QT_MOC_LITERAL(27, 443, 22), // "SlotRecvAnticlockwiseR"
+QT_MOC_LITERAL(28, 466, 16) // "SlotSetWorkSpeed"
 
     },
     "UI_AutoProduction\0SigItemChanged\0\0"
     "nModuleNum\0nChildNum\0dlData\0"
-    "SigSetLaserParam\0nCard\0SlotItemChanged\0"
-    "QTreeWidgetItem*\0item\0column\0"
-    "SlotRunDirection\0SlotOnloadDirection\0"
-    "SlotOnloadClockwiseP\0SlotOnloadClockwiseR\0"
-    "SlotOnloadAnticlockwiseP\0"
+    "SigSetLaserParam\0nCard\0SigMachineRunDir\0"
+    "bFlag\0SlotItemChanged\0QTreeWidgetItem*\0"
+    "item\0column\0SlotRunDirection\0"
+    "SlotOnloadDirection\0SlotOnloadClockwiseP\0"
+    "SlotOnloadClockwiseR\0SlotOnloadAnticlockwiseP\0"
     "SlotOnloadAnticlockwiseR\0"
     "SlotMainAxisClockwiseP\0SlotMainAxisClockwiseR\0"
     "SlotMainAxisAnticlockwiseP\0"
@@ -81,41 +83,43 @@ static const uint qt_meta_data_UI_AutoProduction[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    3,  104,    2, 0x06 /* Public */,
-       6,    1,  111,    2, 0x06 /* Public */,
+       1,    3,  109,    2, 0x06 /* Public */,
+       6,    1,  116,    2, 0x06 /* Public */,
+       8,    1,  119,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       8,    2,  114,    2, 0x09 /* Protected */,
-      12,    0,  119,    2, 0x09 /* Protected */,
-      13,    0,  120,    2, 0x09 /* Protected */,
-      14,    0,  121,    2, 0x09 /* Protected */,
-      15,    0,  122,    2, 0x09 /* Protected */,
-      16,    0,  123,    2, 0x09 /* Protected */,
-      17,    0,  124,    2, 0x09 /* Protected */,
-      18,    0,  125,    2, 0x09 /* Protected */,
-      19,    0,  126,    2, 0x09 /* Protected */,
-      20,    0,  127,    2, 0x09 /* Protected */,
-      21,    0,  128,    2, 0x09 /* Protected */,
-      22,    0,  129,    2, 0x09 /* Protected */,
-      23,    0,  130,    2, 0x09 /* Protected */,
-      24,    0,  131,    2, 0x09 /* Protected */,
-      25,    0,  132,    2, 0x09 /* Protected */,
-      26,    0,  133,    2, 0x09 /* Protected */,
+      10,    2,  122,    2, 0x09 /* Protected */,
+      14,    0,  127,    2, 0x09 /* Protected */,
+      15,    0,  128,    2, 0x09 /* Protected */,
+      16,    0,  129,    2, 0x09 /* Protected */,
+      17,    0,  130,    2, 0x09 /* Protected */,
+      18,    0,  131,    2, 0x09 /* Protected */,
+      19,    0,  132,    2, 0x09 /* Protected */,
+      20,    0,  133,    2, 0x09 /* Protected */,
+      21,    0,  134,    2, 0x09 /* Protected */,
+      22,    0,  135,    2, 0x09 /* Protected */,
+      23,    0,  136,    2, 0x09 /* Protected */,
+      24,    0,  137,    2, 0x09 /* Protected */,
+      25,    0,  138,    2, 0x09 /* Protected */,
+      26,    0,  139,    2, 0x09 /* Protected */,
+      27,    0,  140,    2, 0x09 /* Protected */,
+      28,    0,  141,    2, 0x09 /* Protected */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Double,    3,    4,    5,
     QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, QMetaType::Bool,    9,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 9, QMetaType::Int,   10,   11,
+    QMetaType::Void, 0x80000000 | 11, QMetaType::Int,   12,   13,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -143,22 +147,23 @@ void UI_AutoProduction::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         switch (_id) {
         case 0: _t->SigItemChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
         case 1: _t->SigSetLaserParam((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->SlotItemChanged((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 3: _t->SlotRunDirection(); break;
-        case 4: _t->SlotOnloadDirection(); break;
-        case 5: _t->SlotOnloadClockwiseP(); break;
-        case 6: _t->SlotOnloadClockwiseR(); break;
-        case 7: _t->SlotOnloadAnticlockwiseP(); break;
-        case 8: _t->SlotOnloadAnticlockwiseR(); break;
-        case 9: _t->SlotMainAxisClockwiseP(); break;
-        case 10: _t->SlotMainAxisClockwiseR(); break;
-        case 11: _t->SlotMainAxisAnticlockwiseP(); break;
-        case 12: _t->SlotMainAxisAnticlockwiseR(); break;
-        case 13: _t->SlotRecvClockwiseP(); break;
-        case 14: _t->SlotRecvClockwiseR(); break;
-        case 15: _t->SlotRecvAnticlockwiseP(); break;
-        case 16: _t->SlotRecvAnticlockwiseR(); break;
-        case 17: _t->SlotSetWorkSpeed(); break;
+        case 2: _t->SigMachineRunDir((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 3: _t->SlotItemChanged((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->SlotRunDirection(); break;
+        case 5: _t->SlotOnloadDirection(); break;
+        case 6: _t->SlotOnloadClockwiseP(); break;
+        case 7: _t->SlotOnloadClockwiseR(); break;
+        case 8: _t->SlotOnloadAnticlockwiseP(); break;
+        case 9: _t->SlotOnloadAnticlockwiseR(); break;
+        case 10: _t->SlotMainAxisClockwiseP(); break;
+        case 11: _t->SlotMainAxisClockwiseR(); break;
+        case 12: _t->SlotMainAxisAnticlockwiseP(); break;
+        case 13: _t->SlotMainAxisAnticlockwiseR(); break;
+        case 14: _t->SlotRecvClockwiseP(); break;
+        case 15: _t->SlotRecvClockwiseR(); break;
+        case 16: _t->SlotRecvAnticlockwiseP(); break;
+        case 17: _t->SlotRecvAnticlockwiseR(); break;
+        case 18: _t->SlotSetWorkSpeed(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -175,6 +180,13 @@ void UI_AutoProduction::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
             typedef void (UI_AutoProduction::*_t)(int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&UI_AutoProduction::SigSetLaserParam)) {
                 *result = 1;
+                return;
+            }
+        }
+        {
+            typedef void (UI_AutoProduction::*_t)(bool );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&UI_AutoProduction::SigMachineRunDir)) {
+                *result = 2;
                 return;
             }
         }
@@ -208,13 +220,13 @@ int UI_AutoProduction::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 19;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 19)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 18;
+        _id -= 19;
     }
     return _id;
 }
@@ -231,5 +243,12 @@ void UI_AutoProduction::SigSetLaserParam(int _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void UI_AutoProduction::SigMachineRunDir(bool _t1)
+{
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_END_MOC_NAMESPACE

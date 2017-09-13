@@ -1,6 +1,7 @@
 #include "OP_MachineSoftWareMain.h"
 #include "DP_CfgInterface.hpp"
 #include <QCoreApplication>
+#include "UI_MessageBox.h"
 
 OP_MachineSoftWareMain* OP_MachineSoftWareMain::m_pInstanceObj = Q_NULLPTR;
 OP_MachineSoftWareMain* OP_MachineSoftWareMain::GetInstanceObj()
@@ -27,14 +28,6 @@ OP_MachineSoftWareMain::~OP_MachineSoftWareMain()
 void OP_MachineSoftWareMain::initVal()
 {
 	m_bOnloadConfigFinish = false;
-	m_User = new CUserManager;
-	m_User->AddUser(L"中国人", L"123455", USER_ADMIN);
-	CStringList name;
-	name.InsertBefore(0, L"管理员");
-	m_User->DeleteUsers(name);
-	m_User->Login(0);
-	
-
 }
 
 void OP_MachineSoftWareMain::initConnect()
@@ -44,32 +37,56 @@ void OP_MachineSoftWareMain::initConnect()
 void OP_MachineSoftWareMain::LoadModuleInfo()
 {
 	//自动生产页面
-	CFGINTERFACE.initCfgValue(m_QveAutoProduction, ReturnPageCfgPath(AUTOMATICPRODUCT));
+	if (!CFGINTERFACE.initCfgValue(m_QveAutoProduction, ReturnPageCfgPath(AUTOMATICPRODUCT)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取自动生产页面参数失败"),DOMODEL,0);
+		return;
+	}
 	QList<ST_UPDATEDATA> _AutoUpdateData;
 	GetAutoUpdateData(m_QveAutoProduction, _AutoUpdateData,AUTOMATICPRODUCT);
 	m_qMapAutoUpdateData.insert(AUTOMATICPRODUCT, _AutoUpdateData);
 	//IO调试
-	CFGINTERFACE.initCfgValue(m_QveIODebug, ReturnPageCfgPath(IODEBUG));
+	if (!CFGINTERFACE.initCfgValue(m_QveIODebug, ReturnPageCfgPath(IODEBUG)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取IO调试页面参数失败"), DOMODEL, 0);
+		return;
+	}
 	_AutoUpdateData.clear();
 	GetAutoUpdateData(m_QveIODebug, _AutoUpdateData,IODEBUG);
 	m_qMapAutoUpdateData.insert(IODEBUG, _AutoUpdateData);
 	//电机控制
-	CFGINTERFACE.initCfgValue(m_QveMotorDebug, ReturnPageCfgPath(MOTORDEBUG));
+	if (!CFGINTERFACE.initCfgValue(m_QveMotorDebug, ReturnPageCfgPath(MOTORDEBUG)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取IO调试页面参数失败"), DOMODEL, 0);
+		return;
+	}
 	_AutoUpdateData.clear();
 	GetAutoUpdateData(m_QveMotorDebug, _AutoUpdateData);
 	m_qMapAutoUpdateData.insert(MOTORDEBUG, _AutoUpdateData);
 	//参数设置
-	CFGINTERFACE.initCfgValue(m_QveParameterSetting, ReturnPageCfgPath(PARAMETERSET));
+	if (!CFGINTERFACE.initCfgValue(m_QveParameterSetting, ReturnPageCfgPath(PARAMETERSET)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取参数设置页面参数失败"), DOMODEL, 0);
+		return;
+	}
 	_AutoUpdateData.clear();
 	GetAutoUpdateData(m_QveParameterSetting, _AutoUpdateData);
 	m_qMapAutoUpdateData.insert(PARAMETERSET, _AutoUpdateData);
 	//产品编辑
-	CFGINTERFACE.initCfgValue(m_QveProductEditor, ReturnPageCfgPath(PRODUCTEDITOR));
+	if (!CFGINTERFACE.initCfgValue(m_QveProductEditor, ReturnPageCfgPath(PRODUCTEDITOR)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取产品编辑页面参数失败"), DOMODEL, 0);
+		return;
+	}
 	_AutoUpdateData.clear();
 	GetAutoUpdateData(m_QveProductEditor, _AutoUpdateData);
 	m_qMapAutoUpdateData.insert(PRODUCTEDITOR, _AutoUpdateData);
 	//历史信息
-	CFGINTERFACE.initCfgValue(m_QveHistoricalInfo, ReturnPageCfgPath(HISTORICALINFO));
+	if (!CFGINTERFACE.initCfgValue(m_QveHistoricalInfo, ReturnPageCfgPath(HISTORICALINFO)))
+	{
+		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("获取历史信息页面参数失败"), DOMODEL, 0);
+		return;
+	}
 	_AutoUpdateData.clear();
 	GetAutoUpdateData(m_QveHistoricalInfo, _AutoUpdateData,HISTORICALINFO);
 	m_qMapAutoUpdateData.insert(HISTORICALINFO, _AutoUpdateData);
@@ -84,10 +101,9 @@ void OP_MachineSoftWareMain::LoadModuleInfo()
 	m_qVecAllPageData.insert(MOTORDEBUG,m_QveMotorDebug);
 	m_qVecAllPageData.insert(PARAMETERSET, m_QveParameterSetting);
 	//默认参数
-	CFGINTERFACE.initCfgValue(m_QveDefaultParam, ReturnPageCfgPath(FILMTRIMMER));
+	CFGINTERFACE.initCfgValue(m_QveFilmParam, ReturnPageCfgPath(FILMTRIMMER));
 	//UI主框架(报警)
 	//MES
-	//emit SigOnloadConfigFinish();
 	m_bOnloadConfigFinish = true;
 }
 
@@ -119,6 +135,10 @@ QString OP_MachineSoftWareMain::ReturnPageCfgPath(EM_CHILDPAGEITEM emPageItem)
 		break;
 	case FILMTRIMMER:
 		return m_qstrCfgPath + QString::fromLocal8Bit("/System/FilmTrimmer.cfg");
+		break;
+	case ALARMLIST:
+		return m_qstrCfgPath + QString::fromLocal8Bit("/System/Warning.cfg");
+		break;
 	default:
 		return m_qstrCfgPath + QString::fromLocal8Bit("");
 		break;
@@ -262,12 +282,53 @@ bool OP_MachineSoftWareMain::GetAutoUpdateData(const QVector<ST_MODULE>& QVecSou
 
 void OP_MachineSoftWareMain::initTask()
 {
+	while (1)
+	{
+		if(GetOnloadConfigStatus())
+			break;
+		QEventLoop temp;
+		
+	}
+
 	LoadMotorInfo();
 	//生成自动更新类对象
 	m_pAutoUpdateData = new OP_AutoUpdateData;
+
+	//获取报警信息地址列表
+	QVector<ST_MODULE> AlarmErrorList;
+	CFGINTERFACE.initCfgValue(AlarmErrorList, ReturnPageCfgPath(ALARMLIST));
+	
+	//分别存放到容器中
+	for (int i = 0; i < 2; i++)
+	{
+		ST_VALUECFG splitInfo; //每个报警的名称、地址、地址类型
+		if (i == 0)
+		{
+			int nLength = AlarmErrorList.at(i).m_nModuleLength();
+			for (int j = 0; j < nLength; j++)
+			{
+				splitInfo = AlarmErrorList.at(i).Value_.at(j);
+				m_pAutoUpdateData->m_qVecAlarmList.push_back(splitInfo);
+			}
+		}
+		else
+		{
+			int nLength = AlarmErrorList.at(i).m_nModuleLength();
+			for (int j = 0; j < nLength; j++)
+			{
+				splitInfo = AlarmErrorList.at(i).Value_.at(j);
+				m_pAutoUpdateData->m_qVecErrorList.push_back(splitInfo);
+			}
+		}
+	}
+
 	//添加工作任务
 	m_pAutoUpdateData->insertWorkTask(m_qMapAutoUpdateData);
 	m_pAutoUpdateData->SwitchWorkTask(AUTOMATICPRODUCT,0);
+
+	//初始化状态机
+	m_pFSM = new OP_FSM;
+	m_pFSM->InitFSM();
 
 	//状态控制以及产品相关功能
 	m_pMachineStatusCtrl = new OP_MachineStatusCtrl;

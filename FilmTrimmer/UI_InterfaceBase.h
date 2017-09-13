@@ -11,8 +11,11 @@ public:
 private:
 	QWidget* m_pQObject;
 public:
-	virtual void SkipCurrentPage();										//跳转页面
-	virtual bool GetModifyParam(QVector<ST_CHANGE_POINT>& qVecModifyVal);//获取修改过的参数
+
+	bool isChanged = false;
+
+	virtual void SkipCurrentPage();											//跳转页面
+	virtual bool GetModifyParam(QVector<ST_CHANGE_POINT>& qVecModifyVal);	//获取修改过的参数
 	virtual bool AutoUpdateData(QList<ST_UPDATEDATA> qliAutoInfo);			//自动更新
 	virtual bool AutoUpdateData(int nIndex, QStringList qstrListInfo);		//自动更新(历史信息页面)
 	virtual bool AutoUpdateData(const QString qstrAlarmInfo);				//自动更新(Filmtrimmer更新报警)

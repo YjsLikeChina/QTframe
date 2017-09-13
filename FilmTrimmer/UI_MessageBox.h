@@ -1,7 +1,6 @@
 #pragma once
 #include "qdialog.h"
 #include "ui_UI_MessageBox.h"
-//#include "UI_MessageBox.h"
 #include <QTimer>
 #include <QVector>
 
@@ -67,7 +66,6 @@ public Q_SLOTS:
 
 	//1.消息字符串2.弹窗模式3.自动关闭时间(给0则没有），4.是否需要优先弹出，5.如果是domodel是哪一种domodel
 	EN_Resoult SlotNewMessAgeBoxData(QString message, int model, int time = 2000, bool precedence = false,DOMODELTYPE DomodelType = TWOBUTTON);
-	void SlotNewMessAgeBoxData1(QString message, int model, int time = 2000, bool precedence = false, DOMODELTYPE DomodelType = TWOBUTTON);
 Q_SIGNALS:
 	void SigNalMessAgeBoxData(QString message, int model, int time = 2000, bool precedence = false,DOMODELTYPE DomodelType = TWOBUTTON);
 	void SigNalCloseMessageBox();	//关闭窗口

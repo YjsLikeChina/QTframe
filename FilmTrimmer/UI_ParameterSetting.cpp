@@ -20,6 +20,7 @@ void UI_ParameterSetting::initVal()
 	m_bAutoUpdateLock = false;
 	m_pParameterSet = new CTRL_ParameterSet;
 	m_pParameterSet->SetUIInterface(this);
+	m_UserMangerUi = new UI_UserManagerCtrol;
 }
 
 void UI_ParameterSetting::initUI()
@@ -33,28 +34,32 @@ void UI_ParameterSetting::initUI()
 	ui.PB_ParamerSave->setIcon(QIcon(qstrIconPath));
 	ui.PB_ParamerSave->setIconSize(QSize(35, 25));
 	ui.PB_ParamerSave->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/LaserSoftwareShow.png";
 	ui.PB_LaserDataSet->setIcon(QIcon(qstrIconPath));
 	ui.PB_LaserDataSet->setIconSize(QSize(35, 25));
-	ui.PB_LaserDataSet->setStyleSheet("QPushButton{color: white;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+	ui.PB_LaserDataSet->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/UserManage.png";
 	ui.PB_UserManage->setIcon(QIcon(qstrIconPath));
 	ui.PB_UserManage->setIconSize(QSize(35, 25));
-	ui.PB_UserManage->setStyleSheet("QPushButton{color: white;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+	ui.PB_UserManage->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/MESSet.png";
 	ui.PB_MESUploadSet->setIcon(QIcon(qstrIconPath));
 	ui.PB_MESUploadSet->setIconSize(QSize(35, 25));
-	ui.PB_MESUploadSet->setStyleSheet("QPushButton{color: white;}"
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+	ui.PB_MESUploadSet->setStyleSheet(
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = qstrIconFile + "/Image/Diaphaneity2.png";
@@ -72,6 +77,7 @@ void UI_ParameterSetting::initConnect()
 	connect(ui.PB_ParamerSave, SIGNAL(clicked()), this, SLOT(SlotParameSave()));
 	connect(ui.TRW_BoolModule, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(SlotBoolItemChanged(QTreeWidgetItem*, int)));
 	connect(ui.PB_LaserDataSet, SIGNAL(clicked()), this, SLOT(SlotLaserSoftwareShow()));
+	connect(ui.PB_UserManage, SIGNAL(clicked()), m_UserMangerUi, SLOT(Dialog_show()));
 }
 
 bool UI_ParameterSetting::GetModifyParam(QVector<ST_CHANGE_POINT>& mapModifyVal)
@@ -188,6 +194,7 @@ void UI_ParameterSetting::SkipCurrentPage()
 bool UI_ParameterSetting::SaveParamer()
 {
 	SlotParameSave();
+	m_qVecModifyVal.clear();
 	return true;
 }
 
@@ -228,6 +235,8 @@ void UI_ParameterSetting::SlotUserManage()
 void UI_ParameterSetting::SlotBoolItemChanged(QTreeWidgetItem* item, int column)
 {
 	QTreeWidgetItem* CurItemParent = item->parent();
+	if (NULL == CurItemParent)
+		return;
 	int nModuleNum = ui.TRW_BoolModule->indexOfTopLevelItem(CurItemParent);
 	int nChildNum = CurItemParent->indexOfChild(item);
 

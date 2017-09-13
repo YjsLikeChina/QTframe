@@ -20,8 +20,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_OP_AutoUpdateData_t {
-    QByteArrayData data[11];
-    char stringdata0[177];
+    QByteArrayData data[14];
+    char stringdata0[201];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,14 +40,18 @@ QT_MOC_LITERAL(6, 83, 19), // "SigParameterSetting"
 QT_MOC_LITERAL(7, 103, 16), // "SigProductEditor"
 QT_MOC_LITERAL(8, 120, 24), // "SigHistoricalInformation"
 QT_MOC_LITERAL(9, 145, 15), // "SigMachineAlarm"
-QT_MOC_LITERAL(10, 161, 15) // "qslMachineAlarm"
+QT_MOC_LITERAL(10, 161, 8), // "qslAlarm"
+QT_MOC_LITERAL(11, 170, 8), // "qslError"
+QT_MOC_LITERAL(12, 179, 15), // "SigMachineModel"
+QT_MOC_LITERAL(13, 195, 5) // "bFlag"
 
     },
     "OP_AutoUpdateData\0SigAutoProduction\0"
     "\0QList<ST_UPDATEDATA>\0SigIODebug\0"
     "SigMotorDebug\0SigParameterSetting\0"
     "SigProductEditor\0SigHistoricalInformation\0"
-    "SigMachineAlarm\0qslMachineAlarm"
+    "SigMachineAlarm\0qslAlarm\0qslError\0"
+    "SigMachineModel\0bFlag"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,21 +61,22 @@ static const uint qt_meta_data_OP_AutoUpdateData[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x06 /* Public */,
-       4,    1,   52,    2, 0x06 /* Public */,
-       5,    1,   55,    2, 0x06 /* Public */,
-       6,    1,   58,    2, 0x06 /* Public */,
-       7,    1,   61,    2, 0x06 /* Public */,
-       8,    1,   64,    2, 0x06 /* Public */,
-       9,    1,   67,    2, 0x06 /* Public */,
+       1,    1,   54,    2, 0x06 /* Public */,
+       4,    1,   57,    2, 0x06 /* Public */,
+       5,    1,   60,    2, 0x06 /* Public */,
+       6,    1,   63,    2, 0x06 /* Public */,
+       7,    1,   66,    2, 0x06 /* Public */,
+       8,    1,   69,    2, 0x06 /* Public */,
+       9,    2,   72,    2, 0x06 /* Public */,
+      12,    1,   77,    2, 0x06 /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
@@ -80,7 +85,8 @@ static const uint qt_meta_data_OP_AutoUpdateData[] = {
     QMetaType::Void, 0x80000000 | 3,    2,
     QMetaType::Void, 0x80000000 | 3,    2,
     QMetaType::Void, 0x80000000 | 3,    2,
-    QMetaType::Void, QMetaType::QStringList,   10,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,   10,   11,
+    QMetaType::Void, QMetaType::Bool,   13,
 
        0        // eod
 };
@@ -97,7 +103,8 @@ void OP_AutoUpdateData::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 3: _t->SigParameterSetting((*reinterpret_cast< QList<ST_UPDATEDATA>(*)>(_a[1]))); break;
         case 4: _t->SigProductEditor((*reinterpret_cast< QList<ST_UPDATEDATA>(*)>(_a[1]))); break;
         case 5: _t->SigHistoricalInformation((*reinterpret_cast< QList<ST_UPDATEDATA>(*)>(_a[1]))); break;
-        case 6: _t->SigMachineAlarm((*reinterpret_cast< QStringList(*)>(_a[1]))); break;
+        case 6: _t->SigMachineAlarm((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 7: _t->SigMachineModel((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -146,9 +153,16 @@ void OP_AutoUpdateData::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
             }
         }
         {
-            typedef void (OP_AutoUpdateData::*_t)(QStringList );
+            typedef void (OP_AutoUpdateData::*_t)(QString , QString );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&OP_AutoUpdateData::SigMachineAlarm)) {
                 *result = 6;
+                return;
+            }
+        }
+        {
+            typedef void (OP_AutoUpdateData::*_t)(bool );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&OP_AutoUpdateData::SigMachineModel)) {
+                *result = 7;
                 return;
             }
         }
@@ -180,13 +194,13 @@ int OP_AutoUpdateData::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }
@@ -234,9 +248,16 @@ void OP_AutoUpdateData::SigHistoricalInformation(QList<ST_UPDATEDATA> _t1)
 }
 
 // SIGNAL 6
-void OP_AutoUpdateData::SigMachineAlarm(QStringList _t1)
+void OP_AutoUpdateData::SigMachineAlarm(QString _t1, QString _t2)
+{
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    QMetaObject::activate(this, &staticMetaObject, 6, _a);
+}
+
+// SIGNAL 7
+void OP_AutoUpdateData::SigMachineModel(bool _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 6, _a);
+    QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 QT_END_MOC_NAMESPACE

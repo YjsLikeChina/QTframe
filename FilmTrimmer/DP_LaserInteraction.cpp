@@ -252,11 +252,9 @@ bool DP_LaserInteraction::UploadLaserData(ST_LASER_DATA stLaser)
 	bool bRes = false;
 	m_pLaserThread->SetLaserData(stLaser);
 	m_pLaserThread->start();
-
 	QEventLoop loop;
 	connect(m_pLaserThread, SIGNAL(finished()), &loop, SLOT(quit()));
-	loop.exec();//QEventLoop::ExcludeUserInputEvents);
-
+	loop.exec();
 	return m_pLaserThread->m_bResult;
 }
 
@@ -499,7 +497,7 @@ bool DP_LaserInteraction::LaserCardSeparate(ST_LASER_DATA stLaser)
 				break;
 		}
 	}
-	Sleep(4000);
+	emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("11111111111111111111"), DOMODEL, 0);
 	emit MESSAGEBOX.SigNalCloseMessageBox();
 	if (!bResult)
 	{

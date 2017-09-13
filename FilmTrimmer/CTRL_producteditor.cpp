@@ -1,5 +1,6 @@
 ﻿#include "CTRL_producteditor.h"
 #include "UI_MessageBox.h"
+#include <QCoreApplication>
 
 #define FILMTRIMMER_CFG  _T("/System/FilmTrimmer.cfg")
 

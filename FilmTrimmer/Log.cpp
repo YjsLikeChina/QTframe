@@ -298,7 +298,7 @@ void CLog::WriteLogEx(LOG_LEVEL level, const char *pLogText, ...)
     }
 }
 
-void CLog::WriteLogQstring( LOG_LEVEL level, QString qLogText, ...)
+void CLog::WriteLogQstring( int level, QString qLogText, ...)
 {
 	/*string temp(WtoC(qLogText.toStdWString().c_str()));
 	temp = "{$(SOFTWAREVER)}_[$(DATETIME)]_[$(USER)]_" + temp + "_[$(LEVELFLAG)]\n";
@@ -360,6 +360,7 @@ void CLog::ExitLogRunThread()
 		_sleep(20);
 		m_Mutex.lock();
 	}
+	m_Mutex.unlock();
 	m_Mutex.lock();
 	m_LogDataList << "ExitThead";
 	m_Mutex.unlock();
@@ -374,7 +375,7 @@ void CLog::SetLofFilePath(const char *pFilePath)
 	m_openSuccess = m_fileOut.is_open();
 }
 
-void CLog::SetCurUserInfo(wchar_t* userTypename, wchar_t* usaername)
+void CLog::SetCurUserInfo( const wchar_t* userTypename, const wchar_t* usaername)
 {
 	m_UserName = WtoC(userTypename);
 }

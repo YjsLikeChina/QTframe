@@ -74,8 +74,12 @@ void LogManager::Clear()
         delete iter->second;   // 释放指针所占用的内存空间
     }
     m_logMap.clear();
-	if (m_log!= NULL)
+	if (m_log != NULL)
+	{
+		m_log->ExitLogRunThread();
 		delete m_log;
+	}
+		
 }
 
 // <Summary>删除并释放特定日志对象占用的内存空间</Summary>

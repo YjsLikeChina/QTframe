@@ -52,56 +52,64 @@ void UI_MotorDebug::initUI()
 	ui.PB_AxisMove->setIcon(QIcon(strIcon));
 	ui.PB_AxisMove->setIconSize(QSize(35, 25));
 	ui.PB_AxisMove->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/GoHome.png";
 	ui.PB_AxisGoHome->setIcon(QIcon(strIcon));
 	ui.PB_AxisGoHome->setIconSize(QSize(35, 25));
 	ui.PB_AxisGoHome->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/Advance.png";
 	ui.PB_AxisAdvance->setIcon(QIcon(strIcon));
 	ui.PB_AxisAdvance->setIconSize(QSize(35, 25));
 	ui.PB_AxisAdvance->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/Retreat.png";
 	ui.PB_AxisRetreat->setIcon(QIcon(strIcon));
 	ui.PB_AxisRetreat->setIconSize(QSize(35, 25));
 	ui.PB_AxisRetreat->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/Save.png";
 	ui.PB_AxisSave->setIcon(QIcon(strIcon));
 	ui.PB_AxisSave->setIconSize(QSize(35, 25));
 	ui.PB_AxisSave->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/AxisEnable.png";
 	ui.PB_AxisEnable->setIcon(QIcon(strIcon));
 	ui.PB_AxisEnable->setIconSize(QSize(35, 25));
 	ui.PB_AxisEnable->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/Alarm.png";
 	ui.PB_AxisAlarmClear->setIcon(QIcon(strIcon));
 	ui.PB_AxisAlarmClear->setIconSize(QSize(35, 25));
 	ui.PB_AxisAlarmClear->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	strIcon = qstrIconFile + "/Image/AxisStop.png";
 	ui.PB_AxisStop->setIcon(QIcon(strIcon));
 	ui.PB_AxisStop->setIconSize(QSize(40, 35));
 	ui.PB_AxisStop->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: red; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	ui.LE_StartSpeed->setStyleSheet("background-color:rgb(13,74,185); border: 1px groove white;");
@@ -182,6 +190,14 @@ void UI_MotorDebug::SlotSave()
 	GetModifyParam(qVecMotorInfo);
 	m_pCtrlMotorDebug->SaveMotolData(qVecMotorInfo);
 	ui.LE_AxisMoveTargetVel->setText(ui.LB_PointFBVal->text());
+
+	ui.LE_StartSpeed->setModified(false);
+	ui.LE_MaxSpeed->setModified(false);
+	ui.LE_AccSpeedTime->setModified(false);
+	ui.LE_DecSpeedTime->setModified(false);
+	ui.LE_HomeOffset->setModified(false);
+	ui.LE_HomeSpeed->setModified(false);
+	ui.LB_PointFBVal->setWindowModified(false);
 }
 
 //ÒÆ¶¯ÐÅºÅ
@@ -341,6 +357,7 @@ bool UI_MotorDebug::GetModifyParam(QVector<ST_CHANGE_POINT>& VecModifyVal)
 	}
 	VecModifyVal.push_back(stModifyParam);
 
+	if(ui.LB_PointFBVal->isWindowModified())
 	{
 		stModifyParam.nChildNum = ORDER_GET_POS;
 		stModifyParam.dlData = ui.LB_PointFBVal->text().toDouble();

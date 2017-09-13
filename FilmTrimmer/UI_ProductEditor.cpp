@@ -57,35 +57,40 @@ void UI_ProductEditor::initUI()
 	ui.PB_Package_SetCurrent->setIcon(QIcon(qstrIconPath));
 	ui.PB_Package_SetCurrent->setIconSize(QSize(35, 25));
 	ui.PB_Package_SetCurrent->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = m_qstrIconFile + "/Image/PackageNew.png";
 	ui.PB_Package_New->setIcon(QIcon(qstrIconPath));
 	ui.PB_Package_New->setIconSize(QSize(35, 25));
 	ui.PB_Package_New->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = m_qstrIconFile + "/Image/PackageDelete.png";
 	ui.PB_Package_Delete->setIcon(QIcon(qstrIconPath));
 	ui.PB_Package_Delete->setIconSize(QSize(35, 25));
 	ui.PB_Package_Delete->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = m_qstrIconFile + "/Image/PackageCopy.png";
 	ui.PB_Package_Copy->setIcon(QIcon(qstrIconPath));
 	ui.PB_Package_Copy->setIconSize(QSize(35, 25));
 	ui.PB_Package_Copy->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	qstrIconPath = m_qstrIconFile + "/Image/Save.png";
 	ui.PB_Package_Save->setIcon(QIcon(qstrIconPath));
 	ui.PB_Package_Save->setIconSize(QSize(35, 25));
 	ui.PB_Package_Save->setStyleSheet(
-		"QPushButton:pressed{background-color:blue;color: white; border-radius: 10px; border: 1px groove gray; border-style: outset;border-style: inset; }"
+		"QPushButton{background:rgb(1,172,179);color: white;border-radius: 10px;}"
+		"QPushButton:pressed{background:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 
 	//设置控件宽度
@@ -103,8 +108,9 @@ void UI_ProductEditor::initConnect()
 	connect(ui.PB_Package_Save, SIGNAL(clicked()), this, SLOT(SlotSavePackage()));
 	connect(m_pAddStepButton, SIGNAL(clicked()), this, SLOT(SlotAddPackageStep()));
 	connect(&m_ButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(SlotDeleteStep(int)));
-	connect(ui.TRW_PkgParticularInfo, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)), this, SLOT(SlotItemDoubleClick(QTreeWidgetItem*, int)));
+	//connect(ui.TRW_PkgParticularInfo, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)), this, SLOT(SlotItemDoubleClick(QTreeWidgetItem*, int)));
 	connect(ui.LW_PackageList, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(SlotSwitchPackage(QListWidgetItem*)));
+
 }
 
 void UI_ProductEditor::GetPackageList()
@@ -278,21 +284,30 @@ void UI_ProductEditor::SlotDeleteStep(int nButton)
 	}
 }
 
-void UI_ProductEditor::SlotItemDoubleClick(QTreeWidgetItem* item, int nColumn)
+void UI_ProductEditor::SlotLaserFileSel()
 {
-	if (item->text(0) == QString::fromLocal8Bit("激光文件") && 1 == nColumn)
+	//if (item->text(0) == QString::fromLocal8Bit("激光文件") && 1 == nColumn)
 	{
 		if (!CFGINTERFACE.JudgeDirIsExist(m_qstrLaserFilePath))
 		{
-			MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("激光文件夹不存在!"), DOMODEL,0);
+			MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("激光文件夹不存在!"), DOMODEL, 0);
 			return;
 		}
 		m_qstrLaserFileName = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("激光文件选择"), m_qstrLaserFilePath, tr("*.hms"));//文件对话框
+		if (m_qstrLaserFileName.isEmpty())
+			return;
 		m_qstrLaserFileName = m_qstrLaserFileName.section('/', -1); //截取最后一个‘/’后的字符串
 		m_qstrLaserFileName = m_qstrLaserFileName.left(m_qstrLaserFileName.length() - 4);
-		m_qrwLaserItem->setText(1, m_qstrLaserFileName);
+		m_pLaserLineEdit->setText(m_qstrLaserFileName);
+		//占位符，保存时使用，修改激光文件名称
+		ST_CHANGE_POINT temp;
+		temp.dlData = -1;
+		temp.nChildNum = 1;
+		temp.nModuleNum = 0;
+		m_qVecPkgModifyInfo.push_back(temp);
 	}
 }
+
 
 void UI_ProductEditor::SlotItemChanged()
 {
@@ -350,9 +365,26 @@ bool UI_ProductEditor::insertModule(QVector<ST_MODULE>* cfgModuleInfo)
 				if (cfgModuleInfo->at(i).Value_.at(j).Function_name == QString::fromLocal8Bit("激光文件"))
 				{
 					m_qrwLaserItem = ChildModule;
-				}
+					m_pLaserLineEdit = new UI_LineEdit(i, j, this);
+					QFont font(QString::fromLocal8Bit("微软雅黑"), 10);
+					QRegExp regx("^(?![\\p{P}\\p{S}])[\u4e00-\u9fa5,A-Z,a-z,0-9,-]+$"); //限定除中文、字母A-Z、字母a-z、以及-之外的其他字符
+					m_pLaserLineEdit->SetStyleSheet(font, regx);
+					m_pLaserLineEdit->setReadOnly(true);
+					ui.TRW_PkgParticularInfo->setItemWidget(ChildModule, 1, m_pLaserLineEdit);
 
-				ChildModule->setData(1, Qt::DisplayRole, strVal);
+					QFont _font(QString::fromLocal8Bit("微软雅黑"), 10);
+					QPushButton* _PushButton = new QPushButton;
+					_PushButton->setText(QString::fromLocal8Bit("激光文件选择"));
+					_PushButton->setMaximumSize(100, 25);
+					_PushButton->setFont(_font);
+					_PushButton->setIcon(QIcon(m_qstrIconFile + "/Image/LaserFileSel.png"));
+					_PushButton->setStyleSheet(
+						"QPushButton{background: transparent;color: white; border-radius: 10px; border-style: outset;}"
+						"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+						);
+					ui.TRW_PkgParticularInfo->setItemWidget(m_qrwLaserItem, 2, (QWidget*)_PushButton);
+					connect(_PushButton, SIGNAL(clicked()), this, SLOT(SlotLaserFileSel()));
+				}
 
 				_ModuleItem.ChildModuleItems.push_back(ChildModule);
 			}
@@ -429,11 +461,12 @@ void UI_ProductEditor::UpdataPackageInfo(QVector<ST_CHANGE_POINT> qVecOnloadPkgI
 			qslpkgStep.insert(qVecOnloadPkgInfo.at(i).nChildNum, QString::number(qVecOnloadPkgInfo.at(i).dlData, 'g', 6));
 		}
 	}
-	QTreeWidgetItem* BaseItem = ui.TRW_PkgParticularInfo->topLevelItem(0);
-	UI_LineEdit* _LineEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(BaseItem->child(0), 1); //获取产品名的Item
-	if (NULL != _LineEdit)
-		_LineEdit->setText(strPkgName);
-	BaseItem->child(1)->setText(1, LaserFileName);	//激光文件名
+	//QTreeWidgetItem* BaseItem = ui.TRW_PkgParticularInfo->topLevelItem(0);
+	//UI_LineEdit* _LineEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(BaseItem->child(0), 1); //获取产品名的Item
+	//if (NULL != _LineEdit)
+	//	_LineEdit->setText(strPkgName);
+	//BaseItem->child(1)->setText(1, LaserFileName);	//激光文件名
+	m_pLaserLineEdit->setText(LaserFileName);
 
 	//设置极耳间距
 	int nPreStepNum = m_qrwStepItem->childCount();
@@ -552,5 +585,6 @@ void UI_ProductEditor::SetLaserData(int nCard)
 bool UI_ProductEditor::SaveParamer()
 {
 	SlotSavePackage();
+	m_qVecPkgModifyInfo.clear();
 	return true;
 }

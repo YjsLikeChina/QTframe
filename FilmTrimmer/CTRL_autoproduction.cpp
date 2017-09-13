@@ -1,5 +1,8 @@
 ﻿#include "CTRL_autoproduction.h"
 #include<qdebug.h>
+#include "QCoreApplication"
+#include <UI_MessageBox.h>
+
 CTRL_AutoProduction::CTRL_AutoProduction(QObject * parent):CTRL_Base(parent) 
 {
 	Initconnect();
@@ -10,7 +13,8 @@ CTRL_AutoProduction::CTRL_AutoProduction(QObject * parent):CTRL_Base(parent)
 	m_nSetMaxSpeed = ReadIntFromFile(_T("Run"), _T("工作速度最大值"), 30, m_cstrFilmTrimmerCfgPath);
 }
 
-CTRL_AutoProduction::~CTRL_AutoProduction() {
+CTRL_AutoProduction::~CTRL_AutoProduction() 
+{
 	
 }
 
@@ -85,9 +89,9 @@ bool CTRL_AutoProduction::SetWorkSpeed(int nSetSpeed)
 		return false;
 	}
 	//设置工作速度
-	DWORD dwAddr = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt();//地址
-	EM_Type emType = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type;//类型
-	int nAccuracy = MACHINECTRL.m_QveDefaultParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;//精度
+	DWORD dwAddr = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt();//地址
+	EM_Type emType = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type;//类型
+	int nAccuracy = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;//精度
 	if (HC_PLC_INTERFACE.SetDWORDToPLC(nSetSpeed * nAccuracy, dwAddr, emType))
 	{
 		//写入配置文件中
