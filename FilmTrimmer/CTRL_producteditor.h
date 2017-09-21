@@ -14,6 +14,7 @@ public:
 private:
 	QString m_qstrCfgPath;						//程序文件路径
 	QString m_qstrCurFileName;					//当前产品文件名
+	QString m_qstrCurLaserName;					//当前激光文件名
 	CString m_cstrFilmTrimmerPath;
 	QDateTime  LastUpdateTime;					//上次上传的文件的修改时间
 	bool m_bfirstStart = true;

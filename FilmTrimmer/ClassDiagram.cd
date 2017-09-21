@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CLaserClient" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQCFAQAKCAAABAABADAIAYEACAkVCYIEDIAEAAEAA=</HashCode>
+      <FileName>CLaserClient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPing" Collapsed="true">
+    <Position X="33" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAQAAAAAAAAAA=</HashCode>
+      <FileName>Ping.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_InterfaceBase" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAQAAAAAAgAAACAIAACAAAAAAAAAAAAAAQAACA=</HashCode>
+      <FileName>UI_InterfaceBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_LineEdit" Collapsed="true">
+    <Position X="27.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAoAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAEA=</HashCode>
+      <FileName>UI_InterfaceBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_StopCauseListDialog" Collapsed="true">
+    <Position X="34.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAEAAAAAAAAACAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>UI_StopCauseListDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_MachineErrorList" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAEAAEAAABAAAAAAAAAAggAAQAAQAAAAAABg=</HashCode>
+      <FileName>UI_MachineErrorList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_UserManagerCtrol" Collapsed="true">
+    <Position X="26" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAABEBRAAkAAAAAgAAAggAAAAIAAAAIAAAA=</HashCode>
+      <FileName>UI_UserManagerCtrol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Maintenance" Collapsed="true">
+    <Position X="19" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABAAAEAAAAAgAAACCAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>UI_Maintenance.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_WorkSpeedInputDlg" Collapsed="true">
+    <Position X="27.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAAAAAEAgAAAAAAAAgAAAggQAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI_WorkSpeedInputDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_Simpledialog" Collapsed="true">
+    <Position X="33" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAQAEAAAAQAAAAAAIAAAgAIAAAAAAAAIAAA=</HashCode>
+      <FileName>UI_Simpledialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_FilmTrimmer" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYKkAEICCBMAPJiEQMgYARAIgIDghKklQAAABAYFwiI=</HashCode>
+      <FileName>UI_filmtrimmer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_HistoricalInformation" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFAAAAEAAgEAoIhAAAIAACAAAggAAAAAAAAIAABQA=</HashCode>
+      <FileName>UI_HistoricalInformation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_ProductEditor" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAtAIAAAAABGAgoARAAIABiAgFwjIAIIWUsAZAAwIA=</HashCode>
+      <FileName>UI_ProductEditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_ParameterSetting" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFBIAAAAAAEBgAAAAAIEACAIAgkAAAICCAEAAgAUA=</HashCode>
+      <FileName>UI_ParameterSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_MotorDebug" Collapsed="true">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgFAoAAAAAAECgAABAAIAADAABggAACQQAggAAASkA=</HashCode>
+      <FileName>UI_MotorDebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_IODebug" Collapsed="true">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAFAwAAAQAREAgAAAAAJAACAAQggAIAAAQAAAAAAQA=</HashCode>
+      <FileName>UI_IODebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_AutoProduction" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A1MFKYAM4ABAEkgQhYIAoIkCEJQggEARgqECTAIAQXg=</HashCode>
+      <FileName>UI_AutoProduction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_MessageBox" Collapsed="true">
+    <Position X="31.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAEQACAEACAEEAACAAgAEAigQAABBQAABACAAA=</HashCode>
+      <FileName>UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UI_FloatingWindow" Collapsed="true">
+    <Position X="26" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAIAAAAAJAEAAAAAAAAEBAAAAAEAAAgAAABAIAACA=</HashCode>
+      <FileName>UI_FloatingWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AXIS_ATTRIBUTE" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAQAAACAAAAAAAAAgABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HcModbusTcpClient" Collapsed="true">
+    <Position X="31.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAEAAIIABAgAUoAAwAQIAJAAAAKjAACIACAABCBgQ=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DP_HCPLCInteraction" Collapsed="true">
+    <Position X="26" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAQAgAAAAgAAAAAAAABAgAgAAABAAAAAAAQQQ=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MotorCtrlThread" Collapsed="true">
+    <Position X="26" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAgABAAAAAAAgAIgAAAA=</HashCode>
+      <FileName>DP_MotorCtrlInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DP_MotorCtrlInteraction" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAEIACQAAAAIAEBEAIAQAAQBIBAQCABAAFAAAAA=</HashCode>
+      <FileName>DP_MotorCtrlInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLaserCtrl" Collapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAIAgAgIIABAAUSQIAACAAEAAAAIA=</HashCode>
+      <FileName>DP_LaserInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LaserThread" Collapsed="true">
+    <Position X="33" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgBAAAAAAAAAAEABEAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>DP_LaserInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DP_LaserInteraction" Collapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEDAEgAQAAAACQAgCAAI4AEAAAQIAAABAAEAAIAAAA=</HashCode>
+      <FileName>DP_LaserInteraction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DP_CfgInterface" Collapsed="true">
+    <Position X="34.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIggAEgQAAAAIAAIAQACAAAAAAABAAABABBAQAAAAA=</HashCode>
+      <FileName>DP_CfgInterface.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OP_AutoUpdateData" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIEEqBoAABQAAAAAcACAEACwAAgQEgCIAQAAACEIBA=</HashCode>
+      <FileName>OP_AutoUpdateData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OP_MachineStatusCtrl" Collapsed="true">
+    <Position X="33" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAIhQAgIAAwAABAQMBgBBCgTBEICAgsAUAIQwAAZM=</HashCode>
+      <FileName>OP_MachineStatusCtrl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OP_FSM" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAIAAAAAAAAAACABAQBAAAgVAREAAaAUAABBAAQA=</HashCode>
+      <FileName>OP_FSM.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OP_MachineSoftWareMain" Collapsed="true">
+    <Position X="31.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ANAIQYAAQlAhAAJBAAAECAAAAkAggAggpIYMIAAAAIk=</HashCode>
+      <FileName>OP_MachineSoftWareMain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_MachineErrorInfoList" Collapsed="true">
+    <Position X="14.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAAAAAAAIAAAAAAAAAAAQAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MachineErrorList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_StopCauseListDialog" Collapsed="true">
+    <Position X="11.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAQAIAAAAAACAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_StopCauseListDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_UI_UserManagerCtrol" Collapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hwIAAIAAQAAgABCAAAAAAAAQAFQAIAAAARAAAAAACAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_UserManagerCtrol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_MaintenanceDlg" Collapsed="true">
+    <Position X="8.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAAgAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_Maintenance.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_SimPleDialog" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAIAAEAAEAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_Simpledialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_WorkSpeedInputDialog" Collapsed="true">
+    <Position X="5.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAIAAAAAAAAAAQAIAAAAAAAEAAEAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_WorkSpeedInputDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_AutoProduWidget" Collapsed="true">
+    <Position X="2.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>2FEYABEAEEQAABBgABAAxIXhDAaA4GEUBAAAAHAAQHQ=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_AutoProduction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_FrameWidget" Collapsed="true">
+    <Position X="11.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAIEAEAAEARAEBEAABAlQFEAQAIIACAAAQAIwAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_filmtrimmer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_FloatingWindow" Collapsed="true">
+    <Position X="8.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEgAAAAAAAAAAAAAAEUAAAQAIAIABAAAAIQgAEA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_FloatingWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_HistoricalInformationWidget" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAAAAAAIBAAAAAAAAgAAQAIAAQAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_HistoricalInformation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_IODebugWidget" Collapsed="true">
+    <Position X="5.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgIAAAAIAAQAAAAgCAAAAQAIAAQAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_IODebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_QMessageBox" Collapsed="true">
+    <Position X="2.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAJAAQACAAEAAEAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_MotorDebugWidget" Collapsed="true">
+    <Position X="8.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAh2AAZQAAIAAJBAwgQAAywCAFyBIVAIEWAgCIkRABY=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MotorDebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_ParameterSettingWidget" Collapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAIAAIAAAAECAAAAAAQAoAAQAAAAAAAAAIQ=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_ParameterSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui_ProductEditorWidget" Collapsed="true">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAgAAAAACEIcAAAAAAAAAAAQAIAAQAAQAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_ProductEditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_AutoProduction" Collapsed="true">
+    <Position X="3" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiBAAAIAAAEAAAAQgAAAwAAAWAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CTRL_autoproduction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_Base" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAACABBAAAEAAAAQAAAAAABEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CTRL_Base.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_FilmTrimmer" Collapsed="true">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQAAAAAAAAAAAAABCAAACABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CTRL_filmtrimmer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_IODebug" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAEA=</HashCode>
+      <FileName>CTRL_iodebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_ParameterSet" Collapsed="true">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAAAABCAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>CTRL_parameterset.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_ProductEditor" Collapsed="true">
+    <Position X="12" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAIAAAAAAAgAAAAAAIAAACAKCAACAJAICBAQAAAAIA=</HashCode>
+      <FileName>CTRL_producteditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTRL_MotorDebug" Collapsed="true">
+    <Position X="14.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAQgAAAAAAAAAADAAAAAICAYIAAAAABAAAA=</HashCode>
+      <FileName>CTRL_motordebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLog" Collapsed="true">
+    <Position X="31.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJJQRaAAAAIAAAQFLkAAEgAAAAghAAAwAIQCCEAIAAA=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogManager" Collapsed="true">
+    <Position X="34.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAAAAAgAAAAAAAQAAAAACAABgAAA=</HashCode>
+      <FileName>LogManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QCUserManager" Collapsed="true">
+    <Position X="34.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAABogoACAgAKEAkAAAAAggAAgAAAgAAAQAIAAQAA=</HashCode>
+      <FileName>QCUserManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::MachineErrorInfoList" Collapsed="true">
+    <Position X="14.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MachineErrorList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::StopCauseListDialog" Collapsed="true">
+    <Position X="11.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_StopCauseListDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::UI_UserManagerCtrol" Collapsed="true">
+    <Position X="14.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_UserManagerCtrol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::MaintenanceDlg" Collapsed="true">
+    <Position X="8.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_Maintenance.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::SimPleDialog" Collapsed="true">
+    <Position X="14.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_Simpledialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::WorkSpeedInputDialog" Collapsed="true">
+    <Position X="5.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_WorkSpeedInputDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::AutoProduWidget" Collapsed="true">
+    <Position X="2.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_AutoProduction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::FrameWidget" Collapsed="true">
+    <Position X="11.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_filmtrimmer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::FloatingWindow" Collapsed="true">
+    <Position X="8.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_FloatingWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::HistoricalInformationWidget" Collapsed="true">
+    <Position X="11.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_HistoricalInformation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::IODebugWidget" Collapsed="true">
+    <Position X="5.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_IODebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::QMessageBox" Collapsed="true">
+    <Position X="2.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::MotorDebugWidget" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_MotorDebug.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::ParameterSettingWidget" Collapsed="true">
+    <Position X="5.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_ParameterSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ui::ProductEditorWidget" Collapsed="true">
+    <Position X="2.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\ui_UI_ProductEditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="iphdr" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAACAAQAAAAAAAAAgAAAgAAAIEAAAEgAAQAAAIAAA=</HashCode>
+      <FileName>Ping.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_ihdr" Collapsed="true">
+    <Position X="22.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAIAAAAAAAAAAAAAAgIAAAAAAQIAAAAAAAA=</HashCode>
+      <FileName>Ping.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ST_MessageBoxData" Collapsed="true">
+    <Position X="26" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoACA=</HashCode>
+      <FileName>UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_LASER_DATA" Collapsed="true">
+    <Position X="18.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgIAAAAwAAAABAAgAAAAAAAQAAEAAAAAAABAAAgA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MODULEITEM" Collapsed="true">
+    <Position X="7.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="VALUECFG" Collapsed="true">
+    <Position X="22.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAIAAAAABAAAAAAoAAAAAIAAgAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MODULE" Collapsed="true">
+    <Position X="18.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAgAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_UPDATEDATA" Collapsed="true">
+    <Position X="18.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAAEABAAAAAAAjAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CHANGE_POINT" Collapsed="true">
+    <Position X="3.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SPloeSizeInfo" Collapsed="true">
+    <Position X="34.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABKAAAAACAABAAAAAAYAAAAIAAAAABAAAAIACAE=</HashCode>
+      <FileName>DP_LaserInteraction.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TAG_FSM_ITEM" Collapsed="true">
+    <Position X="14.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAABAAAAAAAA=</HashCode>
+      <FileName>OP_FSM.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_StopCauseListDialog_t" Collapsed="true">
+    <Position X="29.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_StopCauseListDialog.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_CTRL_AutoProduction_t" Collapsed="true">
+    <Position X="27.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_CTRL_autoproduction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_CTRL_Base_t" Collapsed="true">
+    <Position X="29.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_CTRL_Base.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_CTRL_FilmTrimmer_t" Collapsed="true">
+    <Position X="31.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_CTRL_filmtrimmer.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_DP_CfgInterface_t" Collapsed="true">
+    <Position X="33" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_DP_CfgInterface.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_MotorCtrlThread_t" Collapsed="true">
+    <Position X="29.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_DP_MotorCtrlInteraction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_DP_MotorCtrlInteraction_t" Collapsed="true">
+    <Position X="26" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_DP_MotorCtrlInteraction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_OP_AutoUpdateData_t" Collapsed="true">
+    <Position X="31.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_OP_AutoUpdateData.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_OP_FSM_t" Collapsed="true">
+    <Position X="33" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_OP_FSM.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_OP_MachineSoftWareMain_t" Collapsed="true">
+    <Position X="34.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_OP_MachineSoftWareMain.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_OP_MachineStatusCtrl_t" Collapsed="true">
+    <Position X="26" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_OP_MachineStatusCtrl.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_QCUserManager_t" Collapsed="true">
+    <Position X="27.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_QCUserManager.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_AutoProduction_t" Collapsed="true">
+    <Position X="29.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_AutoProduction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_FilmTrimmer_t" Collapsed="true">
+    <Position X="31.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_filmtrimmer.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_FloatingWindow_t" Collapsed="true">
+    <Position X="33" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_FloatingWindow.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_HistoricalInformation_t" Collapsed="true">
+    <Position X="34.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_HistoricalInformation.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_IODebug_t" Collapsed="true">
+    <Position X="26" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_IODebug.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_MachineErrorList_t" Collapsed="true">
+    <Position X="27.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_MachineErrorList.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_Maintenance_t" Collapsed="true">
+    <Position X="29.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_Maintenance.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_MessageBox_t" Collapsed="true">
+    <Position X="31.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_MessageBox.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_MotorDebug_t" Collapsed="true">
+    <Position X="33" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_MotorDebug.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_ParameterSetting_t" Collapsed="true">
+    <Position X="34.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_ParameterSetting.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_ProductEditor_t" Collapsed="true">
+    <Position X="26" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_ProductEditor.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_Simpledialog_t" Collapsed="true">
+    <Position X="27.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_Simpledialog.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_UserManagerCtrol_t" Collapsed="true">
+    <Position X="31.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_UserManagerCtrol.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_UI_WorkSpeedInputDlg_t" Collapsed="true">
+    <Position X="33" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_UI_WorkSpeedInputDialog.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_LaserThread_t" Collapsed="true">
+    <Position X="27.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_DP_LaserInteraction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="qt_meta_stringdata_DP_LaserInteraction_t" Collapsed="true">
+    <Position X="34.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GeneratedFiles\Debug\moc_DP_LaserInteraction.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="`anonymous-namespace'::initializer" Collapsed="true">
+    <Position X="26" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEA=</HashCode>
+      <FileName>GeneratedFiles\qrc_filmtrimmer.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="IpHeader" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ping.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="IcmpHeader" Collapsed="true">
+    <Position X="22.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ping.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_LASER_DATA" Collapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_PLASER_DATA" Collapsed="true">
+    <Position X="18.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_MODULEITEM" Collapsed="true">
+    <Position X="10.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_PMODULEITEM" Collapsed="true">
+    <Position X="7.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_VALUECFG" Collapsed="true">
+    <Position X="22.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_MODULE" Collapsed="true">
+    <Position X="18.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_UPDATEDATA" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_PUPDATEDATA" Collapsed="true">
+    <Position X="18.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="EM_OTHERATTRIBUTE" Collapsed="true">
+    <Position X="18.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ST_CHANGE_POINT" Collapsed="true">
+    <Position X="0.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PST_CHANGE_POINT" Collapsed="true">
+    <Position X="3.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPCONNECT" Collapsed="true">
+    <Position X="27.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPCLOSE" Collapsed="true">
+    <Position X="26" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPSETTIMEOUT" Collapsed="true">
+    <Position X="34.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPSETDELAY" Collapsed="true">
+    <Position X="33" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN01" Collapsed="true">
+    <Position X="29.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN02" Collapsed="true">
+    <Position X="31.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN03" Collapsed="true">
+    <Position X="33" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN04" Collapsed="true">
+    <Position X="34.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN05" Collapsed="true">
+    <Position X="26" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN06" Collapsed="true">
+    <Position X="27.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN15" Collapsed="true">
+    <Position X="29.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MBTCPFCN16" Collapsed="true">
+    <Position X="31.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_HCPLCInteraction.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="pFSMFun" Collapsed="true">
+    <Position X="26" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OP_FSM.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FSM_ITEM" Collapsed="true">
+    <Position X="14.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OP_FSM.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="DOMODELTYPE" Collapsed="true">
+    <Position X="26" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EN_Resoult" Collapsed="true">
+    <Position X="27.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>UI_MessageBox.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_MACHINE_SIGNAL" Collapsed="true">
+    <Position X="27.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAQIAAAAgAAAIACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MACHINE_STATUS" Collapsed="true">
+    <Position X="33" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAMAAAAAAQAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MACHINE_FLAG" Collapsed="true">
+    <Position X="31.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MACHINE_STATUSTOOL_COLOR" Collapsed="true">
+    <Position X="34.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAABAAAABAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MACHINE_EVENT" Collapsed="true">
+    <Position X="29.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAABAAAAAAACIAIAAABAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MACHINE_TASK" Collapsed="true">
+    <Position X="26" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAIAAAAAAAAAAAAAAAICAAAAAAAAAAMACAg=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_MACHINE_STOP_TYPE" Collapsed="true">
+    <Position X="29.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_AXIS_MOVE_SIGNAL" Collapsed="true">
+    <Position X="31.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAAAAAAABEAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_AXIS_CTRL_SIGNAL" Collapsed="true">
+    <Position X="29.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAACAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_MODULE_DATA_TYPE" Collapsed="true">
+    <Position X="31.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAABAAAgAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_UPLOAD_TYPE" Collapsed="true">
+    <Position X="26" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_Type" Collapsed="true">
+    <Position X="34.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAiIAAgAAAAAAAAABEAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_DIALOG_MODEL" Collapsed="true">
+    <Position X="34.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_CHILDPAGEITEM" Collapsed="true">
+    <Position X="33" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAAAAAAAAAAQAACAAAAAAAYAAAAAAACgAAAmA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_OtherAttribute" Collapsed="true">
+    <Position X="18.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQQCAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MOTOR_ADDR_ORDER" Collapsed="true">
+    <Position X="27.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEwEIAAAACAAAACAAACAAAIBDEAACAAAECAAAABg=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_AUTOURLDETECT_DEFAULT_ORDER" Collapsed="true">
+    <Position X="27.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIgEAAAAAAAAgAAAAAAAACAAAAAAACABIIAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_FILM_DEFAULT_ORDER" Collapsed="true">
+    <Position X="26" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAMAAAAAAAEAAAQACQAAAAEIAAAAAAABQA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EM_PRODUCTEDITOR_ORDER" Collapsed="true">
+    <Position X="33" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EKASAAAAAAAAAAAAAAAAAAAAACAABAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BaseDataType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MOTOR_MOVE_CTRL" Collapsed="true">
+    <Position X="29.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>DP_MotorCtrlInteraction.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

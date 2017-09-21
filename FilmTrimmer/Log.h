@@ -6,12 +6,12 @@
 #include <fstream>
 #include "QStringList"
 #include <mutex>
-
+#include <vector>
 using std::mutex;
 using std::string;
 using std::fstream;
 using std::ios;
-
+using std::vector;
 class CLog
 {
 public:
@@ -102,11 +102,12 @@ protected:
 	string m_logFilePath; // 日志文件完整路径 string类型
 	mutex  m_Mutex;
 	int ThreadNumber = 0;
-	QStringList m_LogDataList;
+	vector<string> m_LogDataList;
 protected:
     LOG_LEVEL m_LogLevel;  // 日志记录级别 默认为LL_ERROR
 	bool m_showLogFlag;    // 显示日志标志  默认为true
 	size_t m_maxLogFileSize; // 日志文件最大大小 超过该大小将被删除 默认为10MB
+	bool m_ThreadInputDataToList(QString);
 public:
 	string m_UserName;		//用户名
 	string m_softWarever;    //软件版本

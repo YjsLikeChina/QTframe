@@ -1,6 +1,7 @@
 #include "UI_ProductEditor.h"
 #include <QFileDialog>
 #include "UI_MessageBox.h"
+#include <QCheckBox>
 
 #define ROWWIDTH	280
 #define ROWHEIGHT	35
@@ -108,7 +109,7 @@ void UI_ProductEditor::initConnect()
 	connect(ui.PB_Package_Save, SIGNAL(clicked()), this, SLOT(SlotSavePackage()));
 	connect(m_pAddStepButton, SIGNAL(clicked()), this, SLOT(SlotAddPackageStep()));
 	connect(&m_ButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(SlotDeleteStep(int)));
-	//connect(ui.TRW_PkgParticularInfo, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)), this, SLOT(SlotItemDoubleClick(QTreeWidgetItem*, int)));
+	connect(ui.TRW_PkgParticularInfo, SIGNAL(itemClicked(QTreeWidgetItem*, int)), this, SLOT(SlotBoolItemClick(QTreeWidgetItem*, int)));
 	connect(ui.LW_PackageList, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(SlotSwitchPackage(QListWidgetItem*)));
 
 }
@@ -158,11 +159,14 @@ void UI_ProductEditor::GetPackageList()
 void UI_ProductEditor::SlotSetCurrentPackage()
 {
 	QString qstrCurPkgName = m_pCurrentSelPkgItem->text();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击设为当前产品，产品为%2").arg(__func__).arg(qstrCurPkgName));
 	if (m_pCtrlProductEditor->ChangeCurproduct(qstrCurPkgName))
 	{
 		m_qstrCurPkgName = qstrCurPkgName;
 		CString strPkgName = m_qstrCurPkgName.toStdWString().data();
+	
 		WriteStringToFile(_T("Run"), _T("当前产品文件名"), strPkgName, m_cstrCfgPath);
+		WriteStringToFile(_T("Run"), _T("当前激光文件名"), MACHINECTRL.m_pMachineStatusCtrl->GetCurLaserData().strLaserFileName, m_cstrCfgPath);
 		m_pCurPkgItem->setIcon(m_qIconLastPkgIndicate);
 		m_pCurPkgItem = m_pCurrentSelPkgItem;
 		m_pCurPkgItem->setIcon(m_qIconCurPkgIndicate); //设置当前产品图标
@@ -173,6 +177,7 @@ void UI_ProductEditor::SlotCopyPackage()
 {
 	QString qstrCopyPkgName = m_pCurrentSelPkgItem->text();
 	QString qstrNewCopyPkgName;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击复制产品，被复制产品为%2").arg(__func__).arg(qstrCopyPkgName));
 	if (m_pCtrlProductEditor->CopyPackage(qstrCopyPkgName, qstrNewCopyPkgName))
 	{
 		QListWidgetItem* addItem = new QListWidgetItem(qstrNewCopyPkgName);
@@ -185,6 +190,7 @@ void UI_ProductEditor::SlotCopyPackage()
 void UI_ProductEditor::SlotDeletePackage()
 {
 	QString qstrDelPkgName = m_pCurrentSelPkgItem->text();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击删除产品，产品名为%2").arg(__func__).arg(qstrDelPkgName));
 	if (m_pCtrlProductEditor->DeletePackage(qstrDelPkgName))
 	{
 		int CurRow = ui.LW_PackageList->currentRow();
@@ -199,6 +205,7 @@ void UI_ProductEditor::SlotDeletePackage()
 void UI_ProductEditor::SlotNewPackage()
 {
 	QString qstrNewPkgName;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击新建产品").arg(__func__));
 	AddNewPackage(qstrNewPkgName);
 	QListWidgetItem* _NewItem = new QListWidgetItem(qstrNewPkgName);
 	_NewItem->setSizeHint(QSize(300, 35));
@@ -209,18 +216,32 @@ void UI_ProductEditor::SlotSavePackage()
 {
 	int nLength = m_qrwStepItem->childCount();
 	QVector<double> qVecStepDist;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击保存产品").arg(__func__));
 	for (int i = 0; i < nLength; i++)
 	{
 		qVecStepDist.push_back(m_qrwStepItem->child(i)->text(1).toDouble());
 	}
 	QString qstrOldPkgName = m_pCurrentSelPkgItem->text();
-	QTreeWidgetItem* PkgNameItem = ui.TRW_PkgParticularInfo->topLevelItem(0);
-	UI_LineEdit* PkgNameEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(PkgNameItem->child(0),1);
+	QTreeWidgetItem* PkgDefaultItem = ui.TRW_PkgParticularInfo->topLevelItem(0);//获取产品默认模组
+
+	UI_LineEdit* PkgNameEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(PkgDefaultItem->child(PACKAGE_NAME),1); //产品名称
 	QString qstrNewPkgName = PkgNameEdit->text();
 
-	QString qstrLaserName = PkgNameItem->child(1)->text(1);
+	UI_LineEdit* LaserNameEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(PkgDefaultItem->child(PACKAGE_LASERNAME), 1); //产品名称
+	QString qstrLaserName = LaserNameEdit->text();
 	QStringList qslPkgName;
 	qslPkgName << qstrNewPkgName << qstrOldPkgName;
+	//将产品文件名称、激光文件名称的Item项放入容器中
+	ST_CHANGE_POINT stSupplData;
+	stSupplData.dlData = -1;
+	stSupplData.nChildNum = PACKAGE_NAME;
+	stSupplData.nModuleNum = 0;
+	m_qVecPkgModifyInfo.push_back(stSupplData);
+	stSupplData.dlData = -1;
+	stSupplData.nChildNum = PACKAGE_LASERNAME;
+	stSupplData.nModuleNum = 0;
+	m_qVecPkgModifyInfo.push_back(stSupplData);
+	
 	if (m_pCtrlProductEditor->SaveProducteData(m_qVecPkgModifyInfo, qVecStepDist, qslPkgName, qstrLaserName))
 	{
 		if(qstrNewPkgName != qstrOldPkgName)
@@ -232,6 +253,7 @@ void UI_ProductEditor::SlotAddPackageStep()
 {
 	if (m_bAddStepLock)
 		return;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击新增极耳间距").arg(__func__));
 	m_bAddStepLock = true;
 	int nCurStep = m_qrwStepItem->childCount();
 	QString qstrStep = QString::number(nCurStep);
@@ -262,14 +284,16 @@ void UI_ProductEditor::SlotSwitchPackage(QListWidgetItem *item)
 
 	QVector<ST_CHANGE_POINT> qVecOnloadPkgInfo;
 	QString qstrLaserFileName;
-
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:切换产品,要切换产品名:%1").arg(__func__).arg(qstrPkgName));
 	m_pCtrlProductEditor->SwitchPackage(qVecOnloadPkgInfo, qstrLaserFileName, qstrPkgName);
 	UpdataPackageInfo(qVecOnloadPkgInfo, qstrLaserFileName, qstrPkgName);
+	m_qVecPkgModifyInfo.clear();
 }
 
 void UI_ProductEditor::SlotDeleteStep(int nButton)
 {
 	int nDelRow = nButton;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击删除极耳间距，删除编号为%2").arg(__func__).arg(nDelRow));
 	QTreeWidgetItem* DelItem = m_qrwStepItem->child(nDelRow);
 	m_qrwStepItem->removeChild(DelItem);
 	QAbstractButton* DelButton = m_ButtonGroup.button(nButton);
@@ -284,8 +308,70 @@ void UI_ProductEditor::SlotDeleteStep(int nButton)
 	}
 }
 
+void UI_ProductEditor::SlotBoolItemClick(QTreeWidgetItem* item, int nColumn)
+{
+	QTreeWidgetItem* CurItemParent = item->parent();
+	if (NULL == CurItemParent || nColumn != 1)
+		return;
+	int nModuleNum = ui.TRW_PkgParticularInfo->indexOfTopLevelItem(CurItemParent);
+	int nChildNum = CurItemParent->indexOfChild(item);
+
+	ST_CHANGE_POINT temp;
+	temp.dlData = item->checkState(1);
+	temp.nChildNum = nChildNum;
+	temp.nModuleNum = nModuleNum;
+	m_qVecPkgModifyInfo.push_back(temp);
+	if (PACKAGE_STRAT_LINE == nChildNum)
+	{
+		if (Qt::Unchecked == temp.dlData)
+		{
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setFlags(Qt::NoItemFlags);
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setFlags(Qt::NoItemFlags);
+		}
+		else
+		{
+			Qt::ItemFlags _DefultFlag = item->flags();
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setFlags(_DefultFlag);
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setFlags(_DefultFlag);
+		}
+	}
+	else if (PACKAGE_FALL_TRIGGER == temp.nChildNum)
+	{
+		if (temp.dlData < 0.1) // == 0
+		{
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setCheckState(1, Qt::Checked);
+			temp.dlData = Qt::Checked;
+		}
+		else
+		{
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setCheckState(1, Qt::Unchecked);
+			temp.dlData = Qt::Unchecked;
+		}
+		temp.nChildNum = PACKAGE_RISE_TRIGGER;
+		temp.nModuleNum = nModuleNum;
+		m_qVecPkgModifyInfo.push_back(temp);
+	}
+	else
+	{
+		if (temp.dlData < 0.1) // == 0
+		{
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setCheckState(1, Qt::Checked);
+			temp.dlData = Qt::Checked;
+		}
+		else
+		{
+			m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setCheckState(1, Qt::Unchecked);
+			temp.dlData = Qt::Unchecked;
+		}
+		temp.nChildNum = PACKAGE_FALL_TRIGGER;
+		temp.nModuleNum = nModuleNum;
+		m_qVecPkgModifyInfo.push_back(temp);
+	}
+}
+
 void UI_ProductEditor::SlotLaserFileSel()
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击选择激光文件").arg(__func__));
 	//if (item->text(0) == QString::fromLocal8Bit("激光文件") && 1 == nColumn)
 	{
 		if (!CFGINTERFACE.JudgeDirIsExist(m_qstrLaserFilePath))
@@ -293,12 +379,12 @@ void UI_ProductEditor::SlotLaserFileSel()
 			MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("激光文件夹不存在!"), DOMODEL, 0);
 			return;
 		}
-		m_qstrLaserFileName = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("激光文件选择"), m_qstrLaserFilePath, tr("*.hms"));//文件对话框
-		if (m_qstrLaserFileName.isEmpty())
+		QString qstrLaserFileName = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("激光文件选择"), m_qstrLaserFilePath, tr("*.hms"));//文件对话框
+		if (qstrLaserFileName.isEmpty())
 			return;
-		m_qstrLaserFileName = m_qstrLaserFileName.section('/', -1); //截取最后一个‘/’后的字符串
-		m_qstrLaserFileName = m_qstrLaserFileName.left(m_qstrLaserFileName.length() - 4);
-		m_pLaserLineEdit->setText(m_qstrLaserFileName);
+		qstrLaserFileName = qstrLaserFileName.section('/', -1); //截取最后一个‘/’后的字符串
+		qstrLaserFileName = qstrLaserFileName.left(qstrLaserFileName.length() - 4);
+		m_pLaserLineEdit->setText(qstrLaserFileName);
 		//占位符，保存时使用，修改激光文件名称
 		ST_CHANGE_POINT temp;
 		temp.dlData = -1;
@@ -313,11 +399,16 @@ void UI_ProductEditor::SlotItemChanged()
 {
 	UI_LineEdit* ChangeItem = (UI_LineEdit*)QObject::sender();
 	if (ChangeItem->text() == QString::fromLocal8Bit("产品名称"))
+	{
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:修改产品名称").arg(__func__));
 		return;
+	}
+		
 	ST_CHANGE_POINT temp;
 	temp.dlData = ChangeItem->text().toDouble();
 	temp.nChildNum = ChangeItem->nChildNum;
 	temp.nModuleNum = ChangeItem->nModuleNum;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:修改%2o数据,修改为%3").arg(__func__).arg(ChangeItem->text()).arg(temp.dlData));
 	m_qVecPkgModifyInfo.push_back(temp);
 }
 
@@ -343,49 +434,64 @@ bool UI_ProductEditor::insertModule(QVector<ST_MODULE>* cfgModuleInfo)
 			{
 				QTreeWidgetItem* ChildModule = new QTreeWidgetItem(_Moduleitem, QStringList(cfgModuleInfo->at(i).Value_.at(j).Function_name));
 				ChildModule->setSizeHint(0, QSize(ROWWIDTH, ROWHEIGHT));
-				QString strVal;
-				if (cfgModuleInfo->at(i).Value_.at(j).Vel_Type == _INT)
-					strVal = QString::number(cfgModuleInfo->at(i).Value_.at(j).Vel);
-				else
-					strVal = QString::number(cfgModuleInfo->at(i).Value_.at(j).Vel, 'g', 8);
+				//QString strVal;
+				//if (cfgModuleInfo->at(i).Value_.at(j).Vel_Type == _INT)
+				//	strVal = QString::number(cfgModuleInfo->at(i).Value_.at(j).Vel);
+				//else
+				//	strVal = QString::number(cfgModuleInfo->at(i).Value_.at(j).Vel, 'g', 8);
 
-				if (ENABLEEDIT == cfgModuleInfo->at(i).Value_.at(j).OtherAttribute)
+				if (ENABLEEDIT == cfgModuleInfo->at(i).Value_.at(j).OtherAttribute) //可编辑
 				{
-					UI_LineEdit* UserLineEdit = new UI_LineEdit(i, j,this);
+					UI_LineEdit* UserLineEdit = new UI_LineEdit(i, j, this);
 					if (cfgModuleInfo->at(i).Value_.at(j).Function_name == QString::fromLocal8Bit("产品名称"))
 					{
 						QFont font(QString::fromLocal8Bit("微软雅黑"), 10);
 						QRegExp regx("^(?![\\p{P}\\p{S}])[\u4e00-\u9fa5,A-Z,a-z,0-9,-]+$"); //限定除中文、字母A-Z、字母a-z、以及-之外的其他字符
 						UserLineEdit->SetStyleSheet(font, regx);
+						UserLineEdit->setMinimumSize(QSize(150,28));
 					}
 					ui.TRW_PkgParticularInfo->setItemWidget(ChildModule, 1, UserLineEdit);
 					connect(UserLineEdit, SIGNAL(editingFinished()), this, SLOT(SlotItemChanged()));
 				}
-
-				if (cfgModuleInfo->at(i).Value_.at(j).Function_name == QString::fromLocal8Bit("激光文件"))
+				else if (DISABLEEDIT == cfgModuleInfo->at(i).Value_.at(j).OtherAttribute) //不可编辑
 				{
-					m_qrwLaserItem = ChildModule;
-					m_pLaserLineEdit = new UI_LineEdit(i, j, this);
-					QFont font(QString::fromLocal8Bit("微软雅黑"), 10);
-					QRegExp regx("^(?![\\p{P}\\p{S}])[\u4e00-\u9fa5,A-Z,a-z,0-9,-]+$"); //限定除中文、字母A-Z、字母a-z、以及-之外的其他字符
-					m_pLaserLineEdit->SetStyleSheet(font, regx);
-					m_pLaserLineEdit->setReadOnly(true);
-					ui.TRW_PkgParticularInfo->setItemWidget(ChildModule, 1, m_pLaserLineEdit);
+					if (cfgModuleInfo->at(i).Value_.at(j).Function_name == QString::fromLocal8Bit("激光文件"))
+					{
+						m_qrwLaserItem = ChildModule;
+						m_pLaserLineEdit = new UI_LineEdit(i, j, this);
+						QFont font(QString::fromLocal8Bit("微软雅黑"), 10);
+						QRegExp regx("^(?![\\p{P}\\p{S}])[\u4e00-\u9fa5,A-Z,a-z,0-9,-]+$"); //限定除中文、字母A-Z、字母a-z、以及-之外的其他字符
+						m_pLaserLineEdit->SetStyleSheet(font, regx);
+						m_pLaserLineEdit->setReadOnly(true);
+						ui.TRW_PkgParticularInfo->setItemWidget(ChildModule, 1, m_pLaserLineEdit);
 
-					QFont _font(QString::fromLocal8Bit("微软雅黑"), 10);
-					QPushButton* _PushButton = new QPushButton;
-					_PushButton->setText(QString::fromLocal8Bit("激光文件选择"));
-					_PushButton->setMaximumSize(100, 25);
-					_PushButton->setFont(_font);
-					_PushButton->setIcon(QIcon(m_qstrIconFile + "/Image/LaserFileSel.png"));
-					_PushButton->setStyleSheet(
-						"QPushButton{background: transparent;color: white; border-radius: 10px; border-style: outset;}"
-						"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
-						);
-					ui.TRW_PkgParticularInfo->setItemWidget(m_qrwLaserItem, 2, (QWidget*)_PushButton);
-					connect(_PushButton, SIGNAL(clicked()), this, SLOT(SlotLaserFileSel()));
+						QFont _font(QString::fromLocal8Bit("微软雅黑"), 10);
+						QPushButton* _PushButton = new QPushButton;
+						_PushButton->setText(QString::fromLocal8Bit("激光文件选择"));
+						_PushButton->setMaximumSize(100, 25);
+						_PushButton->setFont(_font);
+						_PushButton->setIcon(QIcon(m_qstrIconFile + "/Image/LaserFileSel.png"));
+						_PushButton->setStyleSheet(
+							"QPushButton{background: transparent;color: white; border-radius: 10px; border-style: outset;}"
+							"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
+							);
+						ui.TRW_PkgParticularInfo->setItemWidget(m_qrwLaserItem, 2, (QWidget*)_PushButton);
+						connect(_PushButton, SIGNAL(clicked()), this, SLOT(SlotLaserFileSel()));
+					}
+					else if (_BOOL == cfgModuleInfo->at(i).Value_.at(j).Vel_Type) //勾选框
+					{
+						ChildModule->setCheckState(1, Qt::Unchecked);
+					}
+					else
+					{
+						UI_LineEdit* UserLineEdit = new UI_LineEdit(i, j, this);
+						QFont font(QString::fromLocal8Bit("微软雅黑"), 10);
+						QRegExp regx("^(?![\\p{P}\\p{S}])[\u4e00-\u9fa5,A-Z,a-z,0-9,-]+$"); //限定除中文、字母A-Z、字母a-z、以及-之外的其他字符
+						UserLineEdit->SetStyleSheet(font, regx);
+						UserLineEdit->setReadOnly(true);
+						ui.TRW_PkgParticularInfo->setItemWidget(ChildModule, 1, UserLineEdit);
+					}
 				}
-
 				_ModuleItem.ChildModuleItems.push_back(ChildModule);
 			}
 			m_ModuleVector.push_back(_ModuleItem);
@@ -449,23 +555,43 @@ void UI_ProductEditor::UpdataPackageInfo(QVector<ST_CHANGE_POINT> qVecOnloadPkgI
 		{
 			int ModuleNum = qVecOnloadPkgInfo.at(i).nModuleNum;
 			int ChildNum = qVecOnloadPkgInfo.at(i).nChildNum;
-			QString strVal = QString::number(qVecOnloadPkgInfo.at(i).dlData, 'g', 7);
 			QTreeWidgetItem* setValItem = m_ModuleVector.at(ModuleNum).ChildModuleItems.at(ChildNum);
-			//setValItem->setText(1, strVal);
-			UI_LineEdit* _LineEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(setValItem, 1);
-			if(NULL != _LineEdit)
+
+			QObject* childItem = ui.TRW_PkgParticularInfo->itemWidget(setValItem, 1);
+			//写入Edit
+			if(NULL != childItem) 
+			{
+				QString strVal = QString::number(qVecOnloadPkgInfo.at(i).dlData, 'g', 7);
+				UI_LineEdit* _LineEdit = (UI_LineEdit*)childItem;
 				_LineEdit->setText(strVal);
+				continue;
+			}
+			//设置CheckBox
+			if (0.1 < qVecOnloadPkgInfo.at(i).dlData) //!=0
+				setValItem->setCheckState(1, Qt::Checked);
+			else
+				setValItem->setCheckState(1, Qt::Unchecked);
+			if (m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_STRAT_LINE)->checkState(1) == Qt::Checked)
+			{
+				Qt::ItemFlags _DefultFlag = m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_STRAT_LINE)->flags();
+				m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setFlags(_DefultFlag);
+				m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setFlags(_DefultFlag);
+			}
+			else
+			{
+				m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_RISE_TRIGGER)->setFlags(Qt::NoItemFlags);
+				m_ModuleVector.at(0).ChildModuleItems.at(PACKAGE_FALL_TRIGGER)->setFlags(Qt::NoItemFlags);
+			}
 		}
 		else //设置极耳间距
 		{
 			qslpkgStep.insert(qVecOnloadPkgInfo.at(i).nChildNum, QString::number(qVecOnloadPkgInfo.at(i).dlData, 'g', 6));
 		}
 	}
-	//QTreeWidgetItem* BaseItem = ui.TRW_PkgParticularInfo->topLevelItem(0);
-	//UI_LineEdit* _LineEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(BaseItem->child(0), 1); //获取产品名的Item
-	//if (NULL != _LineEdit)
-	//	_LineEdit->setText(strPkgName);
-	//BaseItem->child(1)->setText(1, LaserFileName);	//激光文件名
+	QTreeWidgetItem* BaseItem = ui.TRW_PkgParticularInfo->topLevelItem(0);
+	UI_LineEdit* _LineEdit = (UI_LineEdit*)ui.TRW_PkgParticularInfo->itemWidget(BaseItem->child(0), 1); //获取产品名的Item
+	if (NULL != _LineEdit)
+		_LineEdit->setText(strPkgName);	//设置产品名称
 	m_pLaserLineEdit->setText(LaserFileName);
 
 	//设置极耳间距

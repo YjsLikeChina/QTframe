@@ -92,7 +92,6 @@ string CLog::WtoC(const wchar_t *pWcsStr)
 	string tempc = temp.toStdString();
 	const char * temp2 = tempc.c_str();
 	string mbsStr(pDestString);
-	
 	free(pDestString);
 	setlocale(LC_CTYPE, old_locale);            //恢复原来的语系
 	return mbsStr;
@@ -180,6 +179,7 @@ const string& CLog::StringFormat(std::string &srcString, const char *pFormatStri
     srcString = tempString;
     return srcString;
 }
+
 
 // <Summary>将日志字符串转化为真正的日志信息</Summary>
 // <DateTime>2013/10/31</DateTime>
@@ -306,9 +306,32 @@ void CLog::WriteLogQstring( int level, QString qLogText, ...)
 	int LevelValue = (int)level;
 	QString LevelQstr = QString::number(LevelValue);
 	qLogText = LevelQstr+ qLogText ;
-	m_Mutex.lock();
-	m_LogDataList.push_back(qLogText);
+	thread IntDatThread(&CLog::m_ThreadInputDataToList, this,qLogText);
+	IntDatThread.detach();
+}
+bool CLog::m_ThreadInputDataToList(QString qLogText)
+{
+	int Time =0;
+	while(1)
+	{
+		bool resoult = m_Mutex.try_lock();
+		if(resoult)
+			break;
+		else
+		{
+			if (Time++ < 9)
+				_sleep(10);
+			else
+				return false;
+		}
+	}
+	QString FileData = qLogText.right(qLogText.length() - 1);
+	string temp(WtoC(FileData.toStdWString().c_str())); //获取日志级别数字
+	temp = "[$(DATETIME)]-[软件版本：$(SOFTWAREVER)]-[用户名：$(USER)($(USERTYPE))]" + temp + "-[$(LEVELFLAG)]\n";
+	temp = qLogText.left(1).toStdString() + temp;//拼装日志级别进去
+	m_LogDataList.push_back(temp);
 	m_Mutex.unlock();
+	return true;
 }
 
 void CLog::WriteLogRunThread()
@@ -326,43 +349,41 @@ void CLog::WriteLogRunThread()
 	}*/
 	while (1)
 	{
-		QString LogDataTemp;
+		string LogDataTemp;
 		m_Mutex.lock();
-		if (m_LogDataList.length() > 0)
+		if (m_LogDataList.size() > 0)
 		{
 			LogDataTemp = m_LogDataList.at(0);
+			vector<string>::iterator IterItem = m_LogDataList.begin();
+			m_LogDataList.erase(IterItem);
 			m_Mutex.unlock();
 		}
 		else
 		{
 			m_Mutex.unlock();
+			_sleep(20);
 			continue;
 		}
 		if (LogDataTemp == "ExitThead")
 			return;
-		QString FileData = LogDataTemp.right(LogDataTemp.length()-1);
-		LOG_LEVEL LevelValue = (LOG_LEVEL)(LogDataTemp.left(1).toInt());
-		string temp(WtoC(FileData.toStdWString().c_str()));
-		temp = "{[$(DATETIME)]-[软件版本：$(SOFTWAREVER)]-[用户名：$(USER)($(USERTYPE))]}" + temp + "-[$(LEVELFLAG)]\n";
-		WriteLogEx(LevelValue, temp.c_str());
-		m_Mutex.lock();
-		m_LogDataList.removeAt(0);
-		m_Mutex.unlock();
+		/*	char ClogData[1024];
+			LogDataTemp.copy(ClogData,LogDataTemp.length() - 1, 1);*/
+		LOG_LEVEL LevelValue = (LOG_LEVEL)(LogDataTemp.at(0)-48);
+		LogDataTemp.erase(0, 1);
+		WriteLogEx(LevelValue, LogDataTemp.c_str());
 	}
 }
 
 void CLog::ExitLogRunThread()
 {
 	m_Mutex.lock();
-	while (m_LogDataList.length() !=0)
+	m_LogDataList.push_back("ExitThead");
+	while (m_LogDataList.size() !=0)
 	{
 		m_Mutex.unlock();
 		_sleep(20);
 		m_Mutex.lock();
 	}
-	m_Mutex.unlock();
-	m_Mutex.lock();
-	m_LogDataList << "ExitThead";
 	m_Mutex.unlock();
 }
 

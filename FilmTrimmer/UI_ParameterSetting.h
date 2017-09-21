@@ -32,7 +32,6 @@ protected Q_SLOTS:
 	void SlotBoolItemChanged(QTreeWidgetItem* item, int);
 	void SlotDataItemChanged();
 	void SlotLaserSoftwareShow();								//激光软件显示
-	void SlotUserManage();										//用户管理
 
 public:
 	virtual bool GetModifyParam(QVector<ST_CHANGE_POINT>& mapModifyVal);//获取有修改的数据

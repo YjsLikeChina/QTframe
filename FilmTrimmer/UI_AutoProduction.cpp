@@ -362,11 +362,14 @@ void UI_AutoProduction::DataListShowClick()
 
 void UI_AutoProduction::SlotSetWorkSpeed()
 {
+
 	int nSetWorkSpeed = m_pWorkSpeedInputDlg->DoModal(m_nLastSetWorkSpeed);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_{[操作:设置工作速度,速度为：%2]").arg(__func__).arg(nSetWorkSpeed));
 	if (m_pCtrlAutoProduction->SetWorkSpeed(nSetWorkSpeed))
 	{
 		m_nLastSetWorkSpeed = nSetWorkSpeed;
 	}
+
 }
 
 void UI_AutoProduction::paintEvent(QPaintEvent* ev)
@@ -642,16 +645,19 @@ void UI_AutoProduction::SlotItemChanged(QTreeWidgetItem *item, int column)
 void UI_AutoProduction::SlotRunDirection()
 {
 	bool bRes = m_pCtrlAutoProduction->SetMachineRunDir();
+	QString Dir;
 	if (bRes)
 	{
-		ui.PB_RunDirection->setText(QString::fromLocal8Bit("正向运行"));
+		Dir = QString::fromLocal8Bit("正向运行");
 		ui.PB_RunDirection->setIcon(m_qIconRunDirFW);
 	}
 	else
 	{
-		ui.PB_RunDirection->setText(QString::fromLocal8Bit("反向运行"));
+		Dir = QString::fromLocal8Bit("反向运行");
 		ui.PB_RunDirection->setIcon(m_qIconRunDirRE);
 	}
+	ui.PB_RunDirection->setText(Dir);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotRunDirection]_操作:设置运行方向为%1").arg(Dir));
 	emit SigMachineRunDir(bRes);
 }
 
@@ -662,11 +668,13 @@ void UI_AutoProduction::SlotOnloadDirection()
 	{
 		ui.PB_OnloadDirection->setText(QString::fromLocal8Bit("顺时针放卷"));
 		ui.PB_OnloadDirection->setIcon(m_qIconOnloadDirFW);
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:设置放卷方向为%1").arg(ui.PB_OnloadDirection->text()));
 	}
 	else
 	{
 		ui.PB_OnloadDirection->setText(QString::fromLocal8Bit("逆时针放卷"));
 		ui.PB_OnloadDirection->setIcon(m_qIconOnloadDirRE);
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:设置放卷方为%1").arg(ui.PB_OnloadDirection->text()));
 	}
 	
 }
@@ -674,56 +682,67 @@ void UI_AutoProduction::SlotOnloadDirection()
 void UI_AutoProduction::SlotOnloadClockwiseP()
 {
 	m_pCtrlAutoProduction->SetOnloadClockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:放卷正转(下压)"));
 }
 
 void UI_AutoProduction::SlotOnloadClockwiseR()
 {
 	m_pCtrlAutoProduction->SetOnloadClockwise(false);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:放卷正转(释放)"));
 }
 
 void UI_AutoProduction::SlotOnloadAnticlockwiseP()
 {
 	m_pCtrlAutoProduction->SetOnloadAnticlockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:放卷正转"));
 }
 
 void UI_AutoProduction::SlotOnloadAnticlockwiseR()
 {
 	m_pCtrlAutoProduction->SetOnloadAnticlockwise(false);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:设置放卷正"));
 }
 
 void UI_AutoProduction::SlotMainAxisClockwiseP()
 {
 	m_pCtrlAutoProduction->SetMainAxisClockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotOnloadDirection]_操作:主牵引正转"));
 }
 
 void UI_AutoProduction::SlotMainAxisClockwiseR()
 {
 	m_pCtrlAutoProduction->SetMainAxisClockwise(false);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotMainAxisClockwiseR]_操作:主牵引正转"));
 }
 
 void UI_AutoProduction::SlotMainAxisAnticlockwiseP()
 {
 	m_pCtrlAutoProduction->SetMainAxisAnticlockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotMainAxisAnticlockwiseP]_操作:主牵引反转"));
 }
 
 void UI_AutoProduction::SlotMainAxisAnticlockwiseR()
 {
 	m_pCtrlAutoProduction->SetMainAxisAnticlockwise(false);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotMainAxisAnticlockwiseR]_操作:主牵引反转"));
 }
 
 void UI_AutoProduction::SlotRecvClockwiseP()
 {
 	m_pCtrlAutoProduction->SetRecvClockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : SlotRecvClockwiseP]_操作:收卷正转"));
 }
 
 void UI_AutoProduction::SlotRecvClockwiseR()
 {
 	m_pCtrlAutoProduction->SetRecvClockwise(false);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:收卷反转").arg(__func__));
 }
 
 void UI_AutoProduction::SlotRecvAnticlockwiseP()
 {
 	m_pCtrlAutoProduction->SetRecvAnticlockwise(true);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:收卷反转").arg(__func__));
 }
 
 void UI_AutoProduction::SlotRecvAnticlockwiseR()

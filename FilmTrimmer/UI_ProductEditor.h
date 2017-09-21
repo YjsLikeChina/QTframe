@@ -28,7 +28,7 @@ private:
 	QListWidgetItem* m_pCurrentSelPkgItem;		//点击不同产品时，记录当前选中的Item
 	QVector<double> m_qVecLaserStepDist;		//极耳间距
 	QString m_qstrLaserFilePath;				//激光文件路径,用于打开激光文件选择对话框
-	QString m_qstrLaserFileName;				//激光文件名
+	QString m_qstrCurLaserFileName;				//当前激光文件名
 	QString m_qstrPkgFilePath;					//产品文件路径
 	QString m_qstrCurPkgName;					//当前产品名称
 	CString m_cstrCfgPath;						//FilmTrimmer.cfg文件路径，获取部分默认参数
@@ -53,7 +53,7 @@ protected Q_SLOTS:
 	void SlotAddPackageStep();									//添加产品极耳间距
 	void SlotSwitchPackage(QListWidgetItem *item);				//切换产品
 	void SlotDeleteStep(int nButton);							//删除极耳间距
-	//void SlotItemDoubleClick(QTreeWidgetItem* item, int nColumn);//
+	void SlotBoolItemClick(QTreeWidgetItem* item, int nColumn);//
 	void SlotLaserFileSel();									//激光文件选择
 	void SlotItemChanged();										//产品参数被修改
 

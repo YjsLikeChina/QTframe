@@ -1,8 +1,8 @@
-﻿生成启动时间为 2017/9/13 10:06:09。
+﻿生成启动时间为 2017/9/20 17:25:23。
      1>项目“E:\Wo_Shi_Ji\Qtframe\QTframe\FilmTrimmer\FilmTrimmer.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         E:\Visual_Studio_2015\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IE:\QT5.6\5.6\msvc2015\include /I.\GeneratedFiles\Debug /IE:\QT5.6\5.6\msvc2015\include\QtCore\ /IE:\QT5.6\5.6\msvc2015\include\QtGui\ /IE:\QT5.6\5.6\msvc2015\include\QtWidgets\ /ID:\ControlLibrary\Include\ /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /D _AFXDLL /D _WIN32_WINNT=0x0601 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt UI_filmtrimmer.cpp
-         UI_filmtrimmer.cpp
+         E:\Visual_Studio_2015\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IE:\QT5.6\5.6\msvc2015\include /I.\GeneratedFiles\Debug /IE:\QT5.6\5.6\msvc2015\include\QtCore\ /IE:\QT5.6\5.6\msvc2015\include\QtGui\ /IE:\QT5.6\5.6\msvc2015\include\QtWidgets\ /ID:\ControlLibrary\Include\ /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /D _AFXDLL /D _WIN32_WINNT=0x0601 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt CTRL_motordebug.cpp
+         CTRL_motordebug.cpp
        Link:
          E:\Visual_Studio_2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\\FilmTrimmer.exe" /NOLOGO /LIBPATH:E:\QT5.6\5.6\msvc2015\lib /LIBPATH:D:\ControlLibrary\Lib /LIBPATH:E:\Wo_Shi_Ji\Qtframe\QTframe\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib Iphlpapi.lib LibraryBase.lib CommonSupport.lib EasyAutoControl.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.lib" /MACHINE:X86 /SAFESEH Debug\FilmTrimmer.res
          Debug\CTRL_autoproduction.obj
@@ -25,6 +25,7 @@
          Debug\moc_OP_FSM.obj
          Debug\moc_OP_MachineSoftWareMain.obj
          Debug\moc_OP_MachineStatusCtrl.obj
+         Debug\moc_plcdebug.obj
          Debug\moc_QCUserManager.obj
          Debug\moc_UI_AutoProduction.obj
          Debug\moc_UI_filmtrimmer.obj
@@ -47,6 +48,7 @@
          Debug\OP_MachineStatusCtrl.obj
          Debug\OP_AutoUpdateData.obj
          Debug\OP_MachineSoftWareMain.obj
+         Debug\plcdebug.obj
          Debug\QCUserManager.obj
          Debug\UI_AutoProduction.obj
          Debug\UI_InterfaceBase.obj
@@ -69,9 +71,12 @@
          Debug\UI_StopCauseListDialog.obj
          Debug\UI_UserManagerCtrol.obj
          Debug\UI_WorkSpeedInputDialog.obj
+           正在创建库 E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.lib 和对象 E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.exp
          FilmTrimmer.vcxproj -> E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.exe
+       BscMake:
+         E:\Visual_Studio_2015\VC\bin\bscmake.exe /nologo /o"E:\Wo_Shi_Ji\Qtframe\QTframe\Win32\Debug\FilmTrimmer.bsc" /n Debug\CTRL_autoproduction.sbr Debug\CTRL_Base.sbr Debug\CTRL_filmtrimmer.sbr Debug\CTRL_iodebug.sbr Debug\CTRL_motordebug.sbr Debug\CTRL_parameterset.sbr Debug\CTRL_producteditor.sbr Debug\DP_CfgInterface.sbr Debug\DP_HCPLCInteraction.sbr Debug\DP_LaserInteraction.sbr Debug\DP_MotorCtrlInteraction.sbr Debug\moc_CTRL_autoproduction.sbr Debug\moc_CTRL_Base.sbr Debug\moc_CTRL_filmtrimmer.sbr Debug\moc_DP_CfgInterface.sbr Debug\moc_DP_MotorCtrlInteraction.sbr Debug\moc_OP_AutoUpdateData.sbr Debug\moc_OP_FSM.sbr Debug\moc_OP_MachineSoftWareMain.sbr Debug\moc_OP_MachineStatusCtrl.sbr Debug\moc_plcdebug.sbr Debug\moc_QCUserManager.sbr Debug\moc_UI_AutoProduction.sbr Debug\moc_UI_filmtrimmer.sbr Debug\moc_UI_FloatingWindow.sbr Debug\moc_UI_HistoricalInformation.sbr Debug\moc_UI_IODebug.sbr Debug\moc_UI_MachineErrorList.sbr Debug\moc_UI_Maintenance.sbr Debug\moc_UI_MessageBox.sbr Debug\moc_UI_MotorDebug.sbr Debug\moc_UI_ParameterSetting.sbr Debug\moc_UI_ProductEditor.sbr Debug\moc_UI_Simpledialog.sbr Debug\moc_UI_StopCauseListDialog.sbr Debug\moc_UI_UserManagerCtrol.sbr Debug\moc_UI_WorkSpeedInputDialog.sbr Debug\Log.sbr Debug\LogManager.sbr Debug\OP_FSM.sbr Debug\OP_MachineStatusCtrl.sbr Debug\OP_AutoUpdateData.sbr Debug\OP_MachineSoftWareMain.sbr Debug\plcdebug.sbr Debug\QCUserManager.sbr Debug\UI_AutoProduction.sbr Debug\UI_InterfaceBase.sbr Debug\UI_filmtrimmer.sbr Debug\UI_HistoricalInformation.sbr Debug\UI_IODebug.sbr Debug\UI_MachineErrorList.sbr Debug\UI_Maintenance.sbr Debug\UI_MessageBox.sbr Debug\moc_DP_LaserInteraction.sbr Debug\qrc_filmtrimmer.sbr Debug\main.sbr Debug\Ping.sbr Debug\DP_FileOperator.sbr Debug\UI_FloatingWindow.sbr Debug\UI_MotorDebug.sbr Debug\UI_ParameterSetting.sbr Debug\UI_ProductEditor.sbr Debug\UI_Simpledialog.sbr Debug\UI_StopCauseListDialog.sbr Debug\UI_UserManagerCtrol.sbr Debug\UI_WorkSpeedInputDialog.sbr
      1>已完成生成项目“E:\Wo_Shi_Ji\Qtframe\QTframe\FilmTrimmer\FilmTrimmer.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
 
-已用时间 00:00:03.36
+已用时间 00:01:01.04

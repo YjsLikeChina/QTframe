@@ -59,12 +59,14 @@ bool CTRL_AutoProduction::ItemChanged(QVector<ST_CHANGE_POINT> VeChangePoint)
 
 bool CTRL_AutoProduction::SetMachineRunDir()
 {
+	
 	DWORD dwAddr = MACHINECTRL.m_QveAutoProduction.at(0).Value_.at(MACHINE_RUN_DIR).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveAutoProduction.at(0).Value_.at(MACHINE_RUN_DIR).Addr_Type;
 	bool bCurRunDir = HC_PLC_INTERFACE.GetBOOLFromPLC(dwAddr, emType);//0表示第一个模组，MACHINE_RUN_DIR表示设备运行方向在文件中位置
 	HC_PLC_INTERFACE.SetBOOLToPLC(!bCurRunDir, dwAddr, emType);
 	Sleep(100);
 
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置设备运行方向,方向:%2").arg(__func__).arg(!bCurRunDir));
 	return bCurRunDir = HC_PLC_INTERFACE.GetBOOLFromPLC(dwAddr, emType); //返回实际获取的值
 }
 
@@ -75,7 +77,7 @@ bool CTRL_AutoProduction::SetMachineOnloadDir()
 	bool bCurOnloadDir = HC_PLC_INTERFACE.GetBOOLFromPLC(dwAddr, emType);//0表示第一个模组
 	HC_PLC_INTERFACE.SetBOOLToPLC(!bCurOnloadDir, dwAddr, emType);
 	Sleep(100);
-
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置设备放卷方向,方向:%2").arg(__func__).arg(!bCurOnloadDir));
 	return bCurOnloadDir = HC_PLC_INTERFACE.GetBOOLFromPLC(dwAddr, emType); //返回实际获取的值
 }
 
@@ -92,6 +94,7 @@ bool CTRL_AutoProduction::SetWorkSpeed(int nSetSpeed)
 	DWORD dwAddr = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt();//地址
 	EM_Type emType = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type;//类型
 	int nAccuracy = MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;//精度
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置设备运行方向,方向:%2").arg(__func__).arg(dwAddr));
 	if (HC_PLC_INTERFACE.SetDWORDToPLC(nSetSpeed * nAccuracy, dwAddr, emType))
 	{
 		//写入配置文件中
@@ -101,10 +104,13 @@ bool CTRL_AutoProduction::SetWorkSpeed(int nSetSpeed)
 }
 
 /*电机配置页面默认配置放卷轴、主牵引、收卷轴*/
+
+
 void CTRL_AutoProduction::SetOnloadClockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(0).Value_.at(ORDER_JOG_CW).Addr.toInt(); 
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(0).Value_.at(ORDER_JOG_CW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动放卷正装").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag,dwAddr,emType);
 }
 
@@ -112,6 +118,7 @@ void CTRL_AutoProduction::SetOnloadAnticlockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(0).Value_.at(ORDER_JOG_CCW).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(0).Value_.at(ORDER_JOG_CCW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动放卷反转").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag, dwAddr, emType);
 }
 
@@ -119,6 +126,7 @@ void CTRL_AutoProduction::SetMainAxisClockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(1).Value_.at(ORDER_JOG_CW).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(1).Value_.at(ORDER_JOG_CW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动主牵引正转").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag, dwAddr, emType);
 }
 
@@ -126,6 +134,7 @@ void CTRL_AutoProduction::SetMainAxisAnticlockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(1).Value_.at(ORDER_JOG_CCW).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(1).Value_.at(ORDER_JOG_CCW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动主牵引反转").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag, dwAddr, emType);
 }
 
@@ -133,6 +142,7 @@ void CTRL_AutoProduction::SetRecvClockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(2).Value_.at(ORDER_JOG_CW).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(2).Value_.at(ORDER_JOG_CW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动收卷正转").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag, dwAddr, emType);
 }
 
@@ -140,5 +150,6 @@ void CTRL_AutoProduction::SetRecvAnticlockwise(bool bFlag)
 {
 	DWORD dwAddr = MACHINECTRL.m_QveMotorDebug.at(2).Value_.at(ORDER_JOG_CCW).Addr.toInt();
 	EM_Type emType = MACHINECTRL.m_QveMotorDebug.at(2).Value_.at(ORDER_JOG_CCW).Addr_Type;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:启动收卷反转").arg(__func__));
 	HC_PLC_INTERFACE.SetBOOLToPLC(bFlag, dwAddr, emType);
 }

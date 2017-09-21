@@ -21,12 +21,12 @@ private:
 	int m_nModuleNum;									//模组个数
 	QPainter *m_Painter;								//画笔实例
 	//UI_AutoDynamic  *UiAutoDynamic;					//动态窗口
-	double m_ReMaxtension  =20000;
+	double m_ReMaxtension  =20000;						//最大力臂位1
 	double m_ReMintension =0 ;
-	double m_ReCurtension=0;
+	double m_ReCurtension=0;							//力臂位当前值1
 	double m_PuMaxtension = 20000;
 	double m_PuMintension = 0;
-	double m_PuCurtension = 0;
+	double m_PuCurtension = 0;							//力臂位当前值2
 	double m_ReRollingDiameter = 0;
 	double m_PuRollingDiameter = 0;
 	double m_WorkSpeed = 0;

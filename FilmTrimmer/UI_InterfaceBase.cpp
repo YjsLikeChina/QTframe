@@ -72,8 +72,7 @@ void UI_LineEdit::initUI()
 	QValidator *validator = new QRegExpValidator(regx, this);
 	this->setValidator(validator);
 	this->setContextMenuPolicy(Qt::NoContextMenu);
-	this->setMaximumHeight(28);
-	this->setMaximumWidth(100);
+	setMaximumSize(100,28);
 	this->setStyleSheet("background-color:rgb(13,74,185); color:white;border: 1px groove white;");
 }
 

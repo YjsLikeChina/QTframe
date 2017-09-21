@@ -168,21 +168,21 @@ bool OP_AutoUpdateData::MachineAlarmUpdata(QString& qslAlarm, QString& qslError)
 	qslError.clear();
 	for (int i = 0; i < nLength; i++)
 	{
-		qslAlarm += m_qVecAlarmList.at(i).Function_name + ",";
-		//if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecAlarmList.at(i).Addr.toInt(), m_qVecAlarmList.at(i).Addr_Type))
-		//{
-		//	qslAlarm = qslAlarm + m_qVecAlarmList.at(i).Function_name + ",";
-		//}
+		//qslAlarm += m_qVecAlarmList.at(i).Function_name + ",";
+		if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecAlarmList.at(i).Addr.toInt(), m_qVecAlarmList.at(i).Addr_Type))
+		{
+			qslAlarm = qslAlarm + m_qVecAlarmList.at(i).Function_name + ",";
+		}
 	}
 	//更新设备错误
 	nLength = m_qVecErrorList.length();
 	for (int i = 0; i < nLength; i++)
 	{
-		qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
-		//if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecErrorList.at(i).Addr.toInt(), m_qVecErrorList.at(i).Addr_Type))
-		//{
-		//	qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
-		//}
+		//qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
+		if (HC_PLC_INTERFACE.GetBOOLFromPLC(m_qVecErrorList.at(i).Addr.toInt(), m_qVecErrorList.at(i).Addr_Type))
+		{
+			qslError = qslError + m_qVecErrorList.at(i).Function_name + ",";
+		}
 	}
 	return true;
 }
@@ -214,5 +214,10 @@ void OP_AutoUpdateData::insertWorkTask(QMap<int, QList<ST_UPDATEDATA>>& AutoUpda
 		m_bRunFlag = true;
 		this->start();
 	}
+}
+
+QString OP_AutoUpdateData::GetMachineError()
+{
+	return m_qstrErrorList;
 }
 

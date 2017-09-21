@@ -1,6 +1,7 @@
 #pragma once
 #include <QThread>
 #include "BaseDataType.h"
+#include "UI_StopCauseListDialog.h"
 
 class OP_MachineStatusCtrl
 	: QThread
@@ -24,10 +25,15 @@ private:
 	QVector<ST_MODULE> m_qVecPackageInfo;//当前产品文件容器
 	MACHINE_STATUS m_emMachineStatusCtrl;//设备状态机
 	ST_LASER_DATA m_stCurLaserData;		//当前激光数据
-	bool m_bMachineLasetStatus;			//设备最后一次状态
+	bool m_bMachineLasetStatus = false;	//设备最后一次状态(运行与非运行)
 	bool m_bMachineRunDir;				//设备运行方向
 	QString m_qstrHistoryFilePath;		//历史文件路径
-	ST_VALUECFG m_stCurSpeed;				//当前(反馈)速度地址
+	ST_VALUECFG m_stCurSpeed;			//当前(反馈)速度地址
+	UI_StopCauseListDialog* m_pStopCauseDlg;//停机原因对话框
+	int m_nStopCode;					//停机编码
+	QString m_qstrStopCause;			//停机原因
+	DWORD m_dwMachineWorkTime = 0;		//设备启动到停止之间的时间
+	LONGLONG m_llInciseDist;			//切料距离(牵引位置)
 
 	//设备状态机控制变量
 	MACHINE_TASK m_emMachineTask;		//设备需要执行的任务

@@ -117,6 +117,7 @@ bool UI_IODebug::GetModifyParam(QVector<ST_CHANGE_POINT>& qVecModifyVal)
 void UI_IODebug::SlotOutputClicked(QListWidgetItem *item)
 {
 	int nButtonNum = ui.LW_OutputList->currentRow();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_{[操作:点击输出点,操作点为%2").arg(__func__).arg(ui.LW_OutputList->item(nButtonNum)->text()));
 	nButtonNum += ui.LW_InputList->count();	//加上当前模块的输入点
  	bool bRes = m_PCtrlIODebug->ButtonClickedChanged(m_CurrentModule, nButtonNum);
 	if (bRes)
@@ -135,6 +136,8 @@ void UI_IODebug::SlotSwitchModule(QListWidgetItem *item)
 	int nModuleNum = ui.LW_ModuleList->currentRow();
 	if (m_CurrentModule == nModuleNum)
 		return;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:切换不同I/O模组，切换模组为%2,切换前模组为").arg(__func__).arg(ui.LW_ModuleList->item(ui.LW_ModuleList->currentRow())->text())
+		.arg(ui.LW_ModuleList->item(m_CurrentModule)->text()));
 	m_CurrentModule = nModuleNum;
 	//修改UI
 	ui.LW_InputList->clear();

@@ -14,6 +14,7 @@ bool CTRL_ParameterSet::SaveParmentterset(QVector<ST_CHANGE_POINT> VeChangePoint
 	ST_VALUECFG*     ValuecfgTemp;
 	QMap<QString, QString> QmapString;
 	bool result = true;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:保存数据").arg(__func__));
 	for (int i = 0; i < VeChangePoint.size(); i++)
 	{
 		ChangeTemp = VeChangePoint.at(i);

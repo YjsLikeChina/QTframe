@@ -497,7 +497,6 @@ bool DP_LaserInteraction::LaserCardSeparate(ST_LASER_DATA stLaser)
 				break;
 		}
 	}
-	emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("11111111111111111111"), DOMODEL, 0);
 	emit MESSAGEBOX.SigNalCloseMessageBox();
 	if (!bResult)
 	{

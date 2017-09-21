@@ -94,6 +94,7 @@ bool QCUserManager::LogOut()
 QString QCUserManager::GetTypeName(enum USER_TYPE eType)
 {
 	QString resoult;
+	
 	switch (eType)
 	{
 	case USER_OPERATOR:

@@ -37,7 +37,7 @@ protected Q_SLOTS:
 	void SlotEnable();											//使能
 	void SlotStop();											//停止
 	void SlotCleanAlarm();										//报警清除
-	void SlotSwitchAxis(int nAxis);										//切换轴
+	void SlotSwitchAxis(int nAxis);								//切换轴
 	
 public:
 	bool insertModule(QVector<ST_MODULE>*);								//添加模组

@@ -78,8 +78,11 @@
       <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
       <Extensions>ui</Extensions>
     </Filter>
-    <Filter Include="Source Files\UI_Source\User Manager">
+    <Filter Include="User Manager">
       <UniqueIdentifier>{b2d9b9e1-a460-4582-b792-687976844c78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TexTPLC">
+      <UniqueIdentifier>{fb2f20a8-bc57-4576-887b-4476090ded54}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -312,7 +315,7 @@
       <Filter>Source Files\UI_Source</Filter>
     </ClCompile>
     <ClCompile Include="QCUserManager.cpp">
-      <Filter>Source Files\UI_Source\User Manager</Filter>
+      <Filter>User Manager</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_QCUserManager.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -335,11 +338,20 @@
     <ClCompile Include="GeneratedFiles\Release\moc_UI_MachineErrorList.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="UI_StopCauseListDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_UI_StopCauseListDialog.cpp">
       <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_StopCauseListDialog.cpp">
+      <Filter>Source Files\UI_Source</Filter>
+    </ClCompile>
+    <ClCompile Include="plcdebug.cpp">
+      <Filter>TexTPLC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_plcdebug.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_plcdebug.cpp">
+      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -452,7 +464,7 @@
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="QCUserManager.h">
-      <Filter>Source Files\UI_Source\User Manager</Filter>
+      <Filter>User Manager</Filter>
     </CustomBuild>
     <CustomBuild Include="UI_UserManagerCtrol.h">
       <Filter>Header Files\UI_Head</Filter>
@@ -468,6 +480,12 @@
     </CustomBuild>
     <CustomBuild Include="UI_StopCauseListDialog.h">
       <Filter>Header Files\UI_Head</Filter>
+    </CustomBuild>
+    <CustomBuild Include="plcdebug.h">
+      <Filter>TexTPLC</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI_Plcdebug.ui">
+      <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -555,8 +573,15 @@
     <ClInclude Include="GeneratedFiles\ui_UI_StopCauseListDialog.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_UI_Plcdebug.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FilmTrimmer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

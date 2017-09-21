@@ -43,6 +43,7 @@ bool CTRL_ProductEditor::SaveProducteData(QVector<ST_CHANGE_POINT> VeChangePoint
 		filter << "*.pkg";
 		dir->setNameFilters(filter);
 		QList<QFileInfo> *fileInfo = new QList<QFileInfo>(dir->entryInfoList(filter));
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:重命名产品文件 产品旧名:%2，产品新名:%3").arg(__func__).arg(ProductFileName).arg(FileNewAndOldName.at(1)));
 		for (int i = 0; i < fileInfo->count(); i++)
 		{
 			if (fileInfo->at(i).fileName() == ProductFileName+".pkg")
@@ -52,6 +53,10 @@ bool CTRL_ProductEditor::SaveProducteData(QVector<ST_CHANGE_POINT> VeChangePoint
 			}
 		}
 	
+	}
+	else
+	{
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:保存产品数据 产品名:%2，激光文件名:%3").arg(__func__).arg(ProductFileName).arg(LaserFileName));
 	}
 	ST_MODULE StModuleTemp;
 	bool result = true;
@@ -131,6 +136,7 @@ bool CTRL_ProductEditor::SaveProducteData(QVector<ST_CHANGE_POINT> VeChangePoint
 
 bool CTRL_ProductEditor::ChangeCurproduct(QString ProductFileName)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置产品为当前产品 产品名:%2").arg(__func__).arg(ProductFileName));
 	if (m_bfirstStart)
 	{
 		//上传激光
@@ -139,6 +145,7 @@ bool CTRL_ProductEditor::ChangeCurproduct(QString ProductFileName)
 		QFileInfo temp(qstrPath);
 		if (!temp.exists())
 		{
+			LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置产品为当前产品失败,产品文件打开失败 产品名:%2").arg(__func__).arg(ProductFileName));
 			MESSAGEBOX.SlotNewMessAgeBoxData(ProductFileName + QString::fromLocal8Bit("产品文件打开失败！"), 1, 2000, true);
 			return false;
 		}
@@ -160,11 +167,13 @@ bool CTRL_ProductEditor::ChangeCurproduct(QString ProductFileName)
 		{
 			if (!temp.exists())
 			{
+				LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置产品为当前产品失败,产品文件打开失败 产品名:%2").arg(__func__).arg(ProductFileName));
 				MESSAGEBOX.SlotNewMessAgeBoxData(ProductFileName+QString::fromLocal8Bit("产品文件打开失败！"), 1, 2000, true);
 				return false;
 			}
 			if (LastUpdateTime == temp.lastModified())
 			{
+				LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:设置产品为当前产品失败,请勿重复上传相同产品文件 产品名:%2").arg(__func__).arg(ProductFileName));
 				MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("请勿重复上传相同产品文件！"), 1, 2000, true);
 				return false;		
 			}
@@ -221,12 +230,14 @@ bool CTRL_ProductEditor::CopyPackage(QString qstrPkgName, QString& qstrNewPkgNam
 	qstrNewPkgName = qstrPkgName;
 	QMap<QString, QString> MstrTemp;
 	MstrTemp.insert(QString::fromLocal8Bit("产品名称"), qstrPkgName);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:复制产品文件名 源产品名:%2，现文件名:%3").arg(__func__).arg(qstrPkgName).arg(qstrPkgName));
 	CFGINTERFACE.WriteValue(MstrTemp, QString::fromLocal8Bit("Addr"),m_qstrCfgPath+"/Data/Package/"+ qstrPkgName+".pkg");
 	return result;
 }
 
 bool CTRL_ProductEditor::DeletePackage(QString qstrPkgName)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:删除产品文件 源产品名:%2").arg(__func__).arg(qstrPkgName));
 	if (m_qstrCurFileName == qstrPkgName)
 	{
 		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("不能删除当前产品文件！"), 1, 2000, true);
@@ -239,6 +250,7 @@ bool CTRL_ProductEditor::DeletePackage(QString qstrPkgName)
 		{
 			if (temp.remove())
 			{
+				
 				QString strMsg(QString::fromLocal8Bit("删除成功"));
 				MESSAGEBOX.SlotNewMessAgeBoxData(strMsg, NODOMODEL);
 				return true;
@@ -252,6 +264,7 @@ bool CTRL_ProductEditor::DeletePackage(QString qstrPkgName)
 		}
 		else
 		{
+			LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:删除产品文件失败,产品名:%2不存在").arg(__func__).arg(qstrPkgName));
 			QString strMsg(QString::fromLocal8Bit("产品文件%1不存在").arg(qstrPkgName));
 			MESSAGEBOX.SlotNewMessAgeBoxData(strMsg,NODOMODEL);
 			return true;
@@ -268,10 +281,12 @@ bool CTRL_ProductEditor::NewPackage(QVector<ST_CHANGE_POINT> VeChangePoint, QVec
 	filter << "*.pkg";
 	dir->setNameFilters(filter);
 	QList<QFileInfo> *fileInfo = new QList<QFileInfo>(dir->entryInfoList(filter));
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:新间产品文件 产品名:%2").arg(__func__).arg(FileName));
 	for (int i = 0; i < fileInfo->count(); i++)
 	{
 		if (fileInfo->at(i).fileName() == FileName + ".pkg")
 		{
+			LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_状态:新间产品文件错误！文件名重复！ 产品名:%2").arg(__func__).arg(FileName));
 			MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("文件名重复！"), 1, 2000, true);
 			return false;
 		}
@@ -284,14 +299,18 @@ bool CTRL_ProductEditor::NewPackage(QVector<ST_CHANGE_POINT> VeChangePoint, QVec
 
 bool CTRL_ProductEditor::SwitchPackage(QVector<ST_CHANGE_POINT> &Data, QString &LaserFileName, QString qstrPkgName)
 {
+
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:切换产品文件显示 产品名:%2，激光文件名:").arg(__func__).arg(qstrPkgName).arg(LaserFileName));
 	QVector<ST_MODULE> QVeStModule;
 	if (!CFGINTERFACE.initCfgValue(QVeStModule, m_qstrCfgPath +"./Data/Package/" + qstrPkgName + ".pkg"))
 	{
+		LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_状态:切换产品文件显示错误！产品文件打开失败！ 产品名:%2，激光文件名:").arg(__func__).arg(qstrPkgName).arg(LaserFileName));
 		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("产品文件打开失败！"), 1, 2000, true);
 		return false;
 	}
 	if (QVeStModule.length()<=0)
 	{
+		LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_状态:切换产品文件显示错误！产品文件无内容或者内容格式错误！ 产品名:%2，激光文件名:").arg(__func__).arg(qstrPkgName).arg(LaserFileName));
 		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("产品文件无内容或者内容格式错误！"), 1, 2000, true);
 		return false;
 	}
@@ -312,6 +331,7 @@ bool CTRL_ProductEditor::SwitchPackage(QVector<ST_CHANGE_POINT> &Data, QString &
 			{
 				if (QVeStModule.at(i).Value_.at(j).Addr != qstrPkgName)
 				{
+					LOGSTR.WriteLogQstring(1, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_状态:切换产品文件显示错误！产品文件内所记录文件名与本文件不匹配！ 产品名:%2，激光文件名:").arg(__func__).arg(qstrPkgName).arg(LaserFileName));
 					MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("产品文件内所记录文件名与本文件不匹配！"), 1, 2000, true);
 					return false;
 				}

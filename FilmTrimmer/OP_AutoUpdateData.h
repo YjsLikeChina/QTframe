@@ -32,7 +32,7 @@ private:
 	void AutoUpdateCommon(QList<ST_UPDATEDATA>&);
 	void AutoUpdateIOStatus(QList<ST_UPDATEDATA>&);
 	void AutoUpdataHistoryInfo(QList<ST_UPDATEDATA>&);
-	bool MachineAlarmUpdata(QString& qslAlarm,QString& qslError);				//更新报警
+	bool MachineAlarmUpdata(QString& qslAlarm, QString& qslError);				//更新报警
 	void MachineModelUpdata(bool& bMachineModel);								//设备手自动模式
 
 public:
@@ -40,8 +40,9 @@ public:
 	QVector<ST_VALUECFG> m_qVecErrorList;										//错误地址列表
 public:
 	bool StartAutoUpdateDataThread(bool bFlag = true);							//bflag为真时启动自动刷新线程,flag为假时线程结束
-	void SwitchWorkTask(int nCurPage,int nCurModule);							//切换工作任务,
+	void SwitchWorkTask(int nCurPage, int nCurModule);							//切换工作任务,
 	void insertWorkTask(QMap<int, QList<ST_UPDATEDATA>>& qMapAutoUpdateData);	//添加自动更新列表
+	QString GetMachineError();
 
 Q_SIGNALS:
 	void SigAutoProduction(QList<ST_UPDATEDATA>);								//自动生产页面

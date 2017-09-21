@@ -13,6 +13,7 @@ CTRL_FilmTrimmer::~CTRL_FilmTrimmer()
 
 EN_Resoult CTRL_FilmTrimmer::SwitchPage(int NextPage,bool bFlag)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:切换页面,切换页码：%2").arg(__func__).arg(NextPage));
 	EN_Resoult reslout = NORESOULT;
 	if (!bFlag)
 	{
@@ -21,6 +22,7 @@ EN_Resoult CTRL_FilmTrimmer::SwitchPage(int NextPage,bool bFlag)
 	}
 	else
 	{
+
 	 EN_Resoult resoult = MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("页面有数据修改,请注意是否保存！"),
 		 0, 0, true,THREEBUTTON);
 	 switch (resoult)
@@ -57,6 +59,8 @@ void CTRL_FilmTrimmer::InitValue()
 QString CTRL_FilmTrimmer::UserLogin()
 {
 	QStringList UserName = 	USERMANAGER.Login();
+	if (UserName.isEmpty())
+		return QString::fromLocal8Bit("ERROR");
 	return UserName.at(0);
 }
 

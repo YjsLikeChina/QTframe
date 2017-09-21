@@ -127,10 +127,10 @@ bool UI_ParameterSetting::insertModule(QVector<ST_MODULE>* cfgModuleInfo)
 					ui.TRW_DataModule->setItemWidget(ChildModule, 1, UserLineEdit);
 					connect(UserLineEdit, SIGNAL(editingFinished()), this, SLOT(SlotDataItemChanged()));
 				}
-				else
-				{
-					ChildModule->setFlags(Qt::ItemIsSelectable | Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
-				}
+				//else
+				//{
+				//	ChildModule->setFlags(Qt::ItemIsSelectable | Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+				//}
 				ChildModule->setSizeHint(1, QSize(100, 30));
 
 				_moduleItem.ChildModuleItems.push_back(ChildModule);
@@ -200,6 +200,7 @@ bool UI_ParameterSetting::SaveParamer()
 
 void UI_ParameterSetting::SlotParameSave()
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击保存按钮").arg(__func__));
 	m_pParameterSet->SaveParmentterset(m_qVecModifyVal);
 	QString strtem = MACHINECTRL.ReturnPageCfgPath(PARAMETERSET);
 	CString strPath = strtem.toStdWString().data();
@@ -216,6 +217,7 @@ void UI_ParameterSetting::SlotDataItemChanged()
 	temp.dlData = ChangeItem->text().toDouble();
 	temp.nChildNum = ChangeItem->nChildNum;
 	temp.nModuleNum = ChangeItem->nModuleNum;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:设置可选项%2为%3状态").arg(__func__).arg(temp.nModuleNum).arg(temp.dlData));
 	m_qVecModifyVal.push_back(temp);
 }
 
@@ -223,19 +225,15 @@ void UI_ParameterSetting::SlotLaserSoftwareShow()
 {
 	if (LASERINTERFACE.GetLaserType())
 	{
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:打开激光软件").arg(__func__));
 		LASERINTERFACE.m_pLaserCardCtrl->HMSShowEditWindow();
 	}
-}
-
-void UI_ParameterSetting::SlotUserManage()
-{
-	//
 }
 
 void UI_ParameterSetting::SlotBoolItemChanged(QTreeWidgetItem* item, int column)
 {
 	QTreeWidgetItem* CurItemParent = item->parent();
-	if (NULL == CurItemParent)
+	if (NULL == CurItemParent || column != 1)
 		return;
 	int nModuleNum = ui.TRW_BoolModule->indexOfTopLevelItem(CurItemParent);
 	int nChildNum = CurItemParent->indexOfChild(item);
@@ -243,7 +241,8 @@ void UI_ParameterSetting::SlotBoolItemChanged(QTreeWidgetItem* item, int column)
 	ST_CHANGE_POINT temp;
 	temp.dlData = item->checkState(1);
 	temp.nChildNum = nChildNum;
-	temp.nModuleNum = m_qMapBoolOrder.value(nModuleNum);
+	temp.nModuleNum = m_qMapBoolOrder.value(nModuleNum);\
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:设置可选项%2为%3状态").arg(__func__).arg(temp.nModuleNum).arg(item->checkState(1)));
 	m_qVecModifyVal.push_back(temp);
 }
 

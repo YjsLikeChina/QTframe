@@ -36,6 +36,7 @@ void OP_MachineStatusCtrl::InitVal()
 	m_bIsAutoMoveToPos = false;
 
 	m_stCurSpeed = MACHINECTRL.m_QveAutoProduction.at(0).Value_.at(WORK_SPEED);
+	m_pStopCauseDlg = new UI_StopCauseListDialog;
 }
 
 void OP_MachineStatusCtrl::run()
@@ -112,8 +113,13 @@ bool OP_MachineStatusCtrl::MachineCtrlStart()
 
 	//启动
 	bool bRes = HC_PLC_INTERFACE.SetBOOLToPLC(true, m_stStart.Addr.toInt(), m_stStart.Addr_Type);
-	if(bRes)
+	if (bRes)
+	{
 		m_bMachineLasetStatus = true;
+		m_dwMachineWorkTime = GetTickCount();
+		m_llInciseDist = HC_PLC_INTERFACE.GetDWORDFromPLC(MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Addr.toInt()\
+			, MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Addr_Type) / MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Vel_Accuracy;
+	}
 	return bRes;
 }
 
@@ -303,18 +309,66 @@ bool OP_MachineStatusCtrl::CheckMachineStop()
 	if (m_bMachineLasetStatus)
 	{
 		DWORD  dwCurSpeed = HC_PLC_INTERFACE.GetDWORDFromPLC(m_stCurSpeed.Addr.toInt(),m_stCurSpeed.Addr_Type);
+		if ((dwCurSpeed < 0.01) || m_bMachineRunDir)
+		{
+			//设备已经停止
+			m_bMachineLasetStatus = false;
+			//弹出停机原因选择对话框
+			if (m_pStopCauseDlg->DoModel(m_nStopCode, m_qstrStopCause)) //是否正常关闭对话框
+			{
+				//写入工作记录
+				WriteWorkHistoryLog();
+
+				//写入报警信息
+				WriteAlarmHistoryLog();
+			}
+		}
 	}
 	return true;
 }
 
 void OP_MachineStatusCtrl::WriteWorkHistoryLog()
 {
-	//
+	//获取相关数据
+	QString strWriteInfo;
+	//产品名称
+	CString cstrPkgName = ReadStringFromFile(_T("Run"), _T("当前产品文件名"), _T("Error"), m_cstrFilmCfgPath);
+	QString strPkgName = QString::fromStdWString(cstrPkgName.GetBuffer());
+	cstrPkgName.ReleaseBuffer();
+	strWriteInfo = strWriteInfo + strPkgName + ",";
+	//耗时
+	DWORD dwConsumeTime = m_dwMachineWorkTime - GetTickCount();
+	strWriteInfo = strWriteInfo + QString::number(dwConsumeTime) + ",";
+	//速度
+	int nSetSpeed = HC_PLC_INTERFACE.GetDWORDFromPLC(MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr.toInt()
+		, MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Addr_Type) / MACHINECTRL.m_QveFilmParam.at(0).Value_.at(CTRL_MACHINE_WORKSPEED).Vel_Accuracy;
+	strWriteInfo = strWriteInfo + QString::number(nSetSpeed,'g',8) + ",";
+	//距离(牵引位置差)
+	LONGLONG CurDist = HC_PLC_INTERFACE.GetDWORDFromPLC(MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Addr.toInt()\
+		, MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Addr_Type) / MACHINECTRL.m_QveFilmParam.at(1).Value_.at(MAINAXIS_TRACTIONPOS).Vel_Accuracy;
+	m_llInciseDist = CurDist - m_llInciseDist;
+	strWriteInfo = strWriteInfo + QString::number(m_llInciseDist) + ",";
+	//激光1组
+	int nLaser1Group = HC_PLC_INTERFACE.GetDWORDFromPLC(MACHINECTRL.m_QveFilmParam.at(0).Value_.at(LASER_YIELD).Addr.toInt()\
+		, MACHINECTRL.m_QveFilmParam.at(0).Value_.at(LASER_YIELD).Addr_Type);
+	strWriteInfo = strWriteInfo + QString::number(nLaser1Group) + ",";
+	//激光2组
+	int nLaser2Group = HC_PLC_INTERFACE.GetDWORDFromPLC(MACHINECTRL.m_QveFilmParam.at(0).Value_.at(LASER_YIELD + 1).Addr.toInt()\
+		, MACHINECTRL.m_QveFilmParam.at(0).Value_.at(LASER_YIELD + 1).Addr_Type);
+	strWriteInfo = strWriteInfo + QString::number(nLaser2Group) + ",";
+	//停机原因
+	strWriteInfo = strWriteInfo + m_qstrStopCause + ",";
+	//时间(接口函数带有写入时间功能)
+	CFGINTERFACE.WriteHistoryInfo(strWriteInfo, QString::fromLocal8Bit("WorkHistory"));
 }
 
 void OP_MachineStatusCtrl::WriteAlarmHistoryLog()
 {
-	//
+	QString strMachineError = MACHINECTRL.m_pAutoUpdateData->GetMachineError();
+	if (!strMachineError.isEmpty())
+	{
+		CFGINTERFACE.WriteHistoryInfo(strMachineError.left(strMachineError.length() - 1), QString::fromLocal8Bit("AlarmHistory"));
+	}
 }
 
 bool OP_MachineStatusCtrl::InitMachineWork()
@@ -442,22 +496,23 @@ bool OP_MachineStatusCtrl::SetCrurentPackage(QString qstrCurPkgName)
 				}
 			}
 		}
-		//上传激光数据
-		//获取激光使能
-		QString qstrParamCfgPath = MACHINECTRL.ReturnPageCfgPath(PARAMETERSET);
-		CString cstrParamCfgPath = qstrParamCfgPath.toStdWString().data();
-		LASERINTERFACE.m_bEnableLaser[0] = ReadIntFromFile(_T("激光1使能"), _T("Vel"), 0, cstrParamCfgPath);
-		LASERINTERFACE.m_bEnableLaser[1] = ReadIntFromFile(_T("激光2使能"), _T("Vel"), 0, cstrParamCfgPath);
-
-		if (!LASERINTERFACE.UploadLaserData(stLaserData))
-		{
-			//上传激光数据失败
-			emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("上传激光数据失败"), DOMODEL, 0);
-			return false;
-		}
-		//参数设置页面数据
-		SetOtherData(); 
 	}
+
+	//上传激光数据
+	//获取激光使能
+	QString qstrParamCfgPath = MACHINECTRL.ReturnPageCfgPath(PARAMETERSET);
+	CString cstrParamCfgPath = qstrParamCfgPath.toStdWString().data();
+	LASERINTERFACE.m_bEnableLaser[0] = ReadIntFromFile(_T("激光1使能"), _T("Vel"), 0, cstrParamCfgPath);
+	LASERINTERFACE.m_bEnableLaser[1] = ReadIntFromFile(_T("激光2使能"), _T("Vel"), 0, cstrParamCfgPath);
+
+	if (!LASERINTERFACE.UploadLaserData(stLaserData))
+	{
+		//上传激光数据失败
+		emit MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("上传激光数据失败"), DOMODEL, 0);
+		return false;
+	}
+	//参数设置页面数据
+	SetOtherData(); 
 	m_qstrCurPkgName = qstrCurPkgName;
 	return true;
 }

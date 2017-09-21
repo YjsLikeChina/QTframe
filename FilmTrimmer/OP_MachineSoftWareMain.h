@@ -33,7 +33,7 @@ private:
 	void LoadMotorInfo();                                       //加载电机信息
 
 																//获取自动更新数据,nPage用来区分IO界面\历史页面\其他页面
-	bool GetAutoUpdateData(const QVector<ST_MODULE>& QVecSource,QList<ST_UPDATEDATA>& AutoUpdateData,int nPage = 1);
+	bool GetAutoUpdateData(const QVector<ST_MODULE>& QVecSource,QList<ST_UPDATEDATA>& AutoUpdateData,int nPage = -1);
 	bool m_bOnloadConfigFinish;									//配置文件加载完毕(UI_FilmTrimmer、OP_MachineCtrlOrAlarmStatus中使用)
 	
 public:

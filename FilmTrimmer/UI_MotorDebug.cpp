@@ -205,6 +205,7 @@ void UI_MotorDebug::SlotAbsMove()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
 	double dlDist = ui.LE_AxisMoveTargetVel->text().toDouble();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击移动(绝对移动),移动轴:%2,移动距离%3").arg(__func__).arg(ui.CB_AxisSelect->currentText()).arg(dlDist));
 	m_pCtrlMotorDebug->AxisleMove(nAxis, dlDist, ABSOLUTE_MOVE);
 }
 
@@ -215,11 +216,13 @@ void UI_MotorDebug::SlotAdvanceMovePress()
 		int nAxis = ui.CB_AxisSelect->currentIndex();
 		double dlDist = ui.LE_AxisMoveVel->text().toDouble();
 		dlDist += ui.LB_PointFBVal->text().toDouble();
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:按压按钮前进(相对移动),移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 		m_pCtrlMotorDebug->AxisleMove(nAxis, 0, ABSOLUTE_MOVE);
 	}
 	else
 	{
 		int nAxis = ui.CB_AxisSelect->currentIndex();
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:按压按钮移动(绝对移动),移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 		m_pCtrlMotorDebug->AxisleMove(nAxis, 0, INCHING_MOVE, true, true);
 	}
 }
@@ -227,6 +230,7 @@ void UI_MotorDebug::SlotAdvanceMovePress()
 void UI_MotorDebug::SlotAdvanceMoveRelease()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:释放前进按钮,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->AxisleMove(nAxis, 0, INCHING_MOVE, true, false);
 }
 
@@ -237,11 +241,13 @@ void UI_MotorDebug::SlotRetreatMovePress()
 		int nAxis = ui.CB_AxisSelect->currentIndex();
 		double dlDist = ui.LE_AxisMoveVel->text().toDouble();
 		dlDist = ui.LB_PointFBVal->text().toDouble() - dlDist;
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:按压后退(绝对移动),移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 		m_pCtrlMotorDebug->AxisleMove(nAxis, 0, ABSOLUTE_MOVE);
 	}
 	else
 	{
 		int nAxis = ui.CB_AxisSelect->currentIndex();
+		LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:按压后退按钮(相对移动),移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 		m_pCtrlMotorDebug->AxisleMove(nAxis, 0, INCHING_MOVE, false, true);
 	}
 }
@@ -249,6 +255,7 @@ void UI_MotorDebug::SlotRetreatMovePress()
 void UI_MotorDebug::SlotRetreatMoveRelease()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:释放后退按钮,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->AxisleMove(nAxis, 0, INCHING_MOVE, false, false);
 }
 
@@ -256,7 +263,7 @@ void UI_MotorDebug::SlotRetreatMoveRelease()
 void UI_MotorDebug::SlotGotoHome()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
-	double dlDist = 0;
+	double dlDist = 0; LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击归零按钮,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->AxisleMove(nAxis, 0, GOTOHOME_MOVE);
 }
 //end 移动信号
@@ -265,18 +272,21 @@ void UI_MotorDebug::SlotGotoHome()
 void UI_MotorDebug::SlotEnable()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击使能按钮,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->SetMotorEnable(nAxis);
 }
 
 void UI_MotorDebug::SlotStop()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击停止按钮,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->SetMotorStop(nAxis);
 }
 
 void UI_MotorDebug::SlotCleanAlarm()
 {
 	int nAxis = ui.CB_AxisSelect->currentIndex();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:点击报警清除,移动轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	m_pCtrlMotorDebug->SetMotorCleanAlarm(nAxis);
 }
 
@@ -284,7 +294,7 @@ void UI_MotorDebug::SlotSwitchAxis(int nAxis)
 {
 	QVector<ST_CHANGE_POINT> qVecMotorInfo;
 	m_pCtrlMotorDebug->SwitchMotor(nAxis, qVecMotorInfo);
-
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:切换轴,轴:%2").arg(__func__).arg(ui.CB_AxisSelect->currentText()));
 	if (qVecMotorInfo.isEmpty())
 		return;
 	
@@ -313,57 +323,68 @@ bool UI_MotorDebug::insertModule(QVector<ST_MODULE>* cfgModuleInfo)
 bool UI_MotorDebug::GetModifyParam(QVector<ST_CHANGE_POINT>& VecModifyVal)
 {
 	ST_CHANGE_POINT stModifyParam;
-
-	stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
+	VecModifyVal.clear();
 	if (ui.LE_StartSpeed->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_START_SPEED;
 		stModifyParam.dlData = ui.LE_StartSpeed->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
 
 	if (ui.LE_MaxSpeed->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_MAX_SPEED;
 		stModifyParam.dlData = ui.LE_MaxSpeed->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
 
 	if (ui.LE_AccSpeedTime->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_ADD_SPEED;
 		stModifyParam.dlData = ui.LE_AccSpeedTime->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
+	
 
 	if (ui.LE_DecSpeedTime->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_DEC_SPEED;
 		stModifyParam.dlData = ui.LE_DecSpeedTime->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
-
+	
 	if (ui.LE_HomeOffset->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_HOME_OFFSET;
 		stModifyParam.dlData = ui.LE_HomeOffset->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
 
 	if (ui.LE_HomeSpeed->isModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_GOTOHOME_SPEED;
 		stModifyParam.dlData = ui.LE_HomeSpeed->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
 
 	if(ui.LB_PointFBVal->isWindowModified())
 	{
+		stModifyParam.nModuleNum = ui.CB_AxisSelect->currentIndex();
 		stModifyParam.nChildNum = ORDER_GET_POS;
 		stModifyParam.dlData = ui.LB_PointFBVal->text().toDouble();
+		VecModifyVal.push_back(stModifyParam);
 	}
-	VecModifyVal.push_back(stModifyParam);
-	return true;
+
+	if (VecModifyVal.isEmpty())
+		return false;
+	else
+		return true;
 }
 
 bool UI_MotorDebug::AutoUpdateData(QList<ST_UPDATEDATA> AutoUpdataInfo)

@@ -189,7 +189,7 @@ public:
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(12);
         label_2->setFont(font1);
-        label_2->setFrameShape(QFrame::Box);
+        label_2->setFrameShape(QFrame::NoFrame);
         label_13 = new QLabel(AutoProduWidget);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(765, 598, 71, 21));

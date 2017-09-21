@@ -2,7 +2,7 @@
 #include <QFile>
 #include <QTextStream>
 #include "UI_MessageBox.h"
-
+#include "LogManager.h"
 UI_HistoricalInformation::UI_HistoricalInformation(QWidget* parent /*= Q_NULLPTR*/)
 	:QWidget(parent),UI_InterfaceBase(parent)
 {
@@ -65,6 +65,7 @@ void UI_HistoricalInformation::SlotSwitchSection(int nIndex)
 {
 	if (m_nLastIndex == nIndex)
 		return;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_{[操作:选择切换不同页面历史数据,切换页面为:%2").arg(__func__).arg(nIndex));
 	m_nLastIndex = nIndex;
 	QStringList qslHead = m_qMapHistoryInfoHead.value(nIndex);
 	if (qslHead.isEmpty())
@@ -82,6 +83,7 @@ void UI_HistoricalInformation::SlotSwitchSection(int nIndex)
 		if (!file.open(QIODevice::ReadOnly))
 		{
 			MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("打开历史文件失败"),NODOMODEL);
+			LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:切换页面失败,打开历史文件失败,切换页面为:%2").arg(__func__).arg(nIndex));
 			return;
 		}
 
@@ -108,6 +110,7 @@ void UI_HistoricalInformation::SlotSwitchSection(int nIndex)
 
 void UI_HistoricalInformation::SlotCleanHistoryFile()
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_{[操作:清除历史文件").arg(__func__));
 	emit SigCleanHistoryFile(m_qMapHistoryInfoPath.value(m_nLastIndex));
 }
 

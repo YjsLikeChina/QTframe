@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_UI_ProductEditor_t {
-    QByteArrayData data[15];
-    char stringdata0[220];
+    QByteArrayData data[18];
+    char stringdata0[263];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,8 +42,11 @@ QT_MOC_LITERAL(9, 142, 16), // "QListWidgetItem*"
 QT_MOC_LITERAL(10, 159, 4), // "item"
 QT_MOC_LITERAL(11, 164, 14), // "SlotDeleteStep"
 QT_MOC_LITERAL(12, 179, 7), // "nButton"
-QT_MOC_LITERAL(13, 187, 16), // "SlotLaserFileSel"
-QT_MOC_LITERAL(14, 204, 15) // "SlotItemChanged"
+QT_MOC_LITERAL(13, 187, 17), // "SlotBoolItemClick"
+QT_MOC_LITERAL(14, 205, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(15, 222, 7), // "nColumn"
+QT_MOC_LITERAL(16, 230, 16), // "SlotLaserFileSel"
+QT_MOC_LITERAL(17, 247, 15) // "SlotItemChanged"
 
     },
     "UI_ProductEditor\0SlotSetCurrentPackage\0"
@@ -51,7 +54,8 @@ QT_MOC_LITERAL(14, 204, 15) // "SlotItemChanged"
     "SlotNewPackage\0SlotSavePackage\0"
     "SlotAddPackageStep\0SlotSwitchPackage\0"
     "QListWidgetItem*\0item\0SlotDeleteStep\0"
-    "nButton\0SlotLaserFileSel\0SlotItemChanged"
+    "nButton\0SlotBoolItemClick\0QTreeWidgetItem*\0"
+    "nColumn\0SlotLaserFileSel\0SlotItemChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,7 +65,7 @@ static const uint qt_meta_data_UI_ProductEditor[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,16 +73,17 @@ static const uint qt_meta_data_UI_ProductEditor[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x09 /* Protected */,
-       3,    0,   65,    2, 0x09 /* Protected */,
-       4,    0,   66,    2, 0x09 /* Protected */,
-       5,    0,   67,    2, 0x09 /* Protected */,
-       6,    0,   68,    2, 0x09 /* Protected */,
-       7,    0,   69,    2, 0x09 /* Protected */,
-       8,    1,   70,    2, 0x09 /* Protected */,
-      11,    1,   73,    2, 0x09 /* Protected */,
-      13,    0,   76,    2, 0x09 /* Protected */,
-      14,    0,   77,    2, 0x09 /* Protected */,
+       1,    0,   69,    2, 0x09 /* Protected */,
+       3,    0,   70,    2, 0x09 /* Protected */,
+       4,    0,   71,    2, 0x09 /* Protected */,
+       5,    0,   72,    2, 0x09 /* Protected */,
+       6,    0,   73,    2, 0x09 /* Protected */,
+       7,    0,   74,    2, 0x09 /* Protected */,
+       8,    1,   75,    2, 0x09 /* Protected */,
+      11,    1,   78,    2, 0x09 /* Protected */,
+      13,    2,   81,    2, 0x09 /* Protected */,
+      16,    0,   86,    2, 0x09 /* Protected */,
+      17,    0,   87,    2, 0x09 /* Protected */,
 
  // slots: parameters
     QMetaType::Void,
@@ -89,6 +94,7 @@ static const uint qt_meta_data_UI_ProductEditor[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 9,   10,
     QMetaType::Void, QMetaType::Int,   12,
+    QMetaType::Void, 0x80000000 | 14, QMetaType::Int,   10,   15,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -109,8 +115,9 @@ void UI_ProductEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 5: _t->SlotAddPackageStep(); break;
         case 6: _t->SlotSwitchPackage((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         case 7: _t->SlotDeleteStep((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: _t->SlotLaserFileSel(); break;
-        case 9: _t->SlotItemChanged(); break;
+        case 8: _t->SlotBoolItemClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 9: _t->SlotLaserFileSel(); break;
+        case 10: _t->SlotItemChanged(); break;
         default: ;
         }
     }
@@ -143,13 +150,13 @@ int UI_ProductEditor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

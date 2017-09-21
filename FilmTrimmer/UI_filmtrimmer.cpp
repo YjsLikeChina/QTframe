@@ -6,6 +6,7 @@
 #include <QDateTime>
 #include "QCUserManager.h"
 #include "afxwin.h"
+#include "plcdebug.h"
 UI_FilmTrimmer::UI_FilmTrimmer(QMainWindow* parentWin /*= 0*/)
 	:QMainWindow(parentWin), UI_InterfaceBase(parentWin)
 {
@@ -223,6 +224,25 @@ void UI_FilmTrimmer::initConnect()
 
 bool UI_FilmTrimmer::eventFilter(QObject *obj, QEvent *ev)
 {
+	if (obj == ui.LB_MachineModelLabel||obj  == ui.LB_MachineModel)
+	{
+		if (ev->type() == QEvent::MouseButtonDblClick)
+		{
+			if (obj == ui.LB_MachineModelLabel)
+			{
+				PLCADDRTEST.setWindowFlags(Qt::Window);
+				PLCADDRTEST.setWindowModality(Qt::NonModal);
+				PLCADDRTEST.show();
+			}
+			
+			else
+			{
+				PLCADDRTEST.setWindowFlags(Qt::Window);
+				PLCADDRTEST.setWindowModality(Qt::ApplicationModal);
+				PLCADDRTEST.show();
+			}
+		}
+	}
 	static QString Weidenglu = QString::fromLocal8Bit("未登录");
 	if ((USERMANAGER.m_CurUserName == Weidenglu) && (ev->type() == QEvent::MouseButtonPress)&&!m_isEventFilter)
 	{
@@ -236,11 +256,11 @@ bool UI_FilmTrimmer::eventFilter(QObject *obj, QEvent *ev)
 				QString LogStr;
 				if (UserNameAndType.at(0) == "error")
 				{
-					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_{[操作：管理员权限页面进行登录(管理员掉线),但取消登录][登录者：用户名：未登录,权限:无}");
+					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_操作：管理员权限页面进行登录(管理员掉线),但取消登录][登录者：用户名：未登录,权限:无}");
 				}
 				else
 				{
-					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_{[操作：管理员权限页面进行登录(管理员掉线),登录成功][登录者：用户名：%1,权限:%2}").arg(UserNameAndType.at(0)).arg(UserNameAndType.at(1));
+					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_操作：管理员权限页面进行登录(管理员掉线),登录成功][登录者：用户名：%1,权限:%2}").arg(UserNameAndType.at(0)).arg(UserNameAndType.at(1));
 					if (USERMANAGER.m_CurUSER_TYPEName == QString::fromLocal8Bit("操作员"))
 					{
 						SlotSwitchPage(1, false);
@@ -258,11 +278,11 @@ bool UI_FilmTrimmer::eventFilter(QObject *obj, QEvent *ev)
 				QString LogStr;
 				if (UserNameAndType.at(0) == "error")
 				{
-					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_{[操作：未登录用户进行登录,但取消登录][登录者：用户名：未登录,权限:无}");
+					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_操作：未登录用户进行登录,但取消登录}");
 				}
 				else
 				{
-					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_{[操作：未登录用户进行登录,登录成功][登录者：用户名：%1,权限:%2}").arg(UserNameAndType.at(0)).arg(UserNameAndType.at(1));
+					LogStr = QString::fromLocal8Bit("[层次 :UI层]_[函数名: mousePressEvent]_操作：未登录用户进行登录,登录成功，登录者：用户名：%1,权限:%2").arg(UserNameAndType.at(0)).arg(UserNameAndType.at(1));
 					if (USERMANAGER.m_CurUSER_TYPEName == QString::fromLocal8Bit("操作员"))
 					{
 						SlotSwitchPage(1, false);
@@ -491,7 +511,7 @@ void UI_FilmTrimmer::AddModule()
 	ui.SW_ClientWidget->setCurrentIndex(AUTOMATICPRODUCT);
 	m_qMapWidgetInfo.value(AUTOMATICPRODUCT)->SkipCurrentPage();
 	m_pButtonGruop->button(AUTOMATICPRODUCT)->setStyleSheet(
-		"QPushButton{background: rgb(255,172,179);color: white; border-radius: 10px;}"
+		"QPushButton{background: blue;color: white; border-radius: 10px;}"
 		"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 		);
 }
@@ -499,10 +519,16 @@ void UI_FilmTrimmer::AddModule()
 void UI_FilmTrimmer::SlotSwitchPage(int nPageItem, bool Switchover)
 {
 	//点击的是当前页面
+	
 	if (nPageItem == m_nCurPageItem)
+	{
+		LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_状态:切换页面失败终止,待切换页面就是当前页面！").arg(__func__));
 		return;
+	}
+		
 	if (USERMANAGER.m_CurUSER_TYPEName == QString::fromLocal8Bit("操作员") && (nPageItem == EXIT || nPageItem == PARAMETERSET || nPageItem == PRODUCTEDITOR || nPageItem == MOTORDEBUG))
 	{
+		LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_状态:切换页面失败终止,权限不足！").arg(__func__));
 		EN_Resoult Resoult = MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("权限不足！"), 1);
 		return;
 	}
@@ -529,13 +555,12 @@ void UI_FilmTrimmer::SlotSwitchPage(int nPageItem, bool Switchover)
 		m_bParamModifyFlag = true;
 
 	EN_Resoult emResult = m_pCtrlFilmTrimmer->SwitchPage(nPageItem, m_bParamModifyFlag);
-	if (NORESOULT == emResult || COMPEL == emResult) //不保存跳转到下一个页面
+	if(NORESOULT == emResult || COMPEL == emResult) //不保存跳转到下一个页面
 	{
 		SwitchPage(true, nPageItem, m_nCurPageItem);
 		m_pButtonGruop->button(nPageItem)->setStyleSheet(
-			"QPushButton{background: rgb(255,172,179);color: white; border-radius: 10px; border-style: outset;}"
+			"QPushButton{background: blue;color: white; border-radius: 10px;}"
 			"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
-			"QPushButton::hover{border:2px groove gray; border-radius:10px; padding:2px 4px; border-color: yellow;}"
 			); //当前选中的
 		m_pButtonGruop->button(m_nCurPageItem)->setStyleSheet(
 			"QPushButton{background:rgb(1,172,179);color: white; border-radius: 10px;}"
@@ -544,12 +569,12 @@ void UI_FilmTrimmer::SlotSwitchPage(int nPageItem, bool Switchover)
 		m_nLastPageItem = m_nCurPageItem;
 		m_nCurPageItem = nPageItem;
 	}
-	else if (OK == emResult) // 保存参数跳转到指定页面
+	else if(OK == emResult) // 保存参数跳转到指定页面
 	{
 		m_qMapWidgetInfo.value(m_nCurPageItem)->SaveParamer(); //保存
 		SwitchPage(true, nPageItem, m_nCurPageItem);
 		m_pButtonGruop->button(nPageItem)->setStyleSheet(
-			"QPushButton{background: rgb(255,172,179);color: white; border-radius: 10px;}"
+			"QPushButton{background: blue;color: white; border-radius: 10px;}"
 			"QPushButton:pressed{background-color:blue;color: white; border: 1px groove rgb(0,136,255); border-style: inset; }"
 			); //当前选中的
 		m_pButtonGruop->button(m_nCurPageItem)->setStyleSheet(
@@ -563,6 +588,7 @@ void UI_FilmTrimmer::SlotSwitchPage(int nPageItem, bool Switchover)
 	{
 		//留在当前页面
 	}
+	LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_状态:切换页面完成").arg(__func__));
 }
 
 void UI_FilmTrimmer::SlotMachineStart()
@@ -583,12 +609,17 @@ void UI_FilmTrimmer::SlotMachineStop()
 void UI_FilmTrimmer::SlotMachineEStop()
 {
 	emit SigMachineCtrl(MACHINE_ESTOP);
+	UI_StopCauseListDialog testDlg;
+	int nN = -1;
+	QString sS = "";
+	testDlg.DoModel(nN, sS);
 }
 
 
 void UI_FilmTrimmer::SlotUserLogin()
 {
 	QString qstrUserName = m_pCtrlFilmTrimmer->UserLogin();
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:电机用户登录").arg(__func__));
 	//if (!qstrUserName.isEmpty()&& qstrUserName!= "error")
 	//{
 	//	ui.PB_UserLogin->setText(qstrUserName);
@@ -601,7 +632,6 @@ void UI_FilmTrimmer::SlotUserTypeUpdata()
 	if (m_pCtrlFilmTrimmer->ResultUserName())
 	{
 		if (m_pUserTimer->isActive())
-			{ }
 			m_pUserTimer->stop();
 	}
 }
@@ -617,6 +647,7 @@ void UI_FilmTrimmer::SlotUpdataSystemtime()
 
 void UI_FilmTrimmer::SlotMachineRunModel(bool bModel)
 {
+//	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:设置设备运行模式,模式为:%2]").arg(__func__).arg(bModel? QString::fromLocal8Bit("自动模式"): QString::fromLocal8Bit("手动模式")));
 	if (bModel)
 	{
 		ui.LB_MachineModel->setText(QString::fromLocal8Bit("自动模式"));
@@ -638,6 +669,7 @@ void UI_FilmTrimmer::SlotMachineRunDir(bool bFlag)
 bool UI_FilmTrimmer::SlotAutoUpdateData(QString qslAlarmList, QString qslErrorList)
 {
 	QString qsltemp = qslAlarmList + qslErrorList;
+//	LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:更新报警和警告").arg(__func__));
 	if (qsltemp == m_qstrAlarmList)
 	{
 		if (qsltemp.isEmpty())
@@ -664,6 +696,7 @@ bool UI_FilmTrimmer::SlotAutoUpdateData(QString qslAlarmList, QString qslErrorLi
 
 bool UI_FilmTrimmer::SlotSetStatusFlagTest(QString strStatusHint, QString strOperHint, MACHINE_STATUSTOOL_COLOR _color)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_操作:设置操状态、提示文字").arg(__func__));
 	ui.LB_MachineStatusShow->setText(strStatusHint);
 	ui.LB_OperatorHintText->setText(strOperHint);
 	SetAlarmStatusTool(_color);
@@ -672,6 +705,7 @@ bool UI_FilmTrimmer::SlotSetStatusFlagTest(QString strStatusHint, QString strOpe
 
 void UI_FilmTrimmer::SlotExitMaintenance()
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: UI层]_[函数名 : %1]_{[操作:点击退出软件").arg(__func__));
 	SlotSwitchPage(m_nLastPageItem);
 }
 
@@ -704,7 +738,7 @@ void UI_FilmTrimmer::SlotNewUserLogin()
 	}
 	else
 	{
-		m_pUserTimer->start(10000);
+		m_pUserTimer->start(60000);
 	}
 }
 

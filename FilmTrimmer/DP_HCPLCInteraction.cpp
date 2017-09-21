@@ -71,6 +71,9 @@ bool DP_HCPLCInteraction::SetDWORDToPLC(int nData, DWORD dwPLCAddr, EM_Type addr
 		bRes = true;
 		break;
 	case MW:
+		m_pHcModbusTcpClient->SetWordData(dwPLCAddr, nData);
+		bRes = true;
+		break;
 	case QW:
 		m_pHcModbusTcpClient->SetWordData(dwPLCAddr, nData);
 		bRes = true;
@@ -122,10 +125,10 @@ bool DP_HCPLCInteraction::Connect_HC_PLC()
 HcModbusTcpClient::HcModbusTcpClient(void)
 {
 	m_nPort = 502;
-	m_strIpAddress = _T("192.168.1.88");
+	m_strIpAddress = _T("192.168.250.1");
 	CStringA str;
 	str = m_strIpAddress;
-	DWORD IpAddress = inet_addr("192.168.1.88");
+	DWORD IpAddress = inet_addr("192.168.250.1");
 	m_dIpAddress = IpAddress;//inet_addr("192.168.1.2");
 	m_bIsConnected = FALSE;
 	m_bFirstFailed = TRUE;

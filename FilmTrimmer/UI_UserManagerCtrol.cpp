@@ -63,6 +63,7 @@ void UI_UserManagerCtrol::SlotSave()
 			MESSAGEBOX.SigNalMessAgeBoxData(QString::fromLocal8Bit("保存用户错误，数据量不匹配，请联系程序员!"), 1);
 			return;
 		}
+		
 		Success.clear();
 		Success += QString::fromLocal8Bit("密码保存成功");
 	}	
@@ -74,6 +75,7 @@ void UI_UserManagerCtrol::SlotSave()
 			if (PlistCuser(m_UserList).at(j).m_strName == USERMANAGER.m_CurUserName.toStdWString().data())
 			{
 				j++;
+				continue;
 			}
 			QString username = ui.NoAdminUserList->item(i, 0)->text();
 			QComboBox *Ctemp = (QComboBox*)ui.NoAdminUserList->cellWidget(i, 1);

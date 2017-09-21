@@ -15,6 +15,7 @@ CTRL_MotorDebug::~CTRL_MotorDebug()
 
 bool CTRL_MotorDebug::SaveMotolData(QVector<ST_CHANGE_POINT> VeChangePoint)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:保存电机数据").arg(__func__));
 	ST_CHANGE_POINT ChangeTemp;
 	ST_VALUECFG*     ValuecfgTemp;
 	QMap<QString, QString> QmapString;
@@ -53,11 +54,13 @@ bool CTRL_MotorDebug::SaveMotolData(QVector<ST_CHANGE_POINT> VeChangePoint)
 
 bool CTRL_MotorDebug::AxisleMove(int nAxisNum, double nDist, EM_AXIS_MOVE_SIGNAL MoveModel, bool RunDir /*= true*/, bool bFlag /*= true*/)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:%2 轴号：%3").arg(__func__).arg(MoveModel).arg(nAxisNum));
 	if (ChickFeasible(nAxisNum, MoveModel))
 	{
 		//MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("正在移动，稍等"), 1, 2000, true);
 		return MOTORSCTRL[nAxisNum]->SetMotorMove(nDist, MoveModel, RunDir, bFlag);
 	}
+	LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:%2失败 轴号：%3").arg(__func__).arg(MoveModel).arg(nAxisNum));
 	return false;
 
 }
@@ -68,6 +71,7 @@ bool CTRL_MotorDebug::SetMotorEnable(int nAxis, bool bAutoGetCurrentStatus, bool
 	int result = 0;
 	bool ResultBool = true;
 	MOTORSCTRL[nAxis]->GetAxisAttribute(nAxisName, result);
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:使能 轴号:%3").arg(__func__).arg(nAxis));
 	if (result & AXIS_ATTRIBUTE::ENABLE)
 		return MOTORSCTRL[nAxis]->SetMotorEnable(bAutoGetCurrentStatus, bEnableStatu);
 	else
@@ -76,11 +80,13 @@ bool CTRL_MotorDebug::SetMotorEnable(int nAxis, bool bAutoGetCurrentStatus, bool
 
 bool CTRL_MotorDebug::SetMotorStop(int nAxis, bool bAutoGetCurrentStatus /*= true*/, bool bRunStatu /*= false*/)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:停止 轴号:%3").arg(__func__).arg(nAxis));
 	return MOTORSCTRL[nAxis]->SetMotorStop(bAutoGetCurrentStatus, bRunStatu);
 }
 
 bool CTRL_MotorDebug::SetMotorCleanAlarm(int nAxis)
 {
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:报警清除 轴号:%3").arg(__func__).arg(nAxis));
 	return MOTORSCTRL[nAxis]->SetMotorAlarmClean();
 }
 
@@ -159,9 +165,11 @@ bool CTRL_MotorDebug::SwitchMotor(int nAxis, QVector<ST_CHANGE_POINT> &NewMotorD
 {
 	bool result = true;
 	ST_CHANGE_POINT Potemp;
+	LOGSTR.WriteLogQstring(3, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:切换电机显示 轴号:%3").arg(__func__).arg(nAxis));
 	if (MACHINECTRL.m_QveMotorDebug.length() <= nAxis)
 	{
 		MESSAGEBOX.SlotNewMessAgeBoxData(QString::fromLocal8Bit("轴号错误！"), 1, 2000, true);
+		LOGSTR.WriteLogQstring(2, QString::fromLocal8Bit("[层次: 控制层]_[函数名 : %1]_操作:切换失败,轴号错误 轴号:%3").arg(__func__).arg(nAxis));
 		result = false;
 		return result;
 	}
